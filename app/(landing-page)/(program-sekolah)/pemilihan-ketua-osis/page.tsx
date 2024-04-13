@@ -1,3 +1,3 @@
 export default function PemilihanKetuaOSISPage() {
-  return <div>Halaman Pemilihan Ketua OSIS</div>;
+  return <h1>Halaman Pemilihan Ketua OSIS</h1>;
 }
