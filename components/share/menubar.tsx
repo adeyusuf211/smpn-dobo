@@ -11,18 +11,34 @@ import {
   MENU_PROGRAM_SEKOLAH,
   MENU_WARGA_SEKOLAH,
 } from "@/components/share/menu-list";
+import ImageLogo from "@/public/assets/image-backup.jpg";
+import Image from "next/image";
 
 export default function NavbarComponent() {
   return (
-    <Menubar className="flex gap-3 w-full h-[80px] justify-between">
-      <div>
+    <Menubar className="flex w-full h-[80px] justify-between items-start">
+      <div className="flex">
         <MenubarMenu>
-          <MenubarTrigger className="uppercase text-2xl">
-            <Link href="/">SMP NEGERI 1 DOBO</Link>
+          <MenubarTrigger className="flex flex-col">
+            <Link href="/">
+              <Image src={ImageLogo} width={60} height={50} alt="logo" />
+            </Link>
+          </MenubarTrigger>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="flex flex-col -ml-3">
+            <Link href="/">
+              <h1 className="text-3xl uppercase font-bold">
+                SMP NEGERI 1 DOBO
+              </h1>
+              <p className="text-start text-xl font-normal">
+                Jalan Ali Moertopo
+              </p>
+            </Link>
           </MenubarTrigger>
         </MenubarMenu>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 pt-3">
         <MenubarMenu>
           <MenubarTrigger className="uppercase">
             <Link href="/">HOME</Link>
