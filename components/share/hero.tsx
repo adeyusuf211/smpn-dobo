@@ -1,6 +1,10 @@
+interface HeroProps {
+  showAddressLabel?: boolean;
+}
+
 import TaglineComponent from "./tagline";
 
-export default function HeroComponent() {
+export default function HeroComponent({ showAddressLabel }: HeroProps) {
   return (
     <div className="w-full h-screen flex flex-col bg-gray-100">
       <div className="w-full h-full flex justify-center items-center">
@@ -8,7 +12,7 @@ export default function HeroComponent() {
           Your Image or Text Here
         </h1>
       </div>
-      <TaglineComponent />
+      <TaglineComponent showAddressLabel={showAddressLabel} />
     </div>
   );
 }
