@@ -16,7 +16,7 @@ import Image from "next/image";
 
 export default function NavbarComponent() {
   return (
-    <Menubar className="flex w-full h-[80px] justify-between items-start">
+    <Menubar className="flex w-full h-[80px] justify-between items-start absolute top-0 left-0 2xl:px-[400px] px-[200px]">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col">
