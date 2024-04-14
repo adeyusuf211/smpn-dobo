@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function ProfileComponent() {
   return (
     <div className="w-full h-full bg-blue-700 py-8 flex flex-col gap-5 items-center">
-      <h1 className="text-center font-semibold text-4xl uppercase text-gray-100">
+      <h1 className="text-center font-semibold lg:text-5xl text-3xl uppercase text-gray-100">
         Profil Sekolah
       </h1>
       <div className="flex gap-5 mt-5">

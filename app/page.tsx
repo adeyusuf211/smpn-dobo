@@ -1,3 +1,4 @@
+import AnotherComponent from "@/components/share/another";
 import HeroComponent from "@/components/share/hero";
 import NavbarComponent from "@/components/share/menubar";
 import ProfileComponent from "@/components/share/profile";
@@ -8,6 +9,7 @@ export default function Home() {
       <NavbarComponent />
       <HeroComponent />
       <ProfileComponent />
+      <AnotherComponent />
     </div>
   );
 }
