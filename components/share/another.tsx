@@ -8,8 +8,8 @@ export default function AnotherComponent() {
           seragam sekolah
         </h1>
         <div className="flex lg:flex-row flex-col gap-3">
-          <div className="flex flex-col gap-3">
-            <div className="p-4 bg-yellow-400 w-full">
+          <div className="flex flex-col gap-3 h-full w-full">
+            <div className="p-4 bg-yellow-400 w-full min-h-40 h-full flex justify-center items-center">
               <h1 className="text-center text-gray-600 font-semibold">
                 Place your image here
               </h1>
@@ -18,8 +18,8 @@ export default function AnotherComponent() {
               biru dan putih
             </h3>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="p-4 bg-yellow-400 w-full">
+          <div className="flex flex-col gap-3 h-full w-full">
+            <div className="p-4 bg-yellow-400 w-full min-h-40 flex justify-center items-center">
               <h1 className="text-center text-gray-600 font-semibold">
                 Place your image here
               </h1>
@@ -28,8 +28,8 @@ export default function AnotherComponent() {
               batik
             </h3>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="p-4 bg-yellow-400 w-full">
+          <div className="flex flex-col gap-3 h-full w-full">
+            <div className="p-4 bg-yellow-400 w-full min-h-40 flex justify-center items-center">
               <h1 className="text-center text-gray-600 font-semibold">
                 Place your image here
               </h1>
@@ -38,8 +38,8 @@ export default function AnotherComponent() {
               batik
             </h3>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="p-4 bg-yellow-400 w-full">
+          <div className="flex flex-col gap-3 h-full w-full">
+            <div className="p-4 bg-yellow-400 w-full min-h-40 flex justify-center items-center">
               <h1 className="text-center text-gray-600 font-semibold">
                 Place your image here
               </h1>
@@ -48,8 +48,8 @@ export default function AnotherComponent() {
               kostum
             </h3>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="p-4 bg-yellow-400 w-full">
+          <div className="flex flex-col gap-3 h-full w-full">
+            <div className="p-4 bg-yellow-400 w-full min-h-40 flex justify-center items-center">
               <h1 className="text-center text-gray-600 font-semibold">
                 Place your image here
               </h1>
