@@ -7,7 +7,7 @@ import ProfileComponent from "@/components/share/profile";
 
 export default function HomePageComponent() {
   return (
-    <div className="px-[250px]">
+    <div className="lg:px-[250px] 2xl:px-[250px] xl:px-[250px] px-[20px]">
       <NavbarComponent />
       <HeroComponent />
       <ProfileComponent />

@@ -4,10 +4,10 @@ export default function AnotherComponent() {
   return (
     <div className="w-full h-full p-6 bg-blue-700 flex flex-col gap-5">
       <section id="seragam">
-        <h1 className="lg:text-5xl text-3xl font-semibold uppercase text-center text-white mb-5">
+        <h1 className="lg:text-5xl text-2xl font-semibold uppercase text-center text-white mb-5">
           seragam sekolah
         </h1>
-        <div className="flex gap-3">
+        <div className="flex lg:flex-row flex-col gap-3">
           <div className="flex flex-col gap-3">
             <div className="p-4 bg-yellow-400 w-full">
               <h1 className="text-center text-gray-600 font-semibold">
@@ -62,7 +62,7 @@ export default function AnotherComponent() {
       </section>
       <section id="deskripsi" className="mt-10">
         <div className="flex flex-col my-5">
-          <div className="flex gap-3 w-full">
+          <div className="flex lg:flex-row flex-col gap-3 w-full">
             <div className="p-5 bg-blue-200 w-full h-full min-h-[200px]">
               <h3 className="text-3xl">Your content here</h3>
             </div>
@@ -74,8 +74,8 @@ export default function AnotherComponent() {
         </div>
       </section>
       <section id="sarana-sekolah">
-        <div className="w-full flex flex-col p-4 my-5">
-          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl mb-3">
+        <div className="w-full flex flex-col lg:p-4 px-0 py-4 my-5">
+          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3">
             sarana dan fasilitas sekolah
           </h1>
           <div className="flex flex-col gap-5">
@@ -90,7 +90,7 @@ export default function AnotherComponent() {
                 <span>{">>>"}</span> Ruang Belajar dan Pendukung
               </li>
             </ul>
-            <div className="grid grid-cols-6 gap-3">
+            <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
               <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
@@ -132,8 +132,8 @@ export default function AnotherComponent() {
         </div>
       </section>
       <section id="ekstrakulikuler">
-        <div className="w-full flex flex-col p-4 my-5">
-          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl mb-3">
+        <div className="w-full flex flex-col lg:p-4 px-0 py-4 my-5">
+          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3">
             program ekstra kulikuler
           </h1>
           <div className="flex flex-col gap-5">
@@ -148,7 +148,7 @@ export default function AnotherComponent() {
                 <span>{">>>"}</span> Formasi dan Aktivitas
               </li>
             </ul>
-            <div className="grid grid-cols-6 gap-3">
+            <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
               <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
