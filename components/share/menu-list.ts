@@ -19,7 +19,7 @@ export const MENU_PROGRAM_SEKOLAH: { title: string; href: string }[] = [
     title: "Berita Sekolah",
     href: "/berita-sekolah",
   },
-];
+] as const;
 
 export const MENU_WARGA_SEKOLAH: { title: string; href: string }[] = [
   {
@@ -38,7 +38,7 @@ export const MENU_WARGA_SEKOLAH: { title: string; href: string }[] = [
     title: "Pengembangan Diri",
     href: "/pengembangan-diri",
   },
-];
+] as const;
 
 export const MENU_LIBRARI: { title: string; href: string }[] = [
   {
@@ -65,4 +65,4 @@ export const MENU_LIBRARI: { title: string; href: string }[] = [
     title: "Pengumunan",
     href: "/pengumuman",
   },
-];
+] as const;
