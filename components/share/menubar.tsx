@@ -6,6 +6,9 @@ import {
   MenubarContent,
   MenubarItem,
   MenubarMenu,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import {
@@ -87,57 +90,61 @@ export default function NavbarComponent() {
           </MenubarContent>
         </MenubarMenu>
       </div>
-      <CiMenuFries
-        className="lg:hidden flex w-[30px] h-[30px] font-bold cursor-pointer"
-        onClick={() => setShowMenu(!showMenu)}
-      />
-      {/* {showMenu && (
-        <div className="lg:flex gap-5 pt-3">
-          <MenubarMenu>
-            <MenubarTrigger className="uppercase">
-              <Link href="/">HOME</Link>
-            </MenubarTrigger>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger className="uppercase">
-              PROGRAM SEKOLAH
-            </MenubarTrigger>
-            <MenubarContent className="uppercase">
-              {MENU_PROGRAM_SEKOLAH.map((menu) => (
-                <MenubarItem key={menu.title}>
-                  <Link href={menu.href} className="w-full">
-                    {menu.title}
-                  </Link>
-                </MenubarItem>
-              ))}
-            </MenubarContent>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger className="uppercase">WARGA SEKOLAH</MenubarTrigger>
-            <MenubarContent className="uppercase">
-              {MENU_WARGA_SEKOLAH.map((menu) => (
-                <MenubarItem key={menu.title}>
-                  <Link href={menu.href} className="w-full">
-                    {menu.title}
-                  </Link>
-                </MenubarItem>
-              ))}
-            </MenubarContent>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger className="uppercase">LIBRARI</MenubarTrigger>
-            <MenubarContent className="uppercase">
-              {MENU_LIBRARI.map((menu) => (
-                <MenubarItem key={menu.title}>
-                  <Link href={menu.href} className="w-full">
-                    {menu.title}
-                  </Link>
-                </MenubarItem>
-              ))}
-            </MenubarContent>
-          </MenubarMenu>
-        </div>
-      )} */}
+      <div className="lg:hidden flex flex-col">
+        <CiMenuFries
+          className="lg:hidden flex w-[30px] h-[30px] font-bold cursor-pointer relative"
+          onClick={() => setShowMenu(!showMenu)}
+        />
+        {showMenu && (
+          <div className="lg:hidden absolute w-full right-0 top-full bg-white p-4 flex flex-col gap-3">
+            <MenubarMenu>
+              <MenubarTrigger className="uppercase">
+                <Link href="/">HOME</Link>
+              </MenubarTrigger>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger className="uppercase">
+                PROGRAM SEKOLAH
+              </MenubarTrigger>
+              <MenubarContent className="uppercase ml-24">
+                {MENU_PROGRAM_SEKOLAH.map((menu) => (
+                  <MenubarItem key={menu.title} className="w-full">
+                    <Link href={menu.href} className="w-full">
+                      {menu.title}
+                    </Link>
+                  </MenubarItem>
+                ))}
+              </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger className="uppercase">
+                WARGA SEKOLAH
+              </MenubarTrigger>
+              <MenubarContent className="uppercase ml-24">
+                {MENU_WARGA_SEKOLAH.map((menu) => (
+                  <MenubarItem key={menu.title}>
+                    <Link href={menu.href} className="w-full">
+                      {menu.title}
+                    </Link>
+                  </MenubarItem>
+                ))}
+              </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger className="uppercase">LIBRARI</MenubarTrigger>
+              <MenubarContent className="uppercase ml-24">
+                {MENU_LIBRARI.map((menu) => (
+                  <MenubarItem key={menu.title}>
+                    <Link href={menu.href} className="w-full">
+                      {menu.title}
+                    </Link>
+                  </MenubarItem>
+                ))}
+              </MenubarContent>
+            </MenubarMenu>
+          </div>
+        )}
+      </div>
     </Menubar>
   );
 }
