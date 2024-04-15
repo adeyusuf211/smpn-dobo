@@ -16,22 +16,22 @@ export default function MotivationComponent() {
           Pengembangan Projek Profil Pelajar Pancasila
         </h1>
         <div className="flex lg:flex-row flex-col gap-3">
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
-          <div className="min-w-32 w-full min-h-32 h-full bg-blue-200 flex items-center justify-center">
+          <div className="min-w-32 w-full min-h-40 h-full bg-blue-200 flex items-center justify-center">
             <h1 className="font-semibold text-lg">Image</h1>
           </div>
         </div>

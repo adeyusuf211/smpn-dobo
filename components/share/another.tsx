@@ -91,40 +91,40 @@ export default function AnotherComponent() {
               </li>
             </ul>
             <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
             </div>
@@ -149,40 +149,40 @@ export default function AnotherComponent() {
               </li>
             </ul>
             <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
-              <div className="w-full min-w-10 h-full min-h-10 flex items-center justify-center bg-blue-300 p-3">
+              <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
                 <h3 className="text-lg text-center">Your image here</h3>
               </div>
             </div>

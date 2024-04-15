@@ -4,7 +4,7 @@ interface TaglineProps {
 
 export default function TaglineComponent({ showAddressLabel }: TaglineProps) {
   return (
-    <div className="flex flex-col w-full justify-end items-start lg:p-4 px-0 py-4">
+    <div className="flex flex-col w-full justify-end items-start py-4">
       <h1 className="2xl:text-3xl xl:text-3xl text-2xl uppercase bg-yellow-400 font-semibold p-4">
         mutiara
       </h1>
