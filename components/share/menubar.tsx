@@ -22,7 +22,7 @@ export default function NavbarComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Menubar className="flex w-full h-[80px] justify-between items-center absolute top-0 left-0 lg:px-[240px] px-[30px]">
+    <Menubar className="flex w-full h-[80px] justify-between items-center absolute top-0 left-0 lg:px-[150px] px-[30px]">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">
