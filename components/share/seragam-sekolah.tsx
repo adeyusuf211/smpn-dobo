@@ -18,13 +18,12 @@ export default function SeragamSekolahComponent() {
       <div className="flex flex-col gap-10">
         <div className="flex justify-end w-full -mt-[300px]">
           <div className="relative w-full">
-            <div className=" w-full h-[650px] flex justify-end p-5">
+            <div className=" w-full h-[650px] flex justify-end lg:ml-[150px] ml-0 p-5">
               <Image
                 src={ListBackgroundCard}
                 style={{
                   objectFit: "cover",
                   objectPosition: "center",
-                  marginLeft: "150px",
                 }}
                 fill
                 alt="custom-card-background"
@@ -32,7 +31,7 @@ export default function SeragamSekolahComponent() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full bg-blue-secondary p-4 flex justify-between pr-32">
+        <div className="w-full h-full bg-blue-secondary p-4 flex lg:flex-row flex-col justify-between pr-32">
           {LIST_SERAGAM.map((seragam) => (
             <h3
               className="font-bold text-xl text-white uppercase"

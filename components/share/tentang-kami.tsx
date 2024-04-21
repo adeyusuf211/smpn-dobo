@@ -5,10 +5,10 @@ import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
 export default function TentangKamiComponent({ showAddressLabel }: any) {
   return (
     <section id="tentang-kami">
-      <div className="w-full h-screen relative flex gap-3">
-        <div className="flex md:flex-row flex-col-reverse justify-between">
+      <div className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mt-40">
+        <div className="flex lg:flex-row flex-col justify-between">
           <div className="w-full h-full flex justify-center items-center p-5">
-            <div className="w-[850px] p-10 bg-gray-200 absolute right-10">
+            <div className="lg:w-[850px] w-full lg:p-10 p-6 bg-gray-200 absolute lg:right-10 right-0">
               <h3 className="font-semibold text-2xl uppercase text-gray-700 text-center">
                 deskripsi
               </h3>
@@ -38,7 +38,7 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
               </h3>
             </div>
           </div>
-          <div className="w-[550px] h-[600px] p-4 absolute bottom-0 left-10 mb-5">
+          <div className="w-[550px] h-[600px] p-4 absolute lg:bottom-0 -bottom-[40rem] lg:left-10 -left-10 mb-5">
             <Image
               src={ModelSekolahImage}
               fill
@@ -47,7 +47,7 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
             />
           </div>
         </div>
-        <div className="absolute bottom-0 left-0">
+        <div className="absolute lg:bottom-0 -bottom-[40rem] left-0">
           <TaglineComponent showAddressLabel={showAddressLabel} />
         </div>
       </div>

@@ -30,9 +30,9 @@ export default function ProfileComponent() {
       </h1>
       <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 -mt-40 lg:px-[150px] px-5">
         {PROFILE_DATA.map((profile) => (
-          <div className="flex flex-col w-full gap-5" key={profile.text}>
+          <div className="flex flex-col w-full h-full gap-5" key={profile.text}>
             <div className="relative">
-              <div className=" w-[100px] h-[650px]">
+              <div className="w-[100px] lg:h-[650px] h-[400px]">
                 <Image
                   src={CustomCardBackground}
                   style={{ objectFit: "cover", objectPosition: "center" }}

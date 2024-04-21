@@ -22,7 +22,7 @@ export default function NavbarComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Menubar className="flex lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 gap-20 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 rounded-tr-3xl ">
+    <Menubar className="flex lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 lg:gap-20 gap-36 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 lg:rounded-tr-3xl rounded-none">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">
@@ -32,7 +32,7 @@ export default function NavbarComponent() {
           </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="flex flex-col -ml-3">
+          <MenubarTrigger className="flex flex-col w-full -ml-3">
             <Link href="/">
               <h1 className="lg:text-2xl text-md uppercase font-bold">
                 SMP NEGERI 1 DOBO

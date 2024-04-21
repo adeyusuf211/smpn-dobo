@@ -1,5 +1,4 @@
 import SeragamSekolahComponent from "./seragam-sekolah";
-import TaglineComponent from "./tagline";
 import TentangKamiComponent from "./tentang-kami";
 
 export default function AnotherComponent() {
@@ -8,8 +7,8 @@ export default function AnotherComponent() {
       <SeragamSekolahComponent />
       <TentangKamiComponent />
       <section id="sarana-sekolah">
-        <div className="w-full flex flex-col lg:p-4 px-0 py-4 my-5">
-          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3">
+        <div className="w-full flex flex-col lg:p-4 px-6 py-4 my-5">
+          <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3 lg:mt-0 mt-[40rem]">
             sarana dan fasilitas sekolah
           </h1>
           <div className="flex flex-col gap-5">
@@ -66,7 +65,7 @@ export default function AnotherComponent() {
         </div>
       </section>
       <section id="ekstrakulikuler">
-        <div className="w-full flex flex-col lg:p-4 px-0 py-4 my-5">
+        <div className="w-full flex flex-col lg:p-4 px-6 py-4 my-5">
           <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3">
             program ekstra kulikuler
           </h1>
