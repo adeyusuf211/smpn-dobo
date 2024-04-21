@@ -28,7 +28,7 @@ export default function ProfileComponent() {
       <h1 className="text-center font-semibold lg:text-5xl text-2xl uppercase text-gray-100">
         Profil Sekolah
       </h1>
-      <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 -mt-40 lg:px-[150px] px-5">
+      <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 -mt-40 lg:px-[50px]">
         {PROFILE_DATA.map((profile) => (
           <div className="flex flex-col w-full h-full gap-5" key={profile.text}>
             <div className="relative">
@@ -41,7 +41,7 @@ export default function ProfileComponent() {
                 />
               </div>
             </div>
-            <h3 className="font-bold text-2xl text-white w-full uppercase">
+            <h3 className="font-bold text-2xl text-white w-full uppercase text-center">
               {profile.text}
             </h3>
             <Button variant="destructive" size="lg" className="rounded-full">
