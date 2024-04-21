@@ -15,7 +15,9 @@ export default function LandingPageLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className={`${font.className} 2xl:px-[400px] px-[200px]`}>
+    <div
+      className={`${font.className} overflow-x-hidden bg-hero 2xl:px-[200px] px-6 h-full min-h-screen`}
+    >
       <NavbarComponent />
       {children}
     </div>

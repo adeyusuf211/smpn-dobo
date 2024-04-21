@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function GaleriVidio() {
-  return <h1>Halaman Galeri Vidio</h1>;
+  return <UnderConstructionComponent />;
 }

@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function EPerpusPage() {
-  return <h1>Halaman E-Perpus</h1>;
+  return <UnderConstructionComponent />;
 }

@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function PPDBPage() {
-  return <h1>Halaman PPDB</h1>;
+  return <UnderConstructionComponent />;
 }

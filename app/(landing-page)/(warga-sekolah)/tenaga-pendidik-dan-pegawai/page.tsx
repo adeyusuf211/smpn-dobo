@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function TenagaPendidikDanPegawaiPage() {
-  return <h1>Halaman Tenaga Pendidik dan Pegawai</h1>;
+  return <UnderConstructionComponent />;
 }

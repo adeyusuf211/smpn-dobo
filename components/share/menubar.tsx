@@ -24,7 +24,7 @@ export default function NavbarComponent() {
   const styleMenuBarContent = "uppercase z-[100000]";
 
   return (
-    <Menubar className="flex 2xl:w-[90vw] lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 justify-between 2xl:pl-[200px] lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 lg:rounded-tr-3xl rounded-none">
+    <Menubar className="flex 2xl:w-[90vw] lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 justify-between 2xl:pl-[200px] lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none 2xl:mt-10 md:mt-5 mt-0 lg:rounded-tr-3xl rounded-none">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">

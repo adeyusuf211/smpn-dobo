@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function MplsPage() {
-  return <h1>Halaman MPLS</h1>;
+  return <UnderConstructionComponent />;
 }

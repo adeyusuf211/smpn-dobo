@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function DataPesertaDidikPage() {
-  return <h1>Halaman Data Peserta Didik</h1>;
+  return <UnderConstructionComponent />;
 }

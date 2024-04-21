@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function PengembanganDiriPage() {
-  return <h1>Halaman Pengembangan Diri</h1>;
+  return <UnderConstructionComponent />;
 }

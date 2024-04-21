@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function RedaksiPendidikPage() {
-  return <h1>Halaman Redaksi Pendidik</h1>;
+  return <UnderConstructionComponent />;
 }

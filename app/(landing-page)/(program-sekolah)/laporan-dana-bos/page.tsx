@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function LaporanDanaBosPage() {
-  return <h1>Halaman Laporan Dana BOS</h1>;
+  return <UnderConstructionComponent />;
 }

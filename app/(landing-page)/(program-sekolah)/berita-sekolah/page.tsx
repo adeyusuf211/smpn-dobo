@@ -1,3 +1,5 @@
+import UnderConstructionComponent from "@/components/share/under-construction";
+
 export default function BeritaSekolahPage() {
-  return <h1>Halaman Berita Sekolah</h1>;
+  return <UnderConstructionComponent />;
 }
