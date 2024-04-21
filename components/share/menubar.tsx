@@ -21,6 +21,8 @@ import { useState } from "react";
 export default function NavbarComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
+  const styleMenuBarContent = "uppercase z-[100000]";
+
   return (
     <Menubar className="flex 2xl:w-[90vw] lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 justify-between 2xl:pl-[200px] lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 lg:rounded-tr-3xl rounded-none">
       <div className="flex">
@@ -54,7 +56,7 @@ export default function NavbarComponent() {
           <MenubarTrigger className="uppercase hover:cursor-pointer">
             PROGRAM SEKOLAH
           </MenubarTrigger>
-          <MenubarContent className="uppercase">
+          <MenubarContent className={styleMenuBarContent}>
             {MENU_PROGRAM_SEKOLAH.map((menu) => (
               <MenubarItem key={menu.title}>
                 <Link href={menu.href} className="w-full">
@@ -66,7 +68,7 @@ export default function NavbarComponent() {
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className="uppercase">WARGA SEKOLAH</MenubarTrigger>
-          <MenubarContent className="uppercase">
+          <MenubarContent className={styleMenuBarContent}>
             {MENU_WARGA_SEKOLAH.map((menu) => (
               <MenubarItem key={menu.title}>
                 <Link href={menu.href} className="w-full">
@@ -78,7 +80,7 @@ export default function NavbarComponent() {
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className="uppercase">LIBRARI</MenubarTrigger>
-          <MenubarContent className="uppercase">
+          <MenubarContent className={styleMenuBarContent}>
             {MENU_LIBRARI.map((menu) => (
               <MenubarItem key={menu.title}>
                 <Link href={menu.href} className="w-full">
@@ -105,7 +107,7 @@ export default function NavbarComponent() {
               <MenubarTrigger className="uppercase">
                 PROGRAM SEKOLAH
               </MenubarTrigger>
-              <MenubarContent className="uppercase ml-24">
+              <MenubarContent className={`${styleMenuBarContent} ml-24`}>
                 {MENU_PROGRAM_SEKOLAH.map((menu) => (
                   <MenubarItem key={menu.title} className="w-full">
                     <Link href={menu.href} className="w-full">
@@ -119,7 +121,7 @@ export default function NavbarComponent() {
               <MenubarTrigger className="uppercase">
                 WARGA SEKOLAH
               </MenubarTrigger>
-              <MenubarContent className="uppercase ml-24">
+              <MenubarContent className={`${styleMenuBarContent} ml-24`}>
                 {MENU_WARGA_SEKOLAH.map((menu) => (
                   <MenubarItem key={menu.title}>
                     <Link href={menu.href} className="w-full">
@@ -131,7 +133,7 @@ export default function NavbarComponent() {
             </MenubarMenu>
             <MenubarMenu>
               <MenubarTrigger className="uppercase">LIBRARI</MenubarTrigger>
-              <MenubarContent className="uppercase ml-24">
+              <MenubarContent className={`${styleMenuBarContent} ml-24`}>
                 {MENU_LIBRARI.map((menu) => (
                   <MenubarItem key={menu.title}>
                     <Link href={menu.href} className="w-full">
