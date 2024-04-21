@@ -34,7 +34,10 @@ export default function SeragamSekolahComponent() {
         </div>
         <div className="w-full h-full bg-blue-secondary p-4 flex justify-between pr-32">
           {LIST_SERAGAM.map((seragam) => (
-            <h3 className="font-bold text-xl text-white uppercase">
+            <h3
+              className="font-bold text-xl text-white uppercase"
+              key={seragam}
+            >
               {seragam}
             </h3>
           ))}
