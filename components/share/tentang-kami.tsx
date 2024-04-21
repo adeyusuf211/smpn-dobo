@@ -8,7 +8,7 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
       <div className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mt-40">
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="w-full h-full flex justify-center items-center p-5">
-            <div className="lg:w-[850px] w-full lg:p-10 p-6 bg-gray-200 absolute lg:right-10 right-0">
+            <div className="lg:w-[850px] w-full lg:p-10 p-6 bg-gray-200 absolute right-0">
               <h3 className="font-semibold text-2xl uppercase text-gray-700 text-center">
                 deskripsi
               </h3>

@@ -22,7 +22,7 @@ export default function NavbarComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Menubar className="flex lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 lg:justify-between justify-center lg:gap-0 gap-10 lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 lg:rounded-tr-3xl rounded-none">
+    <Menubar className="flex 2xl:w-[90vw] lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 justify-between 2xl:pl-[200px] lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none md:mt-10 mt-0 lg:rounded-tr-3xl rounded-none">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">
@@ -89,7 +89,7 @@ export default function NavbarComponent() {
           </MenubarContent>
         </MenubarMenu>
       </div>
-      <div className="lg:hidden flex flex-col">
+      <div className="lg:hidden flex flex-col pr-6">
         <CiMenuFries
           className="lg:hidden flex w-[30px] h-[30px] font-bold cursor-pointer relative"
           onClick={() => setShowMenu(!showMenu)}

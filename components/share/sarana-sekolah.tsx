@@ -1,7 +1,7 @@
 export default function SaranaSekolahComponent() {
   return (
     <section id="sarana-sekolah">
-      <div className="w-full flex flex-col lg:p-4 px-6 py-4 my-5">
+      <div className="w-full flex flex-col my-10">
         <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3 lg:mt-0 mt-[40rem]">
           sarana dan fasilitas sekolah
         </h1>
