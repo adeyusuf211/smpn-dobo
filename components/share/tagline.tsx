@@ -5,10 +5,10 @@ interface TaglineProps {
 export default function TaglineComponent({ showAddressLabel }: TaglineProps) {
   return (
     <div className="flex flex-col w-full justify-end items-start py-4">
-      <h1 className="2xl:text-3xl xl:text-3xl text-xl uppercase bg-yellow-400 font-semibold p-4">
+      <h1 className="2xl:text-3xl xl:text-3xl text-xl uppercase bg-yellow-400 font-semibold p-4 rounded-r-full pr-10">
         mutiara
       </h1>
-      <h1 className="2xl:text-3xl xl:text-3xl text-xl uppercase bg-blue-400 font-semibold p-4 text-white">
+      <h1 className="2xl:text-3xl xl:text-3xl text-xl uppercase bg-blue-400 font-semibold p-4 text-white rounded-r-full pr-10">
         mutu, intelektual dan karakter
       </h1>
       {showAddressLabel && (

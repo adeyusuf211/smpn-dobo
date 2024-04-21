@@ -22,7 +22,7 @@ export default function NavbarComponent() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Menubar className="flex w-full h-[80px] justify-between items-center absolute top-0 left-0 lg:px-[150px] px-[30px]">
+    <Menubar className="flex lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 gap-20 items-center fixed top-0 left-0 z-[10000] border-none mt-10 rounded-tr-3xl ">
       <div className="flex">
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">
@@ -34,7 +34,7 @@ export default function NavbarComponent() {
         <MenubarMenu>
           <MenubarTrigger className="flex flex-col -ml-3">
             <Link href="/">
-              <h1 className="lg:text-3xl text-md uppercase font-bold">
+              <h1 className="lg:text-2xl text-md uppercase font-bold">
                 SMP NEGERI 1 DOBO
               </h1>
               <p className="text-start lg:text-xl text-sm font-normal">
@@ -51,7 +51,9 @@ export default function NavbarComponent() {
           </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger className="uppercase">PROGRAM SEKOLAH</MenubarTrigger>
+          <MenubarTrigger className="uppercase hover:cursor-pointer">
+            PROGRAM SEKOLAH
+          </MenubarTrigger>
           <MenubarContent className="uppercase">
             {MENU_PROGRAM_SEKOLAH.map((menu) => (
               <MenubarItem key={menu.title}>

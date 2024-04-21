@@ -1,57 +1,54 @@
 import { Button } from "@/components/ui/button";
+import CustomCardBackground from "@/public/assets/images/custom-card.svg";
+import Image from "next/image";
+
+interface ProfileData {
+  image: string;
+  text: string;
+}
+
+const PROFILE_DATA: ProfileData[] = [
+  {
+    image: "",
+    text: "sambutan kepala sekolah",
+  },
+  {
+    image: "",
+    text: "visi misi",
+  },
+  {
+    image: "",
+    text: "tentang kami",
+  },
+] as const;
 
 export default function ProfileComponent() {
   return (
-    <div className="w-full h-full bg-blue-700 py-8 flex flex-col lg:gap-5 gap-2 items-center">
+    <div className="w-full min-h-screen h-full py-20 flex flex-col lg:gap-5 gap-2 items-center">
       <h1 className="text-center font-semibold lg:text-5xl text-2xl uppercase text-gray-100">
         Profil Sekolah
       </h1>
-      <div className="flex lg:flex-row flex-col lg:gap-5 gap-1 mt-5">
-        <div className="flex p-6 min-w-[200px] w-full min-h-[400px] h-full relative">
-          <div className="w-full h-full flex flex-col gap-3">
-            <div className="w-full h-full min-h-[300px] p-6 bg-yellow-400"></div>
-            <h1 className="lg:text-2xl text-lg font-semibold text-white uppercase">
-              Sambutan Kepala Sekolah
-            </h1>
-            <Button
-              variant="destructive"
-              size="lg"
-              className="rounded-full uppercase"
-            >
-              more info
+      <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 -mt-40 lg:px-[150px] px-5">
+        {PROFILE_DATA.map((profile) => (
+          <div className="flex flex-col w-full gap-5">
+            <div className="relative">
+              <div className=" w-[100px] h-[650px]">
+                <Image
+                  src={CustomCardBackground}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  fill
+                  alt="custom-card-background"
+                />
+              </div>
+            </div>
+            <h3 className="font-bold text-2xl text-white w-full uppercase">
+              {profile.text}
+            </h3>
+            <Button variant="destructive" size="lg" className="rounded-full">
+              Read More
             </Button>
           </div>
-        </div>
-        <div className="flex p-6 min-w-[200px] w-full min-h-[400px] h-full relative">
-          <div className="w-full h-full flex flex-col gap-3">
-            <div className="w-full h-full min-h-[300px] p-6 bg-yellow-400"></div>
-            <h1 className="lg:text-2xl text-lg font-semibold text-white uppercase">
-              Visi Misi
-            </h1>
-            <Button
-              variant="destructive"
-              size="lg"
-              className="rounded-full uppercase"
-            >
-              more info
-            </Button>
-          </div>
-        </div>
-        <div className="flex p-6 min-w-[200px] w-full min-h-[400px] h-full relative">
-          <div className="w-full h-full flex flex-col gap-3">
-            <div className="w-full h-full min-h-[300px] p-6 bg-yellow-400"></div>
-            <h1 className="lg:text-2xl text-lg font-semibold text-white uppercase">
-              Tentang Kami
-            </h1>
-            <Button
-              variant="destructive"
-              size="lg"
-              className="rounded-full uppercase"
-            >
-              more info
-            </Button>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import ProfileComponent from "@/components/share/profile";
 
 export default function HomePageComponent() {
   return (
-    <div className="2xl:px-[250px] lg:px-[150px] px-[20px]">
+    <div className="overflow-x-hidden bg-hero">
       <NavbarComponent />
       <HeroComponent />
       <ProfileComponent />
