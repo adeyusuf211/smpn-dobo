@@ -1,5 +1,12 @@
 import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "SMP NEGERI 1 DOBO | MPLS",
+  description:
+    "Halaman untum masa pengenalan lingkungan sekolah SMP Negeri 1 DOBO",
+};
 
 export default function MplsPage() {
   return (
