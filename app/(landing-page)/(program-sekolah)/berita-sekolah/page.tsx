@@ -48,6 +48,7 @@ export default function BeritaSekolahPage() {
             title="Your Info Title Here"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
           />
+          w
         </div>
         <div className="flex flex-col gap-3 lg:w-[60%] w-full h-full bg-white my-20 lg:p-10 py-10 px-4">
           <h3 className="font-bold text-2xl mb-2">Berita Populer</h3>
