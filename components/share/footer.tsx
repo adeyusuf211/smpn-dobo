@@ -9,12 +9,11 @@ export default function FooterComponent() {
           <iframe
             title="peta smp negeri 1 dobo"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126899.40438285223!2d106.71173326225117!3d-6.315324544154597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1714526588190!5m2!1sid!2sid"
-            width="600"
-            height="450"
+            className="lg:w-[600px] w-full"
             loading="lazy"
           />
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 w-full">
           <h3 className="font-semibold text-xl text-gray-700">
             Informasi Sekolah
           </h3>
@@ -49,7 +48,7 @@ export default function FooterComponent() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full">
           <h3 className="font-semibold text-xl text-gray-700 mb-5">
             Agenda Sekolah
           </h3>
@@ -109,7 +108,7 @@ export default function FooterComponent() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center text-lg">
+      <div className="flex justify-center items-center lg:text-lg text-sm">
         <h3>
           SMP Negeri 1 DOBO - Interchange 2.1 | {new Date().getFullYear()}
         </h3>

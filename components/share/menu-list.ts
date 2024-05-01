@@ -62,7 +62,7 @@ export const MENU_LIBRARI: { title: string; href: string }[] = [
     href: "/redaksi-pendidik",
   },
   {
-    title: "Pengumunan",
+    title: "Pengumuman",
     href: "/pengumuman",
   },
 ] as const;
