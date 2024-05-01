@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import CardWithImageComponent from "@/components/share/card-with-image";
+import FooterComponent from "@/components/share/footer";
 
 import ExampleImage1 from "@/public/assets/images/example-1.svg";
 import ExampleImage2 from "@/public/assets/images/example-2.svg";
@@ -76,6 +75,7 @@ export default function GaleriFotoPage() {
           title="Your title for image here"
         />
       </div>
+      <FooterComponent />
     </div>
   );
 }
