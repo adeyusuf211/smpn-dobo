@@ -1,3 +1,4 @@
+import FooterComponent from "@/components/share/footer";
 import SimpleCardComponent from "@/components/share/simple-card";
 import { Metadata } from "next";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 export default function DataPesertaDidikPage() {
   return (
-    <div className="flex flex-col gap-10 w-full min-h-screen h-full mb-10">
+    <div className="flex flex-col gap-10 w-full min-h-screen h-full">
       <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
         Data Peserta Didik
       </h1>
@@ -41,6 +42,7 @@ export default function DataPesertaDidikPage() {
           buttons={["Guru Vokasi", "Wali Kelas X"]}
         />
       </div>
+      <FooterComponent />
     </div>
   );
 }

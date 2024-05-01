@@ -1,5 +1,6 @@
 import AnotherComponent from "@/components/share/another";
 import ConsultationComponent from "@/components/share/consultation";
+import FooterComponent from "@/components/share/footer";
 import HeroComponent from "@/components/share/hero";
 import NavbarComponent from "@/components/share/menubar";
 import MotivationComponent from "@/components/share/motivation";
@@ -15,6 +16,7 @@ export default function HomePageComponent() {
       <ConsultationComponent />
       <MotivationComponent />
       <HeroComponent showAddressLabel={true} />
+      <FooterComponent />
     </div>
   );
 }

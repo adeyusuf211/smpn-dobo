@@ -1,3 +1,4 @@
+import FooterComponent from "@/components/share/footer";
 import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -168,6 +169,7 @@ export default function MplsPage() {
           </div>
         </div>
       </div>
+      <FooterComponent />
     </div>
   );
 }
