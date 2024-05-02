@@ -1,4 +1,4 @@
-import FooterComponent from "@/components/share/footer";
+import FooterComponent from "@/components/share/footer/footer";
 import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
 import { Metadata } from "next";
 import Image from "next/image";

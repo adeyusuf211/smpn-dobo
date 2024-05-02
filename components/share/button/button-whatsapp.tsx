@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 export default function ButtonWhatsappComponent() {
   return (

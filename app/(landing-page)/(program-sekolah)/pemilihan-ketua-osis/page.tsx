@@ -1,7 +1,7 @@
-import ChartBarComponent from "@/components/share/chart-bar";
-import ChartPieComponent from "@/components/share/chart-pie";
-import FooterComponent from "@/components/share/footer";
-import VideoPlayerComponent from "@/components/share/video-player";
+import ChartBarComponent from "@/components/share/chart/chart-bar";
+import ChartPieComponent from "@/components/share/chart/chart-pie";
+import FooterComponent from "@/components/share/footer/footer";
+import VideoPlayerComponent from "@/components/share/video/video-player";
 
 const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 

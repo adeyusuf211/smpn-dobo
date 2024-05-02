@@ -1,5 +1,5 @@
-import CardWithImageComponent from "@/components/share/card-with-image";
-import FooterComponent from "@/components/share/footer";
+import CardWithImageComponent from "@/components/share/card/card-with-image";
+import FooterComponent from "@/components/share/footer/footer";
 
 import ExampleImage1 from "@/public/assets/images/example-1.svg";
 import ExampleImage2 from "@/public/assets/images/example-2.svg";

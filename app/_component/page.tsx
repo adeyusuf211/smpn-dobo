@@ -1,8 +1,8 @@
 import AnotherComponent from "@/components/share/another";
 import ConsultationComponent from "@/components/share/consultation";
-import FooterComponent from "@/components/share/footer";
+import FooterComponent from "@/components/share/footer/footer";
 import HeroComponent from "@/components/share/hero";
-import NavbarComponent from "@/components/share/menubar";
+import NavbarComponent from "@/components/share/navbar/menubar";
 import MotivationComponent from "@/components/share/motivation";
 import ProfileComponent from "@/components/share/profile";
 

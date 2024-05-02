@@ -1,5 +1,5 @@
-import ButtonWhatsappComponent from "./button-whatsapp";
-import CardConsultationContact from "./card-consultation-contact";
+import ButtonWhatsappComponent from "./button/button-whatsapp";
+import CardConsultationContact from "./card/card-consultation-contact";
 
 export default function ConsultationComponent() {
   return (

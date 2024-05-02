@@ -1,5 +1,5 @@
-import FooterComponent from "@/components/share/footer";
-import SimpleCardComponent from "@/components/share/simple-card";
+import FooterComponent from "@/components/share/footer/footer";
+import SimpleCardComponent from "@/components/share/card/simple-card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
-import FooterComponent from "@/components/share/footer";
-import VideoPlayerComponent from "@/components/share/video-player";
+import FooterComponent from "@/components/share/footer/footer";
+import VideoPlayerComponent from "@/components/share/video/video-player";
 
 const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 
