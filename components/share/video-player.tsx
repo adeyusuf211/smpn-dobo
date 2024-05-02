@@ -14,7 +14,7 @@ export default function VideoPlayerComponent({
   return (
     <div className="w-full">
       <iframe
-        className="w-full"
+        className="w-full h-full"
         // width="350"
         src={sourceVideo}
         title={title}
