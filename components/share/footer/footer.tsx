@@ -1,5 +1,6 @@
 import { FaInfo, FaMapMarkerAlt } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
+import AgendaComponent from "../agenda";
 
 export default function FooterComponent() {
   return (
@@ -52,60 +53,27 @@ export default function FooterComponent() {
           <h3 className="font-semibold text-xl text-gray-700 mb-5">
             Agenda Sekolah
           </h3>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3">
-              <div className="bg-blue-600 w-[80px] h-[80px] flex flex-col gap-2 justify-center items-center">
-                <h1 className="flex justify-center items-center font-bold text-2xl text-white">
-                  01
-                </h1>
-                <p className="text-[12px] text-white">Mei 2024</p>
-              </div>
-              <div className="flex flex-col">
-                <h3 className="font-semibold lg:text-base text-sm">
-                  Hari Buruh Internasional
-                </h3>
-                <p className="font-semibold lg:text-sm text-[12px]  text-red-600">
-                  Libur Sekolah
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3">
-              <div className="bg-blue-600 w-[80px] h-[80px] flex flex-col gap-2 justify-center items-center">
-                <h1 className="flex justify-center items-center font-bold text-2xl text-white">
-                  17
-                </h1>
-                <p className="text-[12px] text-white">Agu 2024</p>
-              </div>
-              <div className="flex flex-col">
-                <h3 className="font-semibold lg:text-base text-sm">
-                  Kemerdekaan Indonesia
-                </h3>
-                <p className="font-semibold lg:text-sm text-[12px]  text-red-600">
-                  Libur Sekolah
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3">
-              <div className="bg-blue-600 w-[80px] h-[80px] flex flex-col gap-2 justify-center items-center">
-                <h1 className="flex justify-center items-center font-bold text-2xl text-white">
-                  18
-                </h1>
-                <p className="text-[12px] text-white">Agu 2024</p>
-              </div>
-              <div className="flex flex-col">
-                <h3 className="font-semibold lg:text-base text-sm">
-                  Perlombaan 17 Agustus
-                </h3>
-                <p className="font-semibold lg:text-sm text-[12px]  text-blue-600">
-                  Waktu: 07.00 - 15.00
-                </p>
-              </div>
-            </div>
-          </div>
+          <AgendaComponent
+            date="01"
+            monthAndYear="Mei 2024"
+            title="Hari Buruh"
+            description="Libur Sekolah"
+            isHoliday={true}
+          />
+          <AgendaComponent
+            date="17"
+            monthAndYear="Agu 2024"
+            title="Proklamasi Kemerdekaan"
+            description="Libur Sekolah"
+            isHoliday={true}
+          />
+          <AgendaComponent
+            date="18"
+            monthAndYear="Agu 2024"
+            title="Perlombaan 17 Agustus"
+            description="Waktu: 08.00 - 15.00 WIB"
+            isHoliday={false}
+          />
         </div>
       </div>
       <div className="flex justify-center items-center lg:text-lg text-sm">
