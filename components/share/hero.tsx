@@ -4,7 +4,7 @@ interface HeroProps {
 
 import Image from "next/image";
 import TaglineComponent from "./tagline";
-import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
+import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.png";
 
 export default function HeroComponent({ showAddressLabel }: HeroProps) {
   return (
@@ -17,12 +17,17 @@ export default function HeroComponent({ showAddressLabel }: HeroProps) {
             </h3>
           </div>
         </div>
-        <div className="w-[550px] h-[600px] lg:p-4 p-0 absolute bottom-0 lg:left-10 -left-10 mb-5">
+        <div
+          className={`min-w-[750px] h-[600px] lg:p-4 p-0 absolute ${
+            showAddressLabel ? "bottom-20" : "bottom-0"
+          } lg:left-10 -left-10 mb-5`}
+        >
           <Image
             src={ModelSekolahImage}
             fill
             style={{ objectFit: "cover" }}
             alt="model"
+            priority={true}
           />
         </div>
       </div>

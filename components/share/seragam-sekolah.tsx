@@ -1,5 +1,8 @@
 import Image from "next/image";
 import ListBackgroundCard from "@/public/assets/images/background-card.svg";
+import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.png";
+import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.png";
+import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.png";
 
 const LIST_SERAGAM: string[] = [
   "biru dan putih",
@@ -15,10 +18,10 @@ export default function SeragamSekolahComponent() {
       <h1 className="lg:text-5xl text-2xl font-semibold uppercase text-center text-white p-6">
         seragam sekolah
       </h1>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col">
         <div className="flex justify-end w-full -mt-[300px]">
           <div className="relative w-full">
-            <div className=" w-full h-[650px] flex justify-end lg:ml-[150px] ml-0 p-5">
+            <div className="w-full h-[450px] flex justify-end lg:ml-[150px] ml-0 p-5">
               <Image
                 src={ListBackgroundCard}
                 style={{
@@ -28,6 +31,35 @@ export default function SeragamSekolahComponent() {
                 fill
                 alt="custom-card-background"
               />
+            </div>
+            <div className="flex">
+              <div className="flex z-10">
+                <Image
+                  src={SeragamPutihBiru}
+                  width={300}
+                  height={300}
+                  alt="seragam-batik"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
+              <div className="flex z-10">
+                <Image
+                  src={SeragamBatik1}
+                  width={300}
+                  height={300}
+                  alt="seragam-batik"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
+              <div className="flex z-10">
+                <Image
+                  src={SeragamBatik2}
+                  width={300}
+                  height={300}
+                  alt="seragam-batik"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
+              </div>
             </div>
           </div>
         </div>

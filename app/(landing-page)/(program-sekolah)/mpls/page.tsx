@@ -1,7 +1,22 @@
 import FooterComponent from "@/components/share/footer/footer";
+import VideoPlayerComponent from "@/components/share/video/video-player";
 import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
+import FotoGuru1 from "@/public/assets/images/Foto Guru/foto-1.jpg";
+import FotoGuru2 from "@/public/assets/images/Foto Guru/foto-2.jpg";
+import FotoGuru3 from "@/public/assets/images/Foto Guru/foto-3.jpg";
+import FotoGuru4 from "@/public/assets/images/Foto Guru/foto-4.jpg";
+import FotoGuru5 from "@/public/assets/images/Foto Guru/foto-5.jpg";
+import FotoGuru6 from "@/public/assets/images/Foto Guru/foto-6.jpg";
+import FotoGuru7 from "@/public/assets/images/Foto Guru/foto-7.jpg";
+import FotoGuru8 from "@/public/assets/images/Foto Guru/foto-8.jpg";
+import FotoGuru9 from "@/public/assets/images/Foto Guru/foto-9.jpg";
+import FotoGuru10 from "@/public/assets/images/Foto Guru/foto-10.jpg";
+import FotoGuru11 from "@/public/assets/images/Foto Guru/foto-11.jpg";
+import FotoGuru12 from "@/public/assets/images/Foto Guru/foto-12.jpg";
 import { Metadata } from "next";
 import Image from "next/image";
+
+const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 
 export const metadata: Metadata = {
   title: "SMP NEGERI 1 DOBO | MPLS",
@@ -49,85 +64,49 @@ export default function MplsPage() {
         </h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
           <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru1} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru2} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru3} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru4} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru5} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru6} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru7} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru8} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
+            <Image src={FotoGuru9} style={{ objectFit: "cover" }} alt="model" />
+          </div>
+          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
             <Image
-              src={ModelSekolahImage}
+              src={FotoGuru10}
               style={{ objectFit: "cover" }}
               alt="model"
             />
           </div>
           <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
             <Image
-              src={ModelSekolahImage}
+              src={FotoGuru11}
               style={{ objectFit: "cover" }}
               alt="model"
             />
           </div>
           <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
             <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
+              src={FotoGuru12}
               style={{ objectFit: "cover" }}
               alt="model"
             />
@@ -138,35 +117,11 @@ export default function MplsPage() {
         <h1 className="text-white font-bold text-3xl text-center uppercase">
           Kumpulan video MPLS
         </h1>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={ModelSekolahImage}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
+          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
+          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
+          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
         </div>
       </div>
       <FooterComponent />
