@@ -45,7 +45,6 @@ import FotoGuru38 from "@/public/assets/images/Foto Guru/38.avif";
 import FotoGuru39 from "@/public/assets/images/Foto Guru/39.avif";
 import FotoGuru40 from "@/public/assets/images/Foto Guru/40.avif";
 import FotoGuru41 from "@/public/assets/images/Foto Guru/41.avif";
-import SimplePaginationComponent from "../pagination/simple-pagination";
 import { Button } from "@/components/ui/button";
 
 export default function TenagaPendidikDanPegawaiComponent() {
@@ -94,7 +93,7 @@ export default function TenagaPendidikDanPegawaiComponent() {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 8;
+  const imagesPerPage = 10;
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = imageList.slice(indexOfFirstImage, indexOfLastImage);
