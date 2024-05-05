@@ -1,38 +1,42 @@
 import FooterComponent from "@/components/share/footer/footer";
 import VideoPlayerComponent from "@/components/share/video/video-player";
 import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
-import FotoGuru1 from "@/public/assets/images/Foto Guru/foto-1.jpg";
-import FotoGuru2 from "@/public/assets/images/Foto Guru/foto-2.jpg";
-import FotoGuru3 from "@/public/assets/images/Foto Guru/foto-3.jpg";
-import FotoGuru4 from "@/public/assets/images/Foto Guru/foto-4.jpg";
-import FotoGuru5 from "@/public/assets/images/Foto Guru/foto-5.jpg";
-import FotoGuru6 from "@/public/assets/images/Foto Guru/foto-6.jpg";
-import FotoGuru7 from "@/public/assets/images/Foto Guru/foto-7.jpg";
-import FotoGuru8 from "@/public/assets/images/Foto Guru/foto-8.jpg";
-import FotoGuru9 from "@/public/assets/images/Foto Guru/foto-9.jpg";
-import FotoGuru10 from "@/public/assets/images/Foto Guru/foto-10.jpg";
-import FotoGuru11 from "@/public/assets/images/Foto Guru/foto-11.jpg";
-import FotoGuru12 from "@/public/assets/images/Foto Guru/foto-12.jpg";
-import { Metadata } from "next";
+
+import ModelSekolah from "@/public/assets/images/Foto Siswa/model.png";
+import FotoGuru1 from "@/public/assets/images/Foto Guru/1.avif";
+import FotoGuru2 from "@/public/assets/images/Foto Guru/2.avif";
+import FotoGuru3 from "@/public/assets/images/Foto Guru/3.avif";
+import FotoGuru4 from "@/public/assets/images/Foto Guru/4.avif";
+import FotoGuru5 from "@/public/assets/images/Foto Guru/5.avif";
+import FotoGuru6 from "@/public/assets/images/Foto Guru/6.avif";
+import FotoGuru7 from "@/public/assets/images/Foto Guru/7.avif";
+import FotoGuru8 from "@/public/assets/images/Foto Guru/8.avif";
+
 import Image from "next/image";
 
 const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 
-export const metadata: Metadata = {
-  title: "SMP NEGERI 1 DOBO | MPLS",
-  description:
-    "Halaman untum masa pengenalan lingkungan sekolah SMP Negeri 1 DOBO",
-};
-
 export default function MplsPage() {
+  const imagesLists = [
+    FotoGuru1,
+    FotoGuru2,
+    FotoGuru3,
+    FotoGuru4,
+    FotoGuru5,
+    FotoGuru6,
+    FotoGuru7,
+    FotoGuru8,
+  ];
+
   return (
     <div className="w-full min-h-screen h-full flex flex-col gap-5 items-center">
       <div className="grid lg:grid-cols-2 grid-cols-1 h-full min-h-screen mt-20">
-        <div className="relative bottom-0 lg:p-4 p-0 mb-5">
+        <div className="relative bottom-0 mt-32 lg:p-4 p-0">
           <Image
-            src={ModelSekolahImage}
+            src={ModelSekolah}
             style={{ objectFit: "cover" }}
             alt="model"
+            className="w-full h-[500px]"
           />
         </div>
         <div className="w-full h-full flex items-center">
@@ -59,62 +63,28 @@ export default function MplsPage() {
         </div>
       </div>
       <div className="relative flex flex-col gap-10 w-full h-full">
-        <h1 className="text-white font-bold text-3xl mt-10 text-center uppercase">
+        <h1 className="text-white font-bold mt-10 text-center uppercase 2xl:text-6xl lg:text-4xl text-xl">
           Guru Tutor Pengajar
         </h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru1} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru2} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru3} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru4} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru5} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru6} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru7} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru8} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image src={FotoGuru9} style={{ objectFit: "cover" }} alt="model" />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={FotoGuru10}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={FotoGuru11}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
-          <div className="p-6 bg-white flex justify-center items-center w-full min-h-[300px] h-full">
-            <Image
-              src={FotoGuru12}
-              style={{ objectFit: "cover" }}
-              alt="model"
-            />
-          </div>
+          {imagesLists.map((src, index) => (
+            <div
+              className="p-2 bg-white flex justify-center items-center w-full min-h-[300px] h-full"
+              key={index}
+            >
+              <Image
+                src={src}
+                style={{ objectFit: "cover" }}
+                alt="model"
+                loading="lazy"
+                className="w-full h-full"
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className="relative flex flex-col gap-10 w-full h-full my-10">
-        <h1 className="text-white font-bold text-3xl text-center uppercase">
+        <h1 className="text-white font-bold 2xl:text-6xl lg:text-4xl text-xl text-center uppercase">
           Kumpulan video MPLS
         </h1>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">

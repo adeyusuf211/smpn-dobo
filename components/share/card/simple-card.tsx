@@ -1,13 +1,14 @@
-import Image from "next/image";
-import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
+import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 
 interface SimpleCardCompoenntProps {
+  image: StaticImageData;
   name: string;
   buttons: string[];
 }
 
 export default function SimpleCardComponent({
+  image,
   name,
   buttons,
 }: SimpleCardCompoenntProps) {
@@ -15,10 +16,11 @@ export default function SimpleCardComponent({
     <div className="flex flex-col gap-2 bg-white">
       <div className="p-6 flex bg-blue-300 justify-center items-center w-full min-h-[300px] h-full relative">
         <Image
-          src={ModelSekolahImage}
+          src={image}
           style={{ objectFit: "cover" }}
           alt="model"
-          className="absolute bottom-0"
+          className="absolute bottom-0 w-full h-full flex"
+          loading="lazy"
         />
       </div>
       <h3 className="font-semibold text-xl text-gray-700 text-center">
