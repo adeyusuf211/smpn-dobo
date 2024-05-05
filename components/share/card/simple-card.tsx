@@ -5,15 +5,17 @@ interface SimpleCardCompoenntProps {
   image: StaticImageData;
   name: string;
   buttons: string[];
+  key?: any;
 }
 
 export default function SimpleCardComponent({
   image,
   name,
   buttons,
+  key,
 }: SimpleCardCompoenntProps) {
   return (
-    <div className="flex flex-col gap-2 bg-white">
+    <div className="flex flex-col gap-2 bg-white" key={key}>
       <div className="p-6 flex bg-blue-300 justify-center items-center w-full min-h-[300px] h-full relative">
         <Image
           src={image}
