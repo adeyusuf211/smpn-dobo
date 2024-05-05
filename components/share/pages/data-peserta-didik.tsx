@@ -2,7 +2,8 @@
 
 import ModelSekolah from "@/public/assets/images/Foto Siswa/model.png";
 
-import SimpleCardComponent from "../card/simple-card";
+import SimpleCardComponent from "@/components/share/card/simple-card";
+import FooterComponent from "@/components/share/footer/footer";
 
 export default function DataPesertaDidikComponent() {
   return (
