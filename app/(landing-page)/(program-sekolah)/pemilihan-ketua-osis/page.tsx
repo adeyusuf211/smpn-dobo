@@ -27,9 +27,9 @@ export default function PemilihanKetuaOSISPage() {
         <h3 className="text-center font-bold uppercase lg:text-4xl text-xl text-blue-500">
           Perolehan Suara Sementara
         </h3>
-        <div className="flex lg:flex-row flex-col gap-10">
+        <div className="flex w-full">
           <ChartBarComponent />
-          <ChartPieComponent />
+          {/* <ChartPieComponent /> */}
         </div>
       </div>
       <div className="w-full h-full my-10 bg-white p-10">
