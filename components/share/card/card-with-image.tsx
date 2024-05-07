@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface CardWithImageComponentProps {
   readonly badge?: string;
-  readonly imageSource: string;
+  readonly imageSource: StaticImageData;
   readonly title?: string;
   readonly description?: string;
 }
@@ -14,9 +14,14 @@ export default function CardWithImageComponent({
   description,
 }: CardWithImageComponentProps) {
   return (
-    <div className="flex flex-col gap-10 bg-white p-5">
+    <div className="flex flex-col gap-10 bg-white p-3">
       <div className="flex justify-center items-center w-full min-h-[200px] h-full">
-        <Image src={imageSource} alt="model" loading="lazy" />
+        <Image
+          src={imageSource}
+          alt="model"
+          loading="lazy"
+          className="w-full object-contain flex"
+        />
       </div>
       <div className="flex flex-col gap-2">
         {badge ? (

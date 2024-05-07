@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import SimpleCardComponent from "@/components/share/card/simple-card";
-import FooterComponent from "@/components/share/footer/footer";
+import CardWithImageComponent from "../card/card-with-image";
 
+import { allImages as imageList } from "@/helpers/all-static-images";
+import FooterComponent from "../footer/footer";
 import { Button } from "@/components/ui/button";
-import { fotoGuruImages as imageList } from "@/helpers/all-static-images";
 
-export default function TenagaPendidikDanPegawaiComponent() {
+export default function GaleriFotoComponent() {
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 10;
+  const imagesPerPage = 8;
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = imageList.slice(indexOfFirstImage, indexOfLastImage);
@@ -50,17 +50,15 @@ export default function TenagaPendidikDanPegawaiComponent() {
   };
 
   return (
-    <div className="flex flex-col gap-10 w-full min-h-screen h-full">
-      <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
-        Tenaga Pendidik dan Pegawai
+    <div className="w-full h-full min-h-screen">
+      <h1 className="2xl:text-6xl lg:text-4xl text-2xl uppercase text-center font-semibold text-white mt-48">
+        Arsip Foto
       </h1>
-      <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-        {currentImages.map((src, index) => (
-          <SimpleCardComponent
-            image={src}
-            name="Your Name"
-            buttons={["Guru"]}
-            key={index}
+      <div className="my-20 grid 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+        {currentImages.map((image) => (
+          <CardWithImageComponent
+            imageSource={image}
+            title="Your title for image here"
           />
         ))}
       </div>
