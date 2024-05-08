@@ -1,16 +1,15 @@
 import FooterComponent from "@/components/share/footer/footer";
 import VideoPlayerComponent from "@/components/share/video/video-player";
-import ModelSekolahImage from "@/public/assets/images/model-sekolah.png";
 
 import ModelSekolah from "@/public/assets/images/Foto Siswa/model.png";
-import FotoGuru1 from "@/public/assets/images/Foto Guru/1.avif";
-import FotoGuru2 from "@/public/assets/images/Foto Guru/2.avif";
-import FotoGuru3 from "@/public/assets/images/Foto Guru/3.avif";
-import FotoGuru4 from "@/public/assets/images/Foto Guru/4.avif";
-import FotoGuru5 from "@/public/assets/images/Foto Guru/5.avif";
-import FotoGuru6 from "@/public/assets/images/Foto Guru/6.avif";
-import FotoGuru7 from "@/public/assets/images/Foto Guru/7.avif";
-import FotoGuru8 from "@/public/assets/images/Foto Guru/8.avif";
+import FotoGuru1 from "@/public/assets/images/Foto Guru/1.webp";
+import FotoGuru2 from "@/public/assets/images/Foto Guru/2.webp";
+import FotoGuru3 from "@/public/assets/images/Foto Guru/3.webp";
+import FotoGuru4 from "@/public/assets/images/Foto Guru/4.webp";
+import FotoGuru5 from "@/public/assets/images/Foto Guru/5.webp";
+import FotoGuru6 from "@/public/assets/images/Foto Guru/6.webp";
+import FotoGuru7 from "@/public/assets/images/Foto Guru/7.webp";
+import FotoGuru8 from "@/public/assets/images/Foto Guru/8.webp";
 
 import Image from "next/image";
 
