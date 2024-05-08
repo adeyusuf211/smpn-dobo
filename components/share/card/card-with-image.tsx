@@ -14,7 +14,7 @@ export default function CardWithImageComponent({
   description,
 }: CardWithImageComponentProps) {
   return (
-    <div className="flex flex-col gap-10 bg-white p-3">
+    <div className="flex h-[600px] flex-col gap-10 bg-white p-3">
       <div className="flex justify-center items-center w-full min-h-[200px] h-full">
         <Image
           src={imageSource}
