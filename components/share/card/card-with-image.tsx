@@ -14,13 +14,13 @@ export default function CardWithImageComponent({
   description,
 }: CardWithImageComponentProps) {
   return (
-    <div className="flex h-[600px] flex-col gap-10 bg-white p-3">
-      <div className="flex justify-center items-center w-full min-h-[200px] h-full">
+    <div className="flex h-[500px] flex-col gap-10 bg-white p-3">
+      <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
         <Image
           src={imageSource}
           alt="model"
           loading="lazy"
-          className="w-full object-contain flex"
+          className="w-full object-cover flex"
         />
       </div>
       <div className="flex flex-col gap-2">

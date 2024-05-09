@@ -54,7 +54,7 @@ export default function GaleriFotoComponent() {
       <h1 className="2xl:text-6xl lg:text-4xl text-2xl uppercase text-center font-semibold text-white mt-48">
         Arsip Foto
       </h1>
-      <div className="my-20 grid 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+      <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
         {currentImages.map((image, index) => (
           <CardWithImageComponent
             imageSource={image}

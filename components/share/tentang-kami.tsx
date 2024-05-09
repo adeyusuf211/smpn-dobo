@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TaglineComponent from "@/components/share/tagline";
-import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.png";
+import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.webp";
 
 export default function TentangKamiComponent({ showAddressLabel }: any) {
   return (

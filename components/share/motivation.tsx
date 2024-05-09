@@ -12,7 +12,7 @@ export default function MotivationComponent() {
         </div>
       </div>
       <div className="flex flex-col gap-5 my-5">
-        <h1 className="text-2xl text-center font-semibold text-white">
+        <h1 className="2xl:text-6xl lg:text-4xl text-center font-semibold text-white">
           Pengembangan Projek Profil Pelajar Pancasila
         </h1>
         <div className="flex lg:flex-row flex-col gap-3">

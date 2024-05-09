@@ -1,6 +1,6 @@
 "use clinet";
 
-import ModelSekolah from "@/public/assets/images/Foto Siswa/model.png";
+import ModelSekolah from "@/public/assets/images/Foto Siswa/model.webp";
 
 import SimpleCardComponent from "@/components/share/card/simple-card";
 import FooterComponent from "@/components/share/footer/footer";

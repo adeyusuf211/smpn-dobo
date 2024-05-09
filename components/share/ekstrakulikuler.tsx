@@ -1,3 +1,7 @@
+import ImageCardComponent from "./card/image-card";
+
+import { fotoSiswaImages as ImagesLists } from "@/helpers/all-static-images";
+
 export default function ExtrakulikulerComponent() {
   return (
     <section id="ekstrakulikuler">
@@ -18,42 +22,13 @@ export default function ExtrakulikulerComponent() {
             </li>
           </ul>
           <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
+            {ImagesLists.map((image: any) => (
+              <ImageCardComponent
+                imageSource={image}
+                alt="example"
+                key={image}
+              />
+            ))}
           </div>
         </div>
       </div>

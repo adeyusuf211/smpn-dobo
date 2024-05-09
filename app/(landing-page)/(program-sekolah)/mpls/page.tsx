@@ -1,32 +1,15 @@
 import FooterComponent from "@/components/share/footer/footer";
 import VideoPlayerComponent from "@/components/share/video/video-player";
 
-import ModelSekolah from "@/public/assets/images/Foto Siswa/model.png";
-import FotoGuru1 from "@/public/assets/images/Foto Guru/1.webp";
-import FotoGuru2 from "@/public/assets/images/Foto Guru/2.webp";
-import FotoGuru3 from "@/public/assets/images/Foto Guru/3.webp";
-import FotoGuru4 from "@/public/assets/images/Foto Guru/4.webp";
-import FotoGuru5 from "@/public/assets/images/Foto Guru/5.webp";
-import FotoGuru6 from "@/public/assets/images/Foto Guru/6.webp";
-import FotoGuru7 from "@/public/assets/images/Foto Guru/7.webp";
-import FotoGuru8 from "@/public/assets/images/Foto Guru/8.webp";
+import ModelSekolah from "@/public/assets/images/Foto Siswa/model.webp";
+
+import { fotoGuruImages as imagesLists } from "@/helpers/all-static-images";
 
 import Image from "next/image";
 
 const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 
 export default function MplsPage() {
-  const imagesLists = [
-    FotoGuru1,
-    FotoGuru2,
-    FotoGuru3,
-    FotoGuru4,
-    FotoGuru5,
-    FotoGuru6,
-    FotoGuru7,
-    FotoGuru8,
-  ];
-
   return (
     <div className="w-full min-h-screen h-full flex flex-col gap-5 items-center">
       <div className="grid lg:grid-cols-2 grid-cols-1 h-full min-h-screen mt-20">

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import ListBackgroundCard from "@/public/assets/images/background-card.svg";
-import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.png";
-import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.png";
-import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.png";
+import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.webp";
+import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.webp";
+import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.webp";
 
 const LIST_SERAGAM: string[] = [
   "biru dan putih",
