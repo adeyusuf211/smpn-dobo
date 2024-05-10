@@ -1,5 +1,5 @@
-import UnderConstructionComponent from "@/components/share/under-construction";
+import PPDBComponent from "@/components/share/pages/ppdb";
 
 export default function PPDBPage() {
-  return <UnderConstructionComponent />;
+  return <PPDBComponent />;
 }
