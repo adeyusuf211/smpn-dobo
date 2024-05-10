@@ -2,8 +2,8 @@ import DataPesertaDidikComponent from "@/components/share/pages/data-peserta-did
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SMP NEGERI 1 DOBO | Tenaga Pendidik dan Pegawai",
-  description: "Halaman Tenaga Pendidik dan Pegawai SMP Negeri 1 DOBO",
+  title: "SMP NEGERI 1 DOBO | Data Peserta Didik",
+  description: "Halaman Data Peserta Didik SMP Negeri 1 DOBO",
 };
 export default function DataPesertaDidikPage() {
   return <DataPesertaDidikComponent />;
