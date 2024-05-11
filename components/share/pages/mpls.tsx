@@ -10,7 +10,6 @@ import { fotoGuruImages as imagesLists } from "@/helpers/all-static-images";
 import { URL_YOUTUBE } from "@/helpers/all-static-videos";
 import { useState } from "react";
 
-import { allImages as imageList } from "@/helpers/all-static-images";
 import { Button } from "@/components/ui/button";
 
 export default function MPLSComponent() {
@@ -18,9 +17,9 @@ export default function MPLSComponent() {
   const imagesPerPage = 8;
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = imageList?.slice(indexOfFirstImage, indexOfLastImage);
+  const currentImages = imagesLists?.slice(indexOfFirstImage, indexOfLastImage);
 
-  const totalPages = Math.ceil(imageList?.length / imagesPerPage);
+  const totalPages = Math.ceil(imagesLists?.length / imagesPerPage);
 
   const paginate = (pageNumber: any) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
