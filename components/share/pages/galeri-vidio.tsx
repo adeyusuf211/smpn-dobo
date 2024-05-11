@@ -1,7 +1,6 @@
+import { URL_YOUTUBE } from "@/helpers/all-static-videos";
 import FooterComponent from "../footer/footer";
 import VideoPlayerComponent from "../video/video-player";
-
-const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 
 export default function GaleriVidioComponent() {
   return (
@@ -10,18 +9,9 @@ export default function GaleriVidioComponent() {
         Arsip Vidio
       </h1>
       <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
+        {URL_YOUTUBE?.map((url) => (
+          <VideoPlayerComponent title="Video 1" sourceVideo={url} key={url} />
+        ))}
       </div>
       <FooterComponent />
     </div>

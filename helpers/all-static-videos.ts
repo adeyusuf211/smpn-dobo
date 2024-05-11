@@ -1,0 +1,16 @@
+export const URL_YOUTUBE: string[] = [
+  "https://www.youtube.com/embed/aKYN6QXiXGM?si=WuhkeSVtlJ3U8tI_",
+  "https://www.youtube.com/embed/AOHrshoDKEo?si=y3Ye6V0UxAFqGzUn",
+  "https://www.youtube.com/embed/-QnWWHmxHmA?si=x1lvxhh-ZHAcXFjk",
+  "https://www.youtube.com/embed/pCgSagO6he4?si=GgAc34Dnj228amqg",
+  "https://www.youtube.com/embed/gahRckQMW78?si=VQAwp8fIDNNKdH2I",
+  "https://www.youtube.com/embed/wIqGNCKfTc8?si=Q6sMvksCo2djyJOJ",
+  "https://www.youtube.com/embed/QDELaGPgMYs?si=1XlPhgR598Pnj5Ls",
+  "https://www.youtube.com/embed/28R8QB3ineY?si=twQ9EAF7IQKfl5tS",
+  "https://www.youtube.com/embed/Xcd2hbfmFQM?si=fDBgjzxF-go86I0K",
+  "https://www.youtube.com/embed/gGwww9_qniQ?si=FTysY_qitzToNROf",
+  "https://www.youtube.com/embed/cplJcUb22QQ?si=ph8Y7cle94L5KwIq",
+  "https://www.youtube.com/embed/EeAsSaN-Fbk?si=DgksSQ_WRes-UTOd",
+  "https://www.youtube.com/embed/oldKMpXZ4A4?si=BWAsB5j0nSbIGN_E",
+  "https://www.youtube.com/embed/bbhzVZs7DVU?si=vmy6qeKRRIPJdXSX",
+];
