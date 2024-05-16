@@ -1,10 +1,14 @@
+"use client";
+
+import { useAOS } from "@/hooks/useAOS";
 import ImageCardComponent from "./card/image-card";
 
 import { fotoSiswaImages as ImagesLists } from "@/helpers/all-static-images";
 
 export default function ExtrakulikulerComponent() {
+  useAOS();
   return (
-    <section id="ekstrakulikuler">
+    <section id="ekstrakulikuler" data-aos="fade-up">
       <div className="w-full flex flex-col my-10">
         <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3">
           program ekstra kulikuler

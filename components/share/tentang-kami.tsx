@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import TaglineComponent from "@/components/share/tagline";
 import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.webp";
+import { useAOS } from "@/hooks/useAOS";
 
 export default function TentangKamiComponent({ showAddressLabel }: any) {
+  useAOS();
   return (
     <section id="tentang-kami">
-      <div className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mt-40">
+      <div
+        className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mt-40"
+        data-aos="fade-up"
+      >
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="w-full h-full flex justify-center items-center p-5">
             <div className="lg:w-[750px] w-full lg:p-10 p-6 bg-gray-200 absolute right-0">

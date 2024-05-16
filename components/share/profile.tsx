@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { useAOS } from "@/hooks/useAOS";
 import CustomCardBackground from "@/public/assets/images/custom-card.svg";
 import Image from "next/image";
 
@@ -23,8 +26,13 @@ const PROFILE_DATA: ProfileData[] = [
 ] as const;
 
 export default function ProfileComponent() {
+  useAOS();
+
   return (
-    <div className="w-full min-h-screen h-full py-20 flex flex-col lg:gap-5 gap-2 items-center">
+    <div
+      className="w-full min-h-screen h-full py-20 flex flex-col lg:gap-5 gap-2 items-center"
+      data-aos="fade-up"
+    >
       <h1 className="text-center font-semibold lg:text-5xl text-2xl uppercase text-gray-100">
         Profil Sekolah
       </h1>

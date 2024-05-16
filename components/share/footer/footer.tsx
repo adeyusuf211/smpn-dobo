@@ -9,7 +9,7 @@ export default function FooterComponent() {
         <div className="flex">
           <iframe
             title="peta smp negeri 1 dobo"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126899.40438285223!2d106.71173326225117!3d-6.315324544154597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1714526588190!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.656485086666!2d134.22685327477757!3d-5.762476356900616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d2d9092d7c5e2ed%3A0xc50a6a748f9dee0d!2sSMPN%201%20DOBO%20PP%20Aru!5e0!3m2!1sid!2sid!4v1715844689532!5m2!1sid!2sid"
             className="lg:w-[600px] w-full"
             loading="lazy"
           />

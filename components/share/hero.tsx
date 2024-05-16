@@ -1,3 +1,5 @@
+"use client";
+
 interface HeroProps {
   readonly showAddressLabel?: boolean;
 }
@@ -6,9 +8,13 @@ import Image from "next/image";
 import TaglineComponent from "./tagline";
 import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.webp";
 
+import { useAOS } from "@/hooks/useAOS";
+
 export default function HeroComponent({ showAddressLabel }: HeroProps) {
+  useAOS();
+
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative" data-aos="fade-up">
       <div className="flex md:flex-row flex-col justify-between">
         <div className="w-full h-full flex justify-center items-center">
           <div className="lg:w-[200px] w-[150px] lg:h-[200px] h-[150px] flex justify-center items-center bg-gray-300 absolute lg:top-0 top-10 right-0 lg:mt-[300px] mt-[80px] mr-[10%] rounded-full">

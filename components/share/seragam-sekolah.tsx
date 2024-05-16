@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import ListBackgroundCard from "@/public/assets/images/background-card.svg";
 import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.webp";
 import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.webp";
 import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.webp";
+import { useAOS } from "@/hooks/useAOS";
 
 const LIST_SERAGAM: string[] = [
   "biru dan putih",
@@ -13,9 +16,13 @@ const LIST_SERAGAM: string[] = [
 ] as const;
 
 export default function SeragamSekolahComponent() {
+  useAOS();
   return (
     <section id="seragam">
-      <h1 className="lg:text-5xl text-2xl font-semibold uppercase text-center text-white p-6">
+      <h1
+        className="lg:text-5xl text-2xl font-semibold uppercase text-center text-white p-6"
+        data-aos="fade-up"
+      >
         seragam sekolah
       </h1>
       <div className="flex flex-col">

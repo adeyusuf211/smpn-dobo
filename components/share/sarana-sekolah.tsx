@@ -1,6 +1,11 @@
+"use client";
+
+import { useAOS } from "@/hooks/useAOS";
+
 export default function SaranaSekolahComponent() {
+  useAOS();
   return (
-    <section id="sarana-sekolah">
+    <section id="sarana-sekolah" data-aos="fade-up">
       <div className="w-full flex flex-col my-10">
         <h1 className="text-center font-semibold text-white uppercase lg:text-5xl text-2xl mb-3 lg:mt-0 mt-[40rem]">
           sarana dan fasilitas sekolah
