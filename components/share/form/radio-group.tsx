@@ -21,6 +21,9 @@ export function RadioGroupComponent({ contentList }: RadioGroupProps) {
         <div
           className="flex items-center space-x-2 p-5 bg-white-100 hover:bg-blue-100 transition-all"
           onClick={() => handleDivClick(content.value)}
+          key={content.value}
+          role="button"
+          tabIndex={0}
         >
           <RadioGroupItem value={content.value} id={content.value} />
           <Label htmlFor={content.value} onClick={(e) => e.stopPropagation()}>

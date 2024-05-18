@@ -13,12 +13,12 @@ import { Button } from "@/components/ui/button";
 import { RadioGroupComponent } from "../form/radio-group";
 
 interface SimpleModalDialogProps {
-  titleDialog: string;
-  modalHeaderTitle: string;
-  dialogWidth?: string;
-  titleButtonAdd?: string;
-  contentType: "Text" | "Form";
-  contentList?: Array<any>;
+  readonly titleDialog: string;
+  readonly modalHeaderTitle: string;
+  readonly dialogWidth?: string;
+  readonly titleButtonAdd?: string;
+  readonly contentType: "Text" | "Form";
+  readonly contentList: any[];
 }
 
 export function SimpleModalDialog({
@@ -40,7 +40,7 @@ export function SimpleModalDialog({
           {titleDialog}
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className={dialogWidth || "min-w-xl"}>
+      <AlertDialogContent className={dialogWidth ?? "min-w-xl"}>
         <AlertDialogHeader>
           <AlertDialogTitle>{modalHeaderTitle}</AlertDialogTitle>
           <AlertDialogDescription>
@@ -56,7 +56,7 @@ export function SimpleModalDialog({
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>{titleButtonAdd || "Continue"}</AlertDialogAction>
+          <AlertDialogAction>{titleButtonAdd ?? "Continue"}</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
