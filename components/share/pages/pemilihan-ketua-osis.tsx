@@ -1,6 +1,5 @@
 import ChartBarComponent from "../chart/chart-bar";
 import FooterComponent from "../footer/footer";
-import VideoPlayerComponent from "../video/video-player";
 
 const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
 

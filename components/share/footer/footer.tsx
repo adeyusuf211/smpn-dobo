@@ -6,6 +6,7 @@ import Link from "next/link";
 import IconsFacebook from "@/public/assets/images/icons/icons-facebook.svg";
 import IconsYoutube from "@/public/assets/images/icons/icons-youtube.svg";
 import IconsTiktok from "@/public/assets/images/icons/icons-tiktok.svg";
+import IconsInstagram from "@/public/assets/images/icons/icons-instagram.svg";
 
 const LINK_FACEBOOK: string =
   "https://www.facebook.com/smpnegeri1dobo?mibextid=ZbWKwL";
@@ -13,6 +14,8 @@ const LINK_YOUTUBE: string =
   "https://youtube.com/@smpnegeri1dobo?si=JO8Nnx-7ih-v4SP4";
 const LINK_TIKTOK: string =
   "https://www.tiktok.com/@spensa_dobo?_t=8mMPh0kaQVT&_r=1";
+const LINK_INSTAGRAM: string =
+  "https://www.instagram.com/smpnegeri1dobo?igsh=bTVyaWVvbnA3MHpt";
 
 import Image from "next/image";
 
@@ -137,6 +140,21 @@ export default function FooterComponent() {
                 width={40}
                 height={40}
                 alt="icons-tiktok"
+              />
+            </a>
+          </Link>
+          <Link href={LINK_INSTAGRAM} passHref legacyBehavior>
+            <a
+              href={LINK_INSTAGRAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white hover:bg-blue-200 transition-all"
+            >
+              <Image
+                src={IconsInstagram}
+                width={40}
+                height={40}
+                alt="icons-instagram"
               />
             </a>
           </Link>
