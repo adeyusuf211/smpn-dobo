@@ -1,7 +1,18 @@
+import { Button } from "@/components/ui/button";
 import ChartBarComponent from "../chart/chart-bar";
 import FooterComponent from "../footer/footer";
+import { SimpleModalDialog } from "../modal-dialog/simple-modal";
 
-const URL_YOUTUBE = "https://www.youtube.com/embed/xDlaALV5j04";
+const contentList = [
+  {
+    value: "Joni - Asep",
+    label: "Joni - Asep",
+  },
+  {
+    value: "Sumiati - Markonah",
+    label: "Sumiati - Markonah",
+  },
+];
 
 export default function PemilihanKetuaOSISComponent() {
   return (
@@ -95,6 +106,16 @@ export default function PemilihanKetuaOSISComponent() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center w-full h-full">
+        <SimpleModalDialog
+          titleDialog="Pilih Sekarang"
+          modalHeaderTitle="Pilih Ketua OSIS"
+          contentType="Form"
+          dialogWidth="min-w-[800px]"
+          titleButtonAdd="Submit"
+          contentList={contentList}
+        />
       </div>
       <FooterComponent />
     </div>
