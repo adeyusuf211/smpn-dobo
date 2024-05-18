@@ -6,8 +6,11 @@ import FooterComponent from "@/components/share/footer/footer";
 
 import { Button } from "@/components/ui/button";
 import { fotoGuruImages as imageList } from "@/helpers/all-static-images";
+import { useAOS } from "@/hooks/useAOS";
 
 export default function TenagaPendidikDanPegawaiComponent() {
+  useAOS();
+
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 10;
   const indexOfLastImage = currentPage * imagesPerPage;
@@ -50,7 +53,10 @@ export default function TenagaPendidikDanPegawaiComponent() {
   };
 
   return (
-    <div className="flex flex-col gap-10 w-full min-h-screen h-full">
+    <div
+      className="flex flex-col gap-10 w-full min-h-screen h-full"
+      data-aos="fade-up"
+    >
       <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
         Tenaga Pendidik dan Pegawai
       </h1>
@@ -59,7 +65,7 @@ export default function TenagaPendidikDanPegawaiComponent() {
           <SimpleCardComponent
             image={src}
             name="Your Name"
-            buttons={["Guru"]}
+            buttons={["Your Name", "No. Telephone"]}
             key={index}
           />
         ))}
