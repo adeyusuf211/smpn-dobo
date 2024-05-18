@@ -11,17 +11,6 @@ export default function PemilihanKetuaOSISComponent() {
         Pemilihan Ketua OSIS{" "}
         <span className="text-blue-300 font-bold">Periode</span> 2024-2025
       </h1>
-      <div className="flex flex-col gap-5 mt-14">
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 justify-center">
-          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-          <VideoPlayerComponent title="Video 1" sourceVideo={URL_YOUTUBE} />
-        </div>
-      </div>
       <div className="w-full p-10 bg-white my-10 h-full flex flex-col gap-10">
         <h3 className="text-center font-bold uppercase lg:text-4xl text-xl text-blue-500">
           Perolehan Suara Sementara

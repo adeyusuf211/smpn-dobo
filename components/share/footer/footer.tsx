@@ -1,6 +1,20 @@
 import { FaInfo, FaMapMarkerAlt } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 import AgendaComponent from "../agenda";
+import Link from "next/link";
+
+import IconsFacebook from "@/public/assets/images/icons/icons-facebook.svg";
+import IconsYoutube from "@/public/assets/images/icons/icons-youtube.svg";
+import IconsTiktok from "@/public/assets/images/icons/icons-tiktok.svg";
+
+const LINK_FACEBOOK: string =
+  "https://www.facebook.com/smpnegeri1dobo?mibextid=ZbWKwL";
+const LINK_YOUTUBE: string =
+  "https://youtube.com/@smpnegeri1dobo?si=JO8Nnx-7ih-v4SP4";
+const LINK_TIKTOK: string =
+  "https://www.tiktok.com/@spensa_dobo?_t=8mMPh0kaQVT&_r=1";
+
+import Image from "next/image";
 
 export default function FooterComponent() {
   return (
@@ -27,7 +41,7 @@ export default function FooterComponent() {
                 <FaInfo className="text-xl" />
               </div>
               <h3 className="font-semibold lg:text-base text-sm">
-                NSPN: <span>11223344</span>
+                NSPN: <span>60101808</span>
               </h3>
             </div>
             <div className="flex items-start gap-3">
@@ -35,8 +49,8 @@ export default function FooterComponent() {
                 <FaMapMarkerAlt className="text-xl" />
               </div>
               <h3 className="font-semibold lg:text-base text-sm">
-                Jl. ABCD, Kecamatan EFGH. Kota Bogor. Jawa Barat. Indonesia.
-                12345
+                Jl. Ali Moertopo, Desa SIWALIMA, Kec. Pulan Aru, Provinsi
+                Maluku. Indonesia.
               </h3>
             </div>
             <div className="flex items-start gap-3">
@@ -44,7 +58,7 @@ export default function FooterComponent() {
                 <PiPhoneCallFill className="text-xl" />
               </div>
               <h3 className="font-semibold lg:text-base text-sm text-blue-600">
-                (0251) - 112 3344 556
+                091721024
               </h3>
             </div>
           </div>
@@ -76,10 +90,57 @@ export default function FooterComponent() {
           />
         </div>
       </div>
-      <div className="flex justify-center items-center lg:text-lg text-sm">
+      <div className="flex lg:flex-row flex-col justify-between items-center lg:text-lg text-sm">
         <h3>
           SMP Negeri 1 DOBO - Interchange 2.1 | {new Date().getFullYear()}
         </h3>
+        <div className="flex items-center justify-center">
+          <Link href={LINK_FACEBOOK} passHref legacyBehavior>
+            <a
+              href={LINK_FACEBOOK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white hover:bg-blue-200 transition-all"
+            >
+              <Image
+                src={IconsFacebook}
+                width={40}
+                height={40}
+                alt="icons-facebook"
+              />
+            </a>
+          </Link>
+          <Link href={LINK_YOUTUBE} passHref legacyBehavior>
+            <a
+              href={LINK_YOUTUBE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white hover:bg-blue-200 transition-all"
+            >
+              <Image
+                src={IconsYoutube}
+                width={40}
+                height={40}
+                alt="icons-facebook"
+              />
+            </a>
+          </Link>
+          <Link href={LINK_TIKTOK} passHref legacyBehavior>
+            <a
+              href={LINK_TIKTOK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white hover:bg-blue-200 transition-all"
+            >
+              <Image
+                src={IconsTiktok}
+                width={40}
+                height={40}
+                alt="icons-tiktok"
+              />
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );
