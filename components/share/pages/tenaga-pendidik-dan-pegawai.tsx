@@ -65,7 +65,7 @@ export default function TenagaPendidikDanPegawaiComponent() {
           <SimpleCardComponent
             image={src}
             name="Your Name"
-            buttons={["Your Name", "No. Telephone"]}
+            buttons={["No. Telephone"]}
             key={index}
           />
         ))}
