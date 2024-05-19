@@ -13,7 +13,7 @@ import {
   MENU_PROGRAM_SEKOLAH,
   MENU_WARGA_SEKOLAH,
 } from "@/components/share/menu-list";
-import ImageLogo from "@/public/assets/image-backup.jpg";
+import ImageLogo from "@/public/assets/images/logo1.png";
 import Image from "next/image";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
@@ -25,27 +25,21 @@ export default function NavbarComponent() {
 
   return (
     <Menubar className="flex 2xl:w-[90vw] lg:w-[80vw] h-[100px] w-full bg-yellow-primary text-gray-700 justify-between 2xl:pl-[200px] lg:pr-20 pr-0 items-center fixed top-0 left-0 z-[10000] border-none 2xl:mt-10 md:mt-5 mt-0 lg:rounded-tr-3xl rounded-none">
-      <div className="flex">
+      <Link href="/">
         <MenubarMenu>
-          <MenubarTrigger className="flex flex-col lg:w-[80px] lg:h-[80px] w-[65px] height-[65px]">
-            <Link href="/">
-              <Image src={ImageLogo} width={60} height={50} alt="logo" />
-            </Link>
-          </MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger className="flex flex-col w-full -ml-3">
-            <Link href="/">
-              <h1 className="lg:text-2xl text-md uppercase font-bold">
+          <MenubarTrigger className="flex w-full gap-3 min-w-[350px] -ml-3">
+            <Image src={ImageLogo} width={60} height={50} alt="logo" />
+            <div className="flex flex-col">
+              <h4 className="lg:text-lg text-md uppercase font-bold">
                 SMP NEGERI 1 DOBO
-              </h1>
+              </h4>
               <p className="text-start lg:text-xl text-sm font-normal">
                 Jalan Ali Moertopo
               </p>
-            </Link>
+            </div>
           </MenubarTrigger>
         </MenubarMenu>
-      </div>
+      </Link>
       <div className="lg:flex hidden gap-5 pt-3">
         <MenubarMenu>
           <MenubarTrigger className="uppercase">
