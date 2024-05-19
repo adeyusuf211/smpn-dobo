@@ -1,6 +1,30 @@
 import { Button } from "@/components/ui/button";
 import FooterComponent from "../footer/footer";
 import { SimpleFormComponent } from "../form/simple-form";
+import CardWithImageComponent from "../card/card-with-image";
+
+import ExampleImageBackground from "@/public/assets/images/example-documents.svg";
+
+const dummyData = ["Lihat", "Download PDF"];
+
+const dummyDataBuku = [
+  {
+    image: ExampleImageBackground,
+    title: "Student Name",
+  },
+  {
+    image: ExampleImageBackground,
+    title: "Student Name",
+  },
+  {
+    image: ExampleImageBackground,
+    title: "Student Name",
+  },
+  {
+    image: ExampleImageBackground,
+    title: "Student Name",
+  },
+];
 
 export default function ERaportComponent() {
   return (
@@ -21,6 +45,17 @@ export default function ERaportComponent() {
         <Button size="lg" variant="destructive" className="text-lg">
           Cari
         </Button>
+      </div>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+        {dummyDataBuku?.map((data) => (
+          <div key={data.title}>
+            <CardWithImageComponent
+              imageSource={data.image}
+              title={data.title}
+              buttons={dummyData}
+            />
+          </div>
+        ))}
       </div>
       <FooterComponent />
     </div>

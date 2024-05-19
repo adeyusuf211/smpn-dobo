@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/image";
 
 interface CardWithImageComponentProps {
@@ -5,6 +6,7 @@ interface CardWithImageComponentProps {
   readonly imageSource: StaticImageData;
   readonly title?: string;
   readonly description?: string;
+  readonly buttons?: string[];
 }
 
 export default function CardWithImageComponent({
@@ -12,6 +14,7 @@ export default function CardWithImageComponent({
   imageSource,
   title,
   description,
+  buttons,
 }: CardWithImageComponentProps) {
   return (
     <div className="flex h-[500px] flex-col gap-10 bg-white p-3">
@@ -43,6 +46,18 @@ export default function CardWithImageComponent({
             </h1>
           </div>
         ) : null}
+        <div className={`${buttons ? "flex gap-2 w-full mt-5 mb-2" : ""}`}>
+          {buttons?.map((button) => (
+            <Button
+              size="lg"
+              variant="destructive"
+              className="w-full"
+              key={button}
+            >
+              {button}
+            </Button>
+          ))}
+        </div>
       </div>
     </div>
   );
