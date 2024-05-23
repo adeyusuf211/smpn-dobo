@@ -42,7 +42,7 @@ export default function CardWithImageComponentAndDownloadFile({
   };
   return (
     <div className="flex h-[500px] flex-col gap-10 bg-white p-3">
-      <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
+      <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden p-5 mt-5">
         <Image
           src={imageSource}
           alt="model"

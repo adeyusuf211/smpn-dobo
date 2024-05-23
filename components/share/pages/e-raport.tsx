@@ -5,7 +5,7 @@ import FooterComponent from "@/components/share/footer/footer";
 import { SimpleFormComponent } from "@/components/share/form/simple-form";
 import CardWithImageComponentAndDownloadFile from "@/components/share/card/card-with-image-and-download-file";
 
-import IconsPDF from "@/public/assets/images/icons/icons-pdf.png";
+import IconsPDF from "@/public/assets/images/icons/icons-pdf.svg";
 
 const dummyDataBuku = [
   {
