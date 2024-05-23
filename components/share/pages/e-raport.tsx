@@ -1,37 +1,22 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import FooterComponent from "../footer/footer";
-import { SimpleFormComponent } from "../form/simple-form";
-import CardWithImageComponent from "../card/card-with-image";
+import FooterComponent from "@/components/share/footer/footer";
+import { SimpleFormComponent } from "@/components/share/form/simple-form";
+import CardWithImageComponentAndDownloadFile from "@/components/share/card/card-with-image-and-download-file";
 
-import ExampleImageBackground from "@/public/assets/images/example-documents.svg";
-
-const dummyData = ["Lihat", "Download PDF"];
+import IconsPDF from "@/public/assets/images/icons/icons-pdf.png";
 
 const dummyDataBuku = [
   {
-    image: ExampleImageBackground,
-    title: "Student Name",
-  },
-  {
-    image: ExampleImageBackground,
-    title: "Student Name",
-  },
-  {
-    image: ExampleImageBackground,
-    title: "Student Name",
-  },
-  {
-    image: ExampleImageBackground,
+    image: IconsPDF,
     title: "Student Name",
   },
 ];
 
 export default function ERaportComponent() {
   return (
-    <div
-      className="flex flex-col gap-10 w-full min-h-screen h-full"
-      data-aos="fade-up"
-    >
+    <div className="flex flex-col gap-10 w-full min-h-screen h-full">
       <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
         E-Raport
       </h1>
@@ -48,11 +33,10 @@ export default function ERaportComponent() {
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
         {dummyDataBuku?.map((data) => (
-          <div key={data.title}>
-            <CardWithImageComponent
+          <div key={data.title} data-aos="fade-up">
+            <CardWithImageComponentAndDownloadFile
               imageSource={data.image}
-              title={data.title}
-              buttons={dummyData}
+              filePath="/assets/pdf/example.pdf"
             />
           </div>
         ))}
