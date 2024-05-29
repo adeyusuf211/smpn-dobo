@@ -101,6 +101,28 @@ import FotoSiswa7 from "@/public/assets/images/Foto Siswa/7.webp";
 import FotoSiswa8 from "@/public/assets/images/Foto Siswa/8.webp";
 import FotoSiswa9 from "@/public/assets/images/Foto Siswa/9.webp";
 
+import FotoP51 from "@/public/assets/images/Foto P5/foto-1.webp";
+import FotoP52 from "@/public/assets/images/Foto P5/foto-2.webp";
+import FotoP53 from "@/public/assets/images/Foto P5/foto-3.webp";
+import FotoP54 from "@/public/assets/images/Foto P5/foto-4.webp";
+import FotoP55 from "@/public/assets/images/Foto P5/foto-5.webp";
+import FotoP56 from "@/public/assets/images/Foto P5/foto-6.webp";
+import FotoP57 from "@/public/assets/images/Foto P5/foto-7.webp";
+import FotoP58 from "@/public/assets/images/Foto P5/foto-8.webp";
+import FotoP59 from "@/public/assets/images/Foto P5/foto-9.webp";
+
+export const fotoP5Images = [
+  FotoP51,
+  FotoP52,
+  FotoP53,
+  FotoP54,
+  FotoP55,
+  FotoP56,
+  FotoP57,
+  FotoP58,
+  FotoP59,
+];
+
 export const fotoSiswaImages = [
   FotoSiswa1,
   FotoSiswa2,

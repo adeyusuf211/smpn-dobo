@@ -1,27 +1,34 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { useAOS } from "@/hooks/useAOS";
-import CustomCardBackground from "@/public/assets/images/custom-card.svg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+
+import FotoVisiMisi from "@/public/assets/images/Foto Profil Sekolah/visi_misi.webp";
+import FotoKepalaSekolah from "@/public/assets/images/Foto Profil Sekolah/kepala_sekolah.webp";
+import FotoTentangKami from "@/public/assets/images/Foto Profil Sekolah/tentang_kami.webp";
 
 interface ProfileData {
-  image: string;
+  image: StaticImageData;
   text: string;
+  linkUrl: string;
 }
 
 const PROFILE_DATA: ProfileData[] = [
   {
-    image: "",
+    image: FotoKepalaSekolah,
     text: "sambutan kepala sekolah",
+    linkUrl: "/sambutan-kepala-sekolah",
   },
   {
-    image: "",
+    image: FotoVisiMisi,
     text: "visi misi",
+    linkUrl: "/visi-misi",
   },
   {
-    image: "",
-    text: "tentang kami",
+    image: FotoTentangKami,
+    text: "Tentang Kami",
+    linkUrl: "/tentang-kami",
   },
 ] as const;
 
@@ -36,25 +43,31 @@ export default function ProfileComponent() {
       <h1 className="text-center font-semibold lg:text-5xl text-2xl uppercase text-gray-100">
         Profil Sekolah
       </h1>
-      <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 -mt-40 lg:px-[50px]">
+      <div className="flex lg:flex-row flex-col w-full lg:gap-5 gap-1 mt-20 lg:px-[50px]">
         {PROFILE_DATA.map((profile) => (
           <div className="flex flex-col w-full h-full gap-5" key={profile.text}>
             <div className="relative">
-              <div className="w-[100px] lg:h-[650px] h-[400px]">
+              <div className="lg:h-[470px] h-[350px] w-full">
                 <Image
-                  src={CustomCardBackground}
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  src={profile.image}
                   fill
                   alt="custom-card-background"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    display: "flex",
+                  }}
                 />
               </div>
             </div>
             <h3 className="font-bold text-2xl text-white w-full uppercase text-center">
               {profile.text}
             </h3>
-            <Button variant="destructive" size="lg" className="rounded-full">
-              Read More
-            </Button>
+            <Link href={profile.linkUrl} prefetch>
+              <button className="bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 flex justify-center items-center w-full px-5 py-3">
+                Read More
+              </button>
+            </Link>
           </div>
         ))}
       </div>
