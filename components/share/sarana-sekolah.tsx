@@ -1,6 +1,9 @@
 "use client";
 
 import { useAOS } from "@/hooks/useAOS";
+import ImageCardComponent from "@/components/share/card/image-card";
+
+import { fotoSaranaSekolah as ImagesLists } from "@/helpers/all-static-images";
 
 export default function SaranaSekolahComponent() {
   useAOS();
@@ -22,43 +25,14 @@ export default function SaranaSekolahComponent() {
               <span>{">>>"}</span> Ruang Belajar dan Pendukung
             </li>
           </ul>
-          <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
-            <div className="w-full min-w-10 h-full min-h-40 flex items-center justify-center bg-blue-300 p-3">
-              <h3 className="text-lg text-center">Your image here</h3>
-            </div>
+          <div className="grid lg:grid-cols-6 grid-cols-1 gap-5">
+            {ImagesLists.map((image: any) => (
+              <ImageCardComponent
+                imageSource={image}
+                alt="example"
+                key={image}
+              />
+            ))}
           </div>
         </div>
       </div>

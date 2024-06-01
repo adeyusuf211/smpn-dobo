@@ -111,6 +111,19 @@ import FotoP57 from "@/public/assets/images/Foto P5/foto-7.webp";
 import FotoP58 from "@/public/assets/images/Foto P5/foto-8.webp";
 import FotoP59 from "@/public/assets/images/Foto P5/foto-9.webp";
 
+import FotoSarana1 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-1.webp";
+import FotoSarana2 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-2.webp";
+import FotoSarana3 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-3.webp";
+import FotoSarana4 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-4.webp";
+import FotoSarana5 from "@/public/assets/images/Foto Sarana Sekolah/lab-komp-1.webp";
+import FotoSarana6 from "@/public/assets/images/Foto Sarana Sekolah/lab-komp-2.webp";
+import FotoSarana7 from "@/public/assets/images/Foto Sarana Sekolah/lab-komp-3.webp";
+import FotoSarana8 from "@/public/assets/images/Foto Sarana Sekolah/lab-komp-4.webp";
+import FotoSarana9 from "@/public/assets/images/Foto Sarana Sekolah/ruang-guru-1.webp";
+import FotoSarana10 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-1.webp";
+import FotoSarana11 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-2.webp";
+import FotoSarana12 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-3.webp";
+
 export const fotoP5Images = [
   FotoP51,
   FotoP52,
@@ -204,6 +217,21 @@ export const fotoMPLSImages = [
   FotoMPLS22,
   FotoMPLS23,
   FotoMPLS24,
+];
+
+export const fotoSaranaSekolah = [
+  FotoSarana1,
+  FotoSarana2,
+  FotoSarana3,
+  FotoSarana4,
+  FotoSarana5,
+  FotoSarana6,
+  FotoSarana7,
+  FotoSarana8,
+  FotoSarana9,
+  FotoSarana10,
+  FotoSarana11,
+  FotoSarana12,
 ];
 
 export const allImages = [

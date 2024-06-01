@@ -5,6 +5,9 @@ import ListBackgroundCard from "@/public/assets/images/background-card.svg";
 import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.webp";
 import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.webp";
 import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.webp";
+import SeragamKostum from "@/public/assets/images/Foto Siswa/kostum.webp";
+import SeragamPramuka from "@/public/assets/images/Foto Siswa/pramuka.webp";
+
 import { useAOS } from "@/hooks/useAOS";
 
 const LIST_SERAGAM: string[] = [
@@ -39,12 +42,12 @@ export default function SeragamSekolahComponent() {
                 alt="custom-card-background"
               />
             </div>
-            <div className="flex">
-              <div className="flex z-10">
+            <div className="flex w-full relative">
+              <div className="flex gap-10 z-10">
                 <Image
                   src={SeragamPutihBiru}
-                  width={300}
-                  height={300}
+                  width={250}
+                  height={250}
                   alt="seragam-batik"
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
@@ -52,19 +55,53 @@ export default function SeragamSekolahComponent() {
               <div className="flex z-10">
                 <Image
                   src={SeragamBatik1}
-                  width={300}
-                  height={300}
+                  width={250}
+                  height={250}
                   alt="seragam-batik"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    marginLeft: "50px",
+                  }}
                 />
               </div>
               <div className="flex z-10">
                 <Image
                   src={SeragamBatik2}
-                  width={300}
-                  height={300}
+                  width={250}
+                  height={250}
                   alt="seragam-batik"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    marginLeft: "50px",
+                  }}
+                />
+              </div>
+              <div className="flex z-10">
+                <Image
+                  src={SeragamKostum}
+                  width={250}
+                  height={250}
+                  alt="seragam-kostum"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    marginLeft: "50px",
+                  }}
+                />
+              </div>
+              <div className="flex z-10">
+                <Image
+                  src={SeragamPramuka}
+                  width={250}
+                  height={250}
+                  alt="seragam-pramuka"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    marginLeft: "50px",
+                  }}
                 />
               </div>
             </div>
