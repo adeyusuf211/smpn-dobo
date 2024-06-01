@@ -25,7 +25,7 @@ export default function ExtrakulikulerComponent() {
               <span>{">>>"}</span> Formasi dan Aktivitas
             </li>
           </ul>
-          <div className="grid lg:grid-cols-6 grid-cols-1 gap-3">
+          <div className="grid lg:grid-cols-6 grid-cols-1 gap-5">
             {ImagesLists.map((image: any) => (
               <ImageCardComponent
                 imageSource={image}

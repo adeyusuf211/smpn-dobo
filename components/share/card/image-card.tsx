@@ -14,7 +14,7 @@ export default function ImageCardComponent({
   height,
 }: ImageCardProps) {
   return (
-    <div className="w-full h-[250px] bg-white overflow-hidden flex">
+    <div className="w-full h-[250px] bg-white overflow-hidden flex rounded-2xl">
       <Image
         src={imageSource}
         alt={alt}
