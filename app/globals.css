@@ -47,6 +47,15 @@
     background-color: #00a7ff;
   }
 
+  .rounded-rectangle {
+    width: 300px;
+    height: 100%;
+    min-height: 250px;
+    background-color: #ffcc00;
+    border-radius: 15px;
+    transform: skewX(-15deg); /* Miring ke kiri sebesar 10 derajat */
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
