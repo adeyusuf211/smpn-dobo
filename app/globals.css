@@ -97,7 +97,7 @@
 }
 
 .bg-hero {
-  background: url("../public/assets/images/Background.svg");
+  background: url("../public/assets/images/Background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
