@@ -5,6 +5,8 @@ import FooterComponent from "../footer/footer";
 
 import LogoSekolah from "@/public/assets/images/logo1.png";
 
+import FotoBannerKepalaSekolah from "@/public/assets/images/Foto MPLS/1.webp";
+
 export default function SambutanKepalaSekolahComponent() {
   return (
     <div
@@ -16,8 +18,13 @@ export default function SambutanKepalaSekolahComponent() {
       </h1>
       <div className="my-10 flex md:flex-row flex-col md:gap-10 gap-0">
         <div className="flex flex-col gap-5 w-full">
-          <div className="bg-white w-full rounded-2xl h-[350px] flex">
-            <Image src="" alt="banner sambutan kepala sekolah" fill />
+          <div className="bg-white w-full rounded-2xl h-[350px] flex overflow-hidden">
+            <Image
+              src={FotoBannerKepalaSekolah}
+              alt="banner sambutan kepala sekolah"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              className="w-full h-full"
+            />
           </div>
           <div className="relative">
             <h3 className="font-bold text-xl text-white">

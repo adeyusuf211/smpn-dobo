@@ -5,6 +5,8 @@ import { useAOS } from "@/hooks/useAOS";
 import LogoSekolah from "@/public/assets/images/logo1.png";
 import FooterComponent from "@/components/share/footer/footer";
 
+import FotoBanneTentangKami from "@/public/assets/images/Foto Sarana Sekolah/aula-1.webp";
+
 export default function TentangKamiComponent() {
   useAOS();
   return (
@@ -18,7 +20,12 @@ export default function TentangKamiComponent() {
       <div className="my-10 flex md:flex-row flex-col md:gap-10 gap-0">
         <div className="flex flex-col gap-5 w-full">
           <div className="bg-white w-full rounded-2xl h-[350px] flex">
-            <Image src="" alt="banner sambutan kepala sekolah" fill />
+            <Image
+              src={FotoBanneTentangKami}
+              alt="banner sambutan kepala sekolah"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              className="w-full h-full"
+            />
           </div>
           <div className="relative">
             <h3 className="font-bold text-xl text-white">

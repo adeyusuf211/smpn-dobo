@@ -123,6 +123,9 @@ import FotoSarana9 from "@/public/assets/images/Foto Sarana Sekolah/ruang-guru-1
 import FotoSarana10 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-1.webp";
 import FotoSarana11 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-2.webp";
 import FotoSarana12 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas-3.webp";
+import FotoSarana13 from "@/public/assets/images/Foto Sarana Sekolah/aula-1.webp";
+import FotoSarana14 from "@/public/assets/images/Foto Sarana Sekolah/aula-2.webp";
+import FotoSarana15 from "@/public/assets/images/Foto Sarana Sekolah/aula-3.webp";
 
 export const fotoP5Images = [
   FotoP51,
@@ -293,6 +296,22 @@ export const fotoSaranaSekolah = [
   },
   {
     name: FotoSarana12,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana12,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana13,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana14,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana15,
     category: "Ruang Kelas",
   },
 ];

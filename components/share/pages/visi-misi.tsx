@@ -5,6 +5,8 @@ import { useAOS } from "@/hooks/useAOS";
 import FooterComponent from "@/components/share/footer/footer";
 import LogoSekolah from "@/public/assets/images/logo1.png";
 
+import FotoBannerVisiMisi from "@/public/assets/images/Foto MPLS/2.webp";
+
 export default function VisiMisiComponent() {
   useAOS();
   return (
@@ -18,7 +20,12 @@ export default function VisiMisiComponent() {
       <div className="my-10 flex md:flex-row flex-col md:gap-10 gap-0">
         <div className="flex flex-col gap-5 w-full">
           <div className="bg-white w-full rounded-2xl h-[350px] flex">
-            <Image src="" alt="banner sambutan kepala sekolah" fill />
+            <Image
+              src={FotoBannerVisiMisi}
+              alt="banner sambutan kepala sekolah"
+              style={{ objectFit: "cover", objectPosition: "bottom center" }}
+              className="w-full h-full"
+            />
           </div>
           <div className="relative mt-3">
             <h1 className="font-bold text-6xl text-white">Visi</h1>
