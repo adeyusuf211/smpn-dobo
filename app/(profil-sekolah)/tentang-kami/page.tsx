@@ -1,3 +1,4 @@
+import TentangKamiComponent from "@/components/share/pages/tentang-kami";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function TentangKamiPage() {
-  return;
+  return <TentangKamiComponent />;
 }

@@ -1,3 +1,4 @@
+import VisiMisiComponent from "@/components/share/pages/visi-misi";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function VisiMisi() {
-  return;
+  return <VisiMisiComponent />;
 }

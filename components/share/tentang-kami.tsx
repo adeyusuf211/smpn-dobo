@@ -10,7 +10,7 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
   return (
     <section id="tentang-kami">
       <div
-        className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mt-40"
+        className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mb-20"
         data-aos="fade-up"
       >
         <div className="flex lg:flex-row flex-col justify-between">

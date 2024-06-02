@@ -1,100 +1,62 @@
 "use client";
 
 import Image from "next/image";
-import FooterComponent from "../footer/footer";
-
+import { useAOS } from "@/hooks/useAOS";
+import FooterComponent from "@/components/share/footer/footer";
 import LogoSekolah from "@/public/assets/images/logo1.png";
 
-export default function SambutanKepalaSekolahComponent() {
+export default function VisiMisiComponent() {
+  useAOS();
   return (
     <div
       className="flex flex-col gap-10 w-full min-h-screen h-full"
       data-aos="fade-up"
     >
       <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
-        Sambutan Kepala Sekolah
+        Visi Misi
       </h1>
       <div className="my-10 flex md:flex-row flex-col md:gap-10 gap-0">
         <div className="flex flex-col gap-5 w-full">
           <div className="bg-white w-full rounded-2xl h-[350px] flex">
             <Image src="" alt="banner sambutan kepala sekolah" fill />
           </div>
-          <div className="relative">
-            <h3 className="font-bold text-xl text-white">
-              Assalamualaikum warahmatullahi wabarakatuh, Salam sejahtera untuk
-              kita semua, shalom
-            </h3>
-            <br />
+          <div className="relative mt-3">
+            <h1 className="font-bold text-6xl text-white">Visi</h1>
             <br />
             <h3 className="text-white font-regular text-xl">
-              Pada kesempatan yang berbahagia ini, izinkan saya menyampaikan
-              beberapa hal penting terkait dengan implementasi Sistem Informasi
-              Manajemen (SIM) dan Kurikulum di SMP Negeri 1 Dobo
+              BERIMTAQ BERKARAKTER BANGSA UNGGUL DALAM PRESTASI DAN BERBUDAYA
+              LINGKUNGAN
             </h3>
             <br />
-            <h3 className="text-white font-regular text-xl">
-              Sistem Informasi Manajemen (SIM) di SMP Negeri 1 Dobo merupakan
-              suatu sistem yang dirancang untuk mengelola informasi secara
-              efisien dan efektif. Dengan adanya SIM, kita dapat memperbaiki
-              proses administrasi, meningkatkan transparansi, dan memudahkan
-              akses informasi bagi semua pihak yang terlibat, baik itu guru,
-              siswa, maupun orang tua. Implementasi SIM di sekolah kita
-              bertujuan untuk:
-            </h3>
+            <h1 className="font-bold text-6xl text-white">Misi</h1>
+            <br />
             <ol className="flex flex-col gap-3">
-              <li className="text-white font-regular text-xl ml-5">
-                1. Mengembangkan Potensi Siswa Secara Maksimal: Memberikan ruang
-                bagi siswa untuk mengeksplorasi minat dan bakat mereka serta
-                mengembangkan keterampilan abad 21.
+              <li className="text-white font-regular text-xl">
+                1. Meningkatkan iman dan taqwa terhadap Tuhan yang Maha Esa
+                sesuai dengan agama dan kepercayaan yang dianut
               </li>
-              <li className="text-white font-regular text-xl ml-5">
-                2. Fleksibilitas dalam Pembelajaran: Guru diberikan kebebasan
-                untuk menyesuaikan metode dan materi pembelajaran sesuai dengan
-                kebutuhan dan karakteristik siswa.
+              <li className="text-white font-regular text-xl">
+                2. Meningkatkan budaya belajar peserta didik sesuai dengan
+                nilai-nilai karakter bangsa
               </li>
-              <li className="text-white font-regular text-xl ml-5">
-                3. Pembelajaran yang Relevan dan Kontekstual: Mengintegrasikan
-                pembelajaran dengan konteks kehidupan nyata, sehingga siswa
-                dapat lebih mudah memahami dan mengaplikasikan pengetahuan yang
-                mereka peroleh.
+              <li className="text-white font-regular text-xl">
+                3. Meningkatkan kompetensi kinerja guru dan tenaga kependidikan
+                untuk menguasai ilmu pengetahuan, teknologi dan keterampilan
+                secara insentif
+              </li>
+              <li className="text-white font-regular text-xl">
+                4. Meningkatkan partisipasi warga sekolah dan masyarakat dalam
+                pengelolaan lingkungan pendidikan yang berwawasan dan bermutu
+              </li>
+              <li className="text-white font-regular text-xl">
+                5. Mewujudkan fasilitas sarana prasarana dalam bidang akademik
+                maupun non akademik yang ramah lingkungan sesuai dengan
+                kebutuhan
+              </li>
+              <li className="text-white font-regular text-xl">
+                6. Menciptakan lingkungan sekolah yang bersih, sehat dan asri
               </li>
             </ol>
-            <br />
-            <h3 className="text-white font-regular text-xl">
-              Dengan implementasi Kurikulum Merdeka, kita berharap dapat
-              menciptakan lingkungan belajar yang lebih dinamis, kreatif, dan
-              inovatif. Hal ini juga diharapkan dapat menumbuhkan semangat
-              belajar yang tinggi di kalangan siswa serta mempersiapkan mereka
-              untuk menghadapi tantangan masa depan dengan lebih baik.
-            </h3>
-            <h3 className="text-white font-regular text-xl">
-              Akhir kata, saya mengajak seluruh warga sekolah untuk bersama-sama
-              mendukung dan berpartisipasi aktif dalam penerapan Sistem
-              Informasi Manajemen dan Kurikulum Merdeka ini. Semoga upaya kita
-              ini dapat membawa kemajuan dan keberhasilan bagi sekolah kita
-              tercinta SMP Negeri 1 Dobo.
-            </h3>
-            <br />
-            <h3 className="text-white font-regular text-xl">
-              Melalui Sistem Informasi Manajemen (SIM), SMP Negeri 1 Dobo semoga
-              kami, sebagai pendidik dan tenaga pendidik dapat terus berkomitmen
-              dan di mapukan untuk menjalankan Tugas yang mulia ini, dan salah
-              satu usaha SMP Negeri 1 Dobo menyesuaikan diri dengan perkembangan
-              ilmu dan teknologi guna memberikan layanan dan fasilitas
-              pembelajaran yang memadai yang dapat membuat peserta didik nyaman
-              dalam menerima pelajaran.
-            </h3>
-            <br />
-            <h3 className="text-white font-regular text-xl">
-              Sekali lagi, saya ingin mengucapkan selamat datang bergabung di
-              Sistem Informasi Manajemen (SIM) SMP Negeri 1 Dobo.
-            </h3>
-            <br />
-            <br />
-            <h3 className="text-white font-bold text-xl">
-              Wassalamualaikum warahmatullahi wabarakatuh. Salam sejahtera,
-              shalom
-            </h3>
           </div>
         </div>
         <div className="h-full w-full max-w-[35%] bg-white p-10 rounded-xl">

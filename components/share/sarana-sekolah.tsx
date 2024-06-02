@@ -2,6 +2,7 @@
 
 import { useAOS } from "@/hooks/useAOS";
 import ImageCardComponent from "@/components/share/card/image-card";
+import LightboxComponent from "@/components/share/viewer/lightbox";
 
 import { fotoSaranaSekolah as ImagesLists } from "@/helpers/all-static-images";
 import { useState } from "react";
