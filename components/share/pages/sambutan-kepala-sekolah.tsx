@@ -21,7 +21,7 @@ export default function SambutanKepalaSekolahComponent() {
           </div>
           <div className="relative">
             <h3 className="font-bold text-xl text-white">
-              Assalamu'alaikum warahmatullahi wabarakatuh, Salam sejahtera untuk
+              Assalamualaikum warahmatullahi wabarakatuh, Salam sejahtera untuk
               kita semua, shalom
             </h3>
             <br />
@@ -90,7 +90,7 @@ export default function SambutanKepalaSekolahComponent() {
             <br />
             <br />
             <h3 className="text-white font-bold text-xl">
-              Wassalamu'alaikum warahmatullahi wabarakatuh. Salam sejahtera,
+              Wassalamualaikum warahmatullahi wabarakatuh. Salam sejahtera,
               shalom
             </h3>
           </div>
