@@ -2,11 +2,11 @@
 
 import { useAOS } from "@/hooks/useAOS";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 
 import FotoVisiMisi from "@/public/assets/images/Foto Profil Sekolah/visi_misi.webp";
 import FotoKepalaSekolah from "@/public/assets/images/Foto Profil Sekolah/kepala_sekolah.png";
 import FotoTentangKami from "@/public/assets/images/Foto Profil Sekolah/tentang_kami.webp";
+import Link from "next/link";
 
 interface ProfileData {
   image: StaticImageData | "";
@@ -50,7 +50,6 @@ const PROFILE_DATA: ProfileData[] = [
 
 export default function ProfileComponent() {
   useAOS();
-
   return (
     <div
       className="w-full min-h-screen h-full py-20 flex flex-col lg:gap-5 gap-2 items-center"
@@ -62,7 +61,7 @@ export default function ProfileComponent() {
       <div className="flex lg:flex-row flex-col w-full lg:gap-20 gap-1 mt-20 lg:px-[50px]">
         {PROFILE_DATA.map((profile) => (
           <div
-            className="flex flex-col w-full h-full gap-8 relative"
+            className="flex flex-col w-full h-full gap-8 relative "
             key={profile.text}
           >
             <div className="relative min-h-[400px] min-w-[400px] w-full flex items-end overflow-hidden px-10">
@@ -84,7 +83,7 @@ export default function ProfileComponent() {
               {profile.text}
             </h3>
             <Link href={profile.linkUrl} prefetch>
-              <button className="bg-destructive rounded-xl text-destructive-foreground shadow-sm hover:bg-destructive/90 flex justify-center items-center w-full px-5 py-3">
+              <button className="bg-destructive cursor-pointer rounded-xl text-destructive-foreground shadow-sm hover:bg-destructive/90 flex justify-center items-center w-full px-5 py-3">
                 Read More
               </button>
             </Link>

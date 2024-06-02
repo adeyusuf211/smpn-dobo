@@ -28,21 +28,17 @@ export default function SeragamSekolahComponent() {
       >
         seragam sekolah
       </h1>
-      <div className="flex flex-col">
-        <div className="flex justify-end w-full -mt-[300px]">
+      <div className="flex flex-col mt-10">
+        <div className="flex justify-end w-full">
           <div className="relative w-full">
-            <div className="w-full h-[450px] flex justify-end lg:ml-[150px] ml-0 p-5">
-              <Image
-                src={ListBackgroundCard}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-                fill
-                alt="custom-card-background"
-              />
+            <div className="flex lg:flex-row flex-col gap-3">
+              <div className="rounded-rectangle ml-auto" />
+              <div className="rounded-rectangle ml-auto" />
+              <div className="rounded-rectangle ml-auto" />
+              <div className="rounded-rectangle ml-auto" />
+              <div className="rounded-rectangle ml-auto" />
             </div>
-            <div className="flex w-full relative">
+            <div className="flex w-full absolute top-0">
               <div className="flex gap-10 z-10">
                 <Image
                   src={SeragamPutihBiru}
