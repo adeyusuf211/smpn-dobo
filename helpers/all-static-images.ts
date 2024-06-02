@@ -137,15 +137,42 @@ export const fotoP5Images = [
 ];
 
 export const fotoSiswaImages = [
-  FotoSiswa1,
-  FotoSiswa2,
-  FotoSiswa3,
-  FotoSiswa4,
-  FotoSiswa5,
-  FotoSiswa6,
-  FotoSiswa7,
-  FotoSiswa8,
-  FotoSiswa9,
+  {
+    name: FotoSiswa1,
+    category: "Olahraga",
+  },
+  {
+    name: FotoSiswa2,
+    category: "Olahraga",
+  },
+  {
+    name: FotoSiswa3,
+    category: "Seni",
+  },
+  {
+    name: FotoSiswa4,
+    category: "Seni",
+  },
+  {
+    name: FotoSiswa5,
+    category: "Seni",
+  },
+  {
+    name: FotoSiswa6,
+    category: "Aktivitas",
+  },
+  {
+    name: FotoSiswa7,
+    category: "Aktivitas",
+  },
+  {
+    name: FotoSiswa8,
+    category: "Aktivitas",
+  },
+  {
+    name: FotoSiswa9,
+    category: "Aktivitas",
+  },
 ];
 
 export const fotoGuruImages = [
@@ -220,18 +247,54 @@ export const fotoMPLSImages = [
 ];
 
 export const fotoSaranaSekolah = [
-  FotoSarana1,
-  FotoSarana2,
-  FotoSarana3,
-  FotoSarana4,
-  FotoSarana5,
-  FotoSarana6,
-  FotoSarana7,
-  FotoSarana8,
-  FotoSarana9,
-  FotoSarana10,
-  FotoSarana11,
-  FotoSarana12,
+  {
+    name: FotoSarana1,
+    category: "Sarana Utama",
+  },
+  {
+    name: FotoSarana2,
+    category: "Sarana Utama",
+  },
+  {
+    name: FotoSarana3,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana4,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana5,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana6,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana7,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana8,
+    category: "Lab Praktek",
+  },
+  {
+    name: FotoSarana9,
+    category: "Ruang Belajar",
+  },
+  {
+    name: FotoSarana10,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana11,
+    category: "Ruang Kelas",
+  },
+  {
+    name: FotoSarana12,
+    category: "Ruang Kelas",
+  },
 ];
 
 export const allImages = [

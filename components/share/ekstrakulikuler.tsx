@@ -4,9 +4,35 @@ import { useAOS } from "@/hooks/useAOS";
 import ImageCardComponent from "./card/image-card";
 
 import { fotoSiswaImages as ImagesLists } from "@/helpers/all-static-images";
+import { useState } from "react";
 
 export default function ExtrakulikulerComponent() {
   useAOS();
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredImages = selectedCategory
+    ? ImagesLists.filter((image) => {
+        if (selectedCategory === "Olahraga" && image.category === "Olahraga")
+          return true;
+        if (
+          selectedCategory === "Seni dan Kreativitas" &&
+          image.category === "Seni"
+        )
+          return true;
+        if (
+          selectedCategory === "Formasi dan Aktivitas" &&
+          image.category === "Aktivitas"
+        )
+          return true;
+        return false;
+      })
+    : ImagesLists;
+
   return (
     <section id="ekstrakulikuler" data-aos="fade-up">
       <div className="w-full flex flex-col my-10">
@@ -14,21 +40,40 @@ export default function ExtrakulikulerComponent() {
           program ekstra kulikuler
         </h1>
         <div className="flex flex-col gap-5">
-          <ul className="text-white text-2xl mt-5 flex flex-col gap-3">
-            <li className="flex gap-3 items-center">
-              <span>{">>>"}</span> Olahraga
-            </li>
-            <li className="flex gap-3 items-center">
-              <span>{">>>"}</span> Seni dan Kreativitas
-            </li>
-            <li className="flex gap-3 items-center">
-              <span>{">>>"}</span> Formasi dan Aktivitas
-            </li>
-          </ul>
+          <div className="text-white text-2xl my-5 flex gap-3">
+            <button
+              className={`flex gap-3 items-center cursor-pointer  ${
+                selectedCategory === "Olahraga" ? "bg-destructive" : ""
+              } px-7 py-3 border-none rounded-lg`}
+              onClick={() => handleCategoryClick("Olahraga")}
+            >
+              Olahraga
+            </button>
+            <button
+              className={`flex gap-3 items-center cursor-pointer  ${
+                selectedCategory === "Seni dan Kreativitas"
+                  ? "bg-destructive"
+                  : ""
+              } px-7 py-3 border-none rounded-lg`}
+              onClick={() => handleCategoryClick("Seni dan Kreativitas")}
+            >
+              Seni dan Kreativitas
+            </button>
+            <button
+              className={`flex gap-3 items-center cursor-pointer  ${
+                selectedCategory === "Formasi dan Aktivitas"
+                  ? "bg-destructive"
+                  : ""
+              } px-7 py-3 border-none rounded-lg`}
+              onClick={() => handleCategoryClick("Formasi dan Aktivitas")}
+            >
+              Formasi dan Aktivitas
+            </button>
+          </div>
           <div className="grid lg:grid-cols-6 grid-cols-1 gap-5">
-            {ImagesLists.map((image: any) => (
+            {filteredImages.map((image: any) => (
               <ImageCardComponent
-                imageSource={image}
+                imageSource={image.name}
                 alt="example"
                 key={image}
               />
