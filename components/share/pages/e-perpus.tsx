@@ -8,34 +8,27 @@ import ExampleImage6 from "@/public/assets/images/example-6.svg";
 
 const dummyData = ["Terbaru", "Terpopuler"];
 
-const dummyDataBuku = [
-  {
-    image: ExampleImage6,
-    title: "Title Book Here",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum mollitia magni rerum neque vero!",
-  },
-  {
-    image: ExampleImage6,
-    title: "Title Book Here",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum mollitia magni rerum neque vero!",
-  },
-  {
-    image: ExampleImage6,
-    title: "Title Book Here",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum mollitia magni rerum neque vero!",
-  },
-  {
-    image: ExampleImage6,
-    title: "Title Book Here",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident earum mollitia magni rerum neque vero!",
-  },
-];
+async function getDataBuku() {
+  try {
+    const response = await fetch(`${process.env.API_BASE_URL}/books/list`, {
+      cache: "force-cache",
+    });
 
-export default function EPerpusComponent() {
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const result = await response?.json();
+
+    return result?.data;
+  } catch (error) {
+    console.log("Error: \n", error);
+  }
+}
+
+export default async function EPerpusComponent() {
+  const result = await getDataBuku();
+
   return (
     <div
       className="flex flex-col gap-10 w-full min-h-screen h-full"
@@ -57,15 +50,22 @@ export default function EPerpusComponent() {
         </Button>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-        {dummyDataBuku?.map((data) => (
-          <div key={data.title}>
-            <CardWithImageComponent
-              imageSource={data.image}
-              title={data.title}
-              description={data.description}
-              buttons={["Lihat", "Download"]}
-            />
-          </div>
+        {result?.map((data: any) => (
+          <>
+            {data?.length < 1 ? (
+              <h3 className="text-center font-bold text-white text-4xl">
+                Tidak Ada Data / Buku Kosong
+              </h3>
+            ) : (
+              <CardWithImageComponent
+                keyData={data?.id}
+                imageSource={data?.images ?? ExampleImage6}
+                title={data?.title}
+                description={data?.description}
+                buttons={["Lihat", "Download"]}
+              />
+            )}
+          </>
         ))}
       </div>
       <FooterComponent />

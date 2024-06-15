@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/image";
 
 interface CardWithImageComponentProps {
+  readonly keyData?: any;
   readonly badge?: string;
   readonly imageSource: StaticImageData;
   readonly title?: string;
@@ -10,6 +11,7 @@ interface CardWithImageComponentProps {
 }
 
 export default function CardWithImageComponent({
+  keyData,
   badge,
   imageSource,
   title,
@@ -17,7 +19,7 @@ export default function CardWithImageComponent({
   buttons,
 }: CardWithImageComponentProps) {
   return (
-    <div className="flex h-[500px] flex-col gap-10 bg-white p-3">
+    <div className="flex h-[500px] flex-col gap-10 bg-white p-3" key={keyData}>
       <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
         <Image
           src={imageSource}
