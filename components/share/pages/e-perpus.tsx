@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import FooterComponent from "../footer/footer";
 import { SimpleFormComponent } from "../form/simple-form";
 import { SimpleSelectBoxComponent } from "../input/simple-selectbox";
-import CardWithImageComponent from "../card/card-with-image";
 
 import ExampleImage6 from "@/public/assets/images/example-6.svg";
+import CardWithImageComponentAndDownloadFile from "../card/card-with-image-and-download-file";
 
 const dummyData = ["Terbaru", "Terpopuler"];
 
@@ -57,12 +57,14 @@ export default async function EPerpusComponent() {
                 Tidak Ada Data / Buku Kosong
               </h3>
             ) : (
-              <CardWithImageComponent
+              <CardWithImageComponentAndDownloadFile
                 keyData={data?.id}
                 imageSource={data?.images ?? ExampleImage6}
                 title={data?.title}
+                author={data?.author}
+                publisherYear={data?.publication_year}
                 description={data?.description}
-                buttons={["Lihat", "Download"]}
+                filePath={`${process.env.API_BASE_URL}/download/books/${data?.id}`}
               />
             )}
           </>

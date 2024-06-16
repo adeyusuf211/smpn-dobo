@@ -35,6 +35,7 @@ export default function ERaportComponent() {
         {dummyDataBuku?.map((data) => (
           <div key={data.title} data-aos="fade-up">
             <CardWithImageComponentAndDownloadFile
+              keyData={data.title}
               imageSource={data.image}
               filePath="/assets/pdf/example.pdf"
             />
