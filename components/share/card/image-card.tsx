@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import LightboxComponent from "@/components/share/viewer/lightbox";
 
 interface ImageCardProps {
   readonly imageSource: string;
@@ -17,14 +15,9 @@ export default function ImageCardComponent({
   width,
   height,
 }: ImageCardProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
-      <div
-        className="w-full h-[250px] bg-white overflow-hidden flex rounded-2xl cursor-pointer"
-        onClick={() => setIsOpen(true)}
-      >
+      <div className="w-full h-[250px] bg-white overflow-hidden flex rounded-2xl cursor-pointer">
         <Image
           src={imageSource}
           alt={alt}
@@ -34,7 +27,6 @@ export default function ImageCardComponent({
           className="w-full h-full flex object-cover"
         />
       </div>
-      {/* {isOpen && <LightboxComponent images={imageSource} />} */}
     </div>
   );
 }
