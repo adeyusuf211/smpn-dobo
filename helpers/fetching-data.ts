@@ -3,6 +3,8 @@ export async function getDataBuku() {
     const response = await fetch(
       `http://admin.smpnegeri1dobo.sch.id/api/books/list`,
       {
+        method: "GET",
+        mode: "cors",
         cache: "no-store",
         referrerPolicy: "no-referrer",
         headers: {
