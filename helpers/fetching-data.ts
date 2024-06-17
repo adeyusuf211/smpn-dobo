@@ -1,6 +1,5 @@
 export async function getDataBuku() {
   try {
-    // const response = await fetch(`${process.env.API_BASE_URL}/books/list`);
     const response = await fetch(
       `http://admin.smpnegeri1dobo.sch.id/api/books/list`
     );
