@@ -1,7 +1,13 @@
 export async function getDataBuku() {
   try {
     const response = await fetch(
-      `http://admin.smpnegeri1dobo.sch.id/api/books/list`
+      `http://admin.smpnegeri1dobo.sch.id/api/books/list`,
+      {
+        cache: "no-store",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
 
     if (!response.ok) {
