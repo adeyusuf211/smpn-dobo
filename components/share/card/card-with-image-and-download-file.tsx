@@ -3,12 +3,12 @@
 import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import SweetAlertComponent from "../alert/sweatalert";
 
 interface CardWithImageComponentProps {
   readonly keyData: any;
   readonly imageSource: StaticImageData;
   readonly filePath?: string;
+  readonly pathToView?: any;
   readonly title?: string;
   readonly description?: string;
   readonly author?: string;
@@ -19,6 +19,7 @@ export default function CardWithImageComponentAndDownloadFile({
   keyData,
   imageSource,
   filePath,
+  pathToView,
   author,
   title,
   description,
@@ -29,12 +30,6 @@ export default function CardWithImageComponentAndDownloadFile({
   const handleDownload = async () => {
     setIsLoading(true);
     if (!filePath) {
-      <SweetAlertComponent
-        title="Error"
-        text="File path is not valid"
-        icon="error"
-        show={true}
-      />;
       // Tambahkan penanganan error yang sesuai, misal: tampilkan pesan ke pengguna
       setIsLoading(false);
       return; // Menghentikan eksekusi fungsi jika pdfPath tidak valid
@@ -52,23 +47,12 @@ export default function CardWithImageComponentAndDownloadFile({
       setIsLoading(false);
     } catch (error) {
       console.error("Error downloading PDF:", error);
-      <SweetAlertComponent
-        title="Error"
-        text={error}
-        icon="error"
-        show={true}
-      />;
       setIsLoading(false);
     } finally {
-      <SweetAlertComponent
-        title="Sukses"
-        text="File berhasil di download"
-        icon="success"
-        show={true}
-      />;
       setIsLoading(false);
     }
   };
+
   return (
     <div className="flex h-[500px] flex-col gap-10 bg-white p-5">
       <div
@@ -101,7 +85,7 @@ export default function CardWithImageComponentAndDownloadFile({
             size="lg"
             variant="destructive"
             className="w-full"
-            onClick={() => window.open(filePath, "_blank")}
+            onClick={() => window.open(pathToView, "_blank")}
           >
             Lihat
           </Button>

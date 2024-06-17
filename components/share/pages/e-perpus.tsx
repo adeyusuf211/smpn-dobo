@@ -11,7 +11,7 @@ const dummyData = ["Terbaru", "Terpopuler"];
 async function getDataBuku() {
   try {
     const response = await fetch(`${process.env.API_BASE_URL}/books/list`, {
-      cache: "force-cache",
+      cache: "no-cache",
     });
 
     if (!response.ok) {
@@ -65,6 +65,7 @@ export default async function EPerpusComponent() {
                 publisherYear={data?.publication_year}
                 description={data?.description}
                 filePath={`${process.env.API_BASE_URL}/download/books/${data?.id}`}
+                pathToView={data?.pdf}
               />
             )}
           </>
