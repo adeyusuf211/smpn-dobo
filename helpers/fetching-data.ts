@@ -4,9 +4,6 @@ export async function getDataBuku() {
       `http://admin.smpnegeri1dobo.sch.id/api/books/list`,
       {
         method: "GET",
-        mode: "cors",
-        cache: "no-store",
-        referrerPolicy: "no-referrer",
         headers: {
           "Content-Type": "application/json",
         },
