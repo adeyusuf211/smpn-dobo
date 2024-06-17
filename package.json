@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "out": "npx serve@latest out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.0",

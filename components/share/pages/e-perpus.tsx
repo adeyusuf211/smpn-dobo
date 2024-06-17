@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import FooterComponent from "../footer/footer";
 import { SimpleFormComponent } from "../form/simple-form";
@@ -5,29 +7,58 @@ import { SimpleSelectBoxComponent } from "../input/simple-selectbox";
 
 import ExampleImage6 from "@/public/assets/images/example-6.svg";
 import CardWithImageComponentAndDownloadFile from "../card/card-with-image-and-download-file";
+import { getDataBuku } from "@/helpers/fetching-data";
+import { useEffect, useState } from "react";
 
 const dummyData = ["Terbaru", "Terpopuler"];
 
-async function getDataBuku() {
-  try {
-    const response = await fetch(`${process.env.API_BASE_URL}/books/list`, {
-      cache: "no-cache",
-    });
+export default function EPerpusComponent() {
+  const [result, setResult] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
+  const fetchingData = async () => {
+    try {
+      setIsLoading(true);
+      const response = await getDataBuku();
+
+      if (response) {
+        setResult(response?.data);
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.log("Error fetching data:", error);
+      setIsLoading(false);
     }
+  };
 
-    const result = await response?.json();
+  const renderElementBuku = () => {
+    if (!isLoading) {
+      return result?.map((data: any) => (
+        <>
+          {data?.length < 1 ? (
+            <h3 className="text-center font-bold text-white text-4xl">
+              Tidak Ada Data / Buku Kosong
+            </h3>
+          ) : (
+            <CardWithImageComponentAndDownloadFile
+              keyData={data?.id}
+              imageSource={data?.images ?? ExampleImage6}
+              title={data?.title}
+              author={data?.author}
+              publisherYear={data?.publication_year}
+              description={data?.description}
+              filePath={`${process.env.API_BASE_URL}/download/books/${data?.id}`}
+              pathToView={data?.pdf}
+            />
+          )}
+        </>
+      ));
+    }
+  };
 
-    return result?.data;
-  } catch (error) {
-    console.log("Error: \n", error);
-  }
-}
-
-export default async function EPerpusComponent() {
-  const result = await getDataBuku();
+  useEffect(() => {
+    fetchingData();
+  }, []);
 
   return (
     <div
@@ -49,27 +80,13 @@ export default async function EPerpusComponent() {
           Cari
         </Button>
       </div>
+      {isLoading && (
+        <div className="flex justify-center items-center w-full">
+          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
+        </div>
+      )}
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-        {result?.map((data: any) => (
-          <>
-            {data?.length < 1 ? (
-              <h3 className="text-center font-bold text-white text-4xl">
-                Tidak Ada Data / Buku Kosong
-              </h3>
-            ) : (
-              <CardWithImageComponentAndDownloadFile
-                keyData={data?.id}
-                imageSource={data?.images ?? ExampleImage6}
-                title={data?.title}
-                author={data?.author}
-                publisherYear={data?.publication_year}
-                description={data?.description}
-                filePath={`${process.env.API_BASE_URL}/download/books/${data?.id}`}
-                pathToView={data?.pdf}
-              />
-            )}
-          </>
-        ))}
+        {renderElementBuku()}
       </div>
       <FooterComponent />
     </div>
