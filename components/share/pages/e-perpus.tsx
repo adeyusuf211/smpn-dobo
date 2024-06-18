@@ -22,7 +22,7 @@ export default function EPerpusComponent() {
       const response = await getDataBuku();
 
       if (response) {
-        setResult(response?.data);
+        setResult(response?.data?.data);
       }
       setIsLoading(false);
     } catch (error) {

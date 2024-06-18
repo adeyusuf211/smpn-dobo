@@ -1,21 +1,11 @@
+import axios from "axios";
+
 export async function getDataBuku() {
   try {
-    const response = await fetch(
-      `http://admin.smpnegeri1dobo.sch.id/api/books/list`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+    const response = await axios.get(
+      `http://admin.smpnegeri1dobo.sch.id/api/books/list`
     );
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const result = await response?.json();
-    return result;
+    return response;
   } catch (error) {
     console.log("Error: \n", error);
   }
