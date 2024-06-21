@@ -7,8 +7,8 @@ import { SimpleSelectBoxComponent } from "../input/simple-selectbox";
 
 import ExampleImage6 from "@/public/assets/images/example-6.svg";
 import CardWithImageComponentAndDownloadFile from "../card/card-with-image-and-download-file";
-import { getDataBuku } from "@/helpers/fetching-data";
 import { useEffect, useState } from "react";
+// import { getDataBuku } from "@/helpers/fetching-data";
 
 const dummyData = ["Terbaru", "Terpopuler"];
 
@@ -19,11 +19,13 @@ export default function EPerpusComponent() {
   const fetchingData = async () => {
     try {
       setIsLoading(true);
-      const response = await getDataBuku();
+      const response = await fetch("/api/e-perpus");
+      const result = await response.json();
 
       if (response) {
-        setResult(response?.data?.data);
+        setResult(result.response?.data);
       }
+
       setIsLoading(false);
     } catch (error) {
       console.log("Error fetching data:", error);
