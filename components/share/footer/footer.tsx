@@ -1,3 +1,5 @@
+"use client";
+
 import { FaInfo, FaMapMarkerAlt } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 import AgendaComponent from "../agenda";
@@ -18,8 +20,80 @@ const LINK_INSTAGRAM: string =
   "https://www.instagram.com/smpnegeri1dobo?igsh=bTVyaWVvbnA3MHpt";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function FooterComponent() {
+  const [result, setResult] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const fetchingData = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/informasi-sekolah");
+      const result = await response.json();
+
+      if (response) {
+        setResult(result.response.data);
+      }
+
+      setIsLoading(false);
+    } catch (error) {
+      console.log("Error fetching data:", error);
+      setIsLoading(false);
+    }
+  };
+
+  const renderElementInformasiSekolah = () => {
+    if (isLoading) {
+      return (
+        <div className="flex justify-center items-center w-full">
+          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
+        </div>
+      );
+    } else {
+      return (
+        <div className="flex flex-col gap-8 w-full" key={result?.npsn}>
+          <h3 className="font-semibold text-xl text-gray-700">
+            Informasi Sekolah
+          </h3>
+          <div className="flex flex-col gap-3">
+            <h3 className="font-semibold lg:text-lg text-sm text-gray-600">
+              {result?.name}
+            </h3>
+            <div className="flex items-start gap-3">
+              <div className="flex justify-center items-center">
+                <FaInfo className="text-xl" />
+              </div>
+              <h3 className="font-semibold lg:text-base text-sm">
+                NSPN: <span>{result?.nspn}</span>
+              </h3>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex justify-center items-center">
+                <FaMapMarkerAlt className="text-xl" />
+              </div>
+              <h3 className="font-semibold lg:text-base text-sm">
+                {result?.address}
+              </h3>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex justify-center items-center">
+                <PiPhoneCallFill className="text-xl" />
+              </div>
+              <h3 className="font-semibold lg:text-base text-sm text-blue-600">
+                {result?.phone}
+              </h3>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
+
+  useEffect(() => {
+    fetchingData();
+  }, []);
+
   return (
     <div className="mt-20 bg-white flex flex-col lg:gap-10 gap-5 lg:p-10 p-3">
       <div className="flex lg:flex-row flex-col gap-5">
@@ -31,41 +105,7 @@ export default function FooterComponent() {
             loading="lazy"
           />
         </div>
-        <div className="flex flex-col gap-8 w-full">
-          <h3 className="font-semibold text-xl text-gray-700">
-            Informasi Sekolah
-          </h3>
-          <div className="flex flex-col gap-3">
-            <h3 className="font-semibold lg:text-lg text-sm text-gray-600">
-              SMP Negeri 1 DOBO
-            </h3>
-            <div className="flex items-start gap-3">
-              <div className="flex justify-center items-center">
-                <FaInfo className="text-xl" />
-              </div>
-              <h3 className="font-semibold lg:text-base text-sm">
-                NSPN: <span>60101808</span>
-              </h3>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex justify-center items-center">
-                <FaMapMarkerAlt className="text-xl" />
-              </div>
-              <h3 className="font-semibold lg:text-base text-sm">
-                Jl. Ali Moertopo, Desa SIWALIMA, Kec. Pulan Aru, Provinsi
-                Maluku. Indonesia.
-              </h3>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex justify-center items-center">
-                <PiPhoneCallFill className="text-xl" />
-              </div>
-              <h3 className="font-semibold lg:text-base text-sm text-blue-600">
-                091721024
-              </h3>
-            </div>
-          </div>
-        </div>
+        {renderElementInformasiSekolah()}
         <div className="flex flex-col gap-2 w-full">
           <h3 className="font-semibold text-xl text-gray-700 mb-5">
             Agenda Sekolah

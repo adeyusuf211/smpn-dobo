@@ -6,9 +6,60 @@ import FooterComponent from "@/components/share/footer/footer";
 import LogoSekolah from "@/public/assets/images/logo1.png";
 
 import FotoBannerVisiMisi from "@/public/assets/images/Foto MPLS/2.webp";
+import { useEffect, useState } from "react";
 
 export default function VisiMisiComponent() {
   useAOS();
+
+  const [result, setResult] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const fetchingData = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("/api/informasi-sekolah");
+      const result = await response.json();
+
+      if (response) {
+        setResult(result.response.data);
+      }
+
+      setIsLoading(false);
+    } catch (error) {
+      console.log("Error fetching data:", error);
+      setIsLoading(false);
+    }
+  };
+
+  const renderElementVisiMisi = () => {
+    if (isLoading) {
+      return (
+        <div className="flex justify-center items-center w-full">
+          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
+        </div>
+      );
+    } else {
+      return (
+        <div className="relative mt-3">
+          <h1 className="font-bold text-6xl text-white">Visi</h1>
+          <br />
+          <h3 className="text-white font-regular text-xl">{result.vision}</h3>
+          <br />
+          <h1 className="font-bold text-6xl text-white">Misi</h1>
+          <br />
+          <h3
+            className="text-white font-regular text-xl"
+            dangerouslySetInnerHTML={{ __html: result.mission }}
+          />
+        </div>
+      );
+    }
+  };
+
+  useEffect(() => {
+    fetchingData();
+  }, []);
+
   return (
     <div
       className="flex flex-col gap-10 w-full min-h-screen h-full"
@@ -27,44 +78,7 @@ export default function VisiMisiComponent() {
               className="w-full h-full"
             />
           </div>
-          <div className="relative mt-3">
-            <h1 className="font-bold text-6xl text-white">Visi</h1>
-            <br />
-            <h3 className="text-white font-regular text-xl">
-              BERIMTAQ BERKARAKTER BANGSA UNGGUL DALAM PRESTASI DAN BERBUDAYA
-              LINGKUNGAN
-            </h3>
-            <br />
-            <h1 className="font-bold text-6xl text-white">Misi</h1>
-            <br />
-            <ol className="flex flex-col gap-3">
-              <li className="text-white font-regular text-xl">
-                1. Meningkatkan iman dan taqwa terhadap Tuhan yang Maha Esa
-                sesuai dengan agama dan kepercayaan yang dianut
-              </li>
-              <li className="text-white font-regular text-xl">
-                2. Meningkatkan budaya belajar peserta didik sesuai dengan
-                nilai-nilai karakter bangsa
-              </li>
-              <li className="text-white font-regular text-xl">
-                3. Meningkatkan kompetensi kinerja guru dan tenaga kependidikan
-                untuk menguasai ilmu pengetahuan, teknologi dan keterampilan
-                secara insentif
-              </li>
-              <li className="text-white font-regular text-xl">
-                4. Meningkatkan partisipasi warga sekolah dan masyarakat dalam
-                pengelolaan lingkungan pendidikan yang berwawasan dan bermutu
-              </li>
-              <li className="text-white font-regular text-xl">
-                5. Mewujudkan fasilitas sarana prasarana dalam bidang akademik
-                maupun non akademik yang ramah lingkungan sesuai dengan
-                kebutuhan
-              </li>
-              <li className="text-white font-regular text-xl">
-                6. Menciptakan lingkungan sekolah yang bersih, sehat dan asri
-              </li>
-            </ol>
-          </div>
+          {renderElementVisiMisi()}
         </div>
         <div className="h-full w-full max-w-[35%] bg-white p-10 rounded-xl">
           <div className="flex justify-center items-center py-5">
