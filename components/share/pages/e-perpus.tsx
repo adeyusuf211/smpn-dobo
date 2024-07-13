@@ -8,22 +8,33 @@ import { SimpleSelectBoxComponent } from "../input/simple-selectbox";
 import ExampleImage6 from "@/public/assets/images/example-6.svg";
 import CardWithImageComponentAndDownloadFile from "../card/card-with-image-and-download-file";
 import { useEffect, useState } from "react";
-// import { getDataBuku } from "@/helpers/fetching-data";
 
 const dummyData = ["Terbaru", "Terpopuler"];
 
 export default function EPerpusComponent() {
   const [result, setResult] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [valueText, setValueText] = useState<string>("");
+
+  const onChangeValue = (e: any) => setValueText(e.target.value);
+
+  const paramsUrl = {
+    list: "list",
+    search: `search?search=${valueText ?? ""}`,
+  };
 
   const fetchingData = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("/api/e-perpus");
+      const response = await fetch(
+        `https://admin.smpnegeri1dobo.sch.id/api/books/${
+          valueText === "" ? `${paramsUrl.list}` : `${paramsUrl.search}`
+        }`
+      );
       const result = await response.json();
 
-      if (response) {
-        setResult(result.response?.data);
+      if (result) {
+        setResult(result?.data);
       }
 
       setIsLoading(false);
@@ -35,13 +46,18 @@ export default function EPerpusComponent() {
 
   const renderElementBuku = () => {
     if (!isLoading) {
-      return result?.map((data: any) => (
-        <>
-          {data?.length < 1 ? (
-            <h3 className="text-center font-bold text-white text-4xl">
-              Tidak Ada Data / Buku Kosong
-            </h3>
-          ) : (
+      if (result?.length === 0 || result === undefined) {
+        return (
+          <h3 className="text-center font-bold text-white text-4xl">
+            Tidak Ada Data / Buku Kosong
+          </h3>
+        );
+      } else {
+        return result?.map((data: any) => (
+          <div
+            key={data.id}
+            className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center"
+          >
             <CardWithImageComponentAndDownloadFile
               keyData={data?.id}
               imageSource={data?.images ?? ExampleImage6}
@@ -52,9 +68,15 @@ export default function EPerpusComponent() {
               filePath={`${process.env.API_BASE_URL}/download/books/${data?.id}`}
               pathToView={data?.pdf}
             />
-          )}
-        </>
-      ));
+          </div>
+        ));
+      }
+    } else {
+      return (
+        <div className="flex justify-center items-center w-full">
+          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
+        </div>
+      );
     }
   };
 
@@ -76,20 +98,21 @@ export default function EPerpusComponent() {
           inputName="e-raport"
           placeholder="Ketik Judul Buku"
           customClassName="bg-gray-100 rounded-lg flex px-5 text-lg"
+          value={valueText}
+          onChange={onChangeValue}
         />
         <SimpleSelectBoxComponent placeholder="Filter" inputData={dummyData} />
-        <Button size="lg" variant="destructive" className="text-lg">
-          Cari
+        <Button
+          size="lg"
+          variant="destructive"
+          className="text-lg"
+          onClick={fetchingData}
+          disabled={isLoading}
+        >
+          {isLoading ? "..." : "Cari"}
         </Button>
       </div>
-      {isLoading && (
-        <div className="flex justify-center items-center w-full">
-          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
-        </div>
-      )}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-        {renderElementBuku()}
-      </div>
+      {renderElementBuku()}
       <FooterComponent />
     </div>
   );

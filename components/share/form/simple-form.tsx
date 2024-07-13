@@ -6,6 +6,8 @@ interface SimpleFormComponentProps {
   readonly label?: string;
   readonly inputType: string;
   readonly inputName: string;
+  readonly value?: string;
+  readonly onChange?: any;
   readonly placeholder: string;
   readonly customClassName?: string;
 }
@@ -15,8 +17,10 @@ export function SimpleFormComponent({
   label,
   inputType,
   inputName,
+  value,
   placeholder,
   customClassName,
+  onChange,
 }: SimpleFormComponentProps) {
   return (
     <div className="grid w-full items-center gap-1.5">
@@ -26,6 +30,8 @@ export function SimpleFormComponent({
         id={inputName}
         placeholder={placeholder}
         className={customClassName}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
