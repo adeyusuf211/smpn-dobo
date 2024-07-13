@@ -1,11 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
+import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 
 interface SimpleCardCompoenntProps {
-  image: StaticImageData;
-  name: string;
-  buttons: string[];
-  key?: any;
+  readonly image: StaticImageData;
+  readonly name: string;
+  readonly buttons: string[];
+  readonly key?: any;
 }
 
 export default function SimpleCardComponent({
@@ -18,8 +19,7 @@ export default function SimpleCardComponent({
     <div className="flex flex-col gap-2 bg-white" key={key}>
       <div className="p-6 flex bg-blue-300 justify-center items-center w-full min-h-[300px] h-full relative">
         <Image
-          src={image}
-          style={{ objectFit: "cover" }}
+          src={image ?? PlaceHolderImage}
           alt="model"
           className="absolute bottom-0 w-full h-full flex"
           loading="lazy"

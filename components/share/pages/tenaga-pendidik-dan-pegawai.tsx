@@ -5,7 +5,6 @@ import SimpleCardComponent from "@/components/share/card/simple-card";
 import FooterComponent from "@/components/share/footer/footer";
 
 import { Button } from "@/components/ui/button";
-import { fotoGuruImages as imageList } from "@/helpers/all-static-images";
 import { useAOS } from "@/hooks/useAOS";
 
 export default function TenagaPendidikDanPegawaiComponent() {
@@ -15,12 +14,11 @@ export default function TenagaPendidikDanPegawaiComponent() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const imagesPerPage = 10;
-  const indexOfLastImage = currentPage * imagesPerPage;
-  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = imageList.slice(indexOfFirstImage, indexOfLastImage);
-
-  const totalPages = Math.ceil(imageList.length / imagesPerPage);
+  const dataPerPage = 10;
+  const indexOfLastData = currentPage * dataPerPage;
+  const indexOfFirstData = indexOfLastData - dataPerPage;
+  const currentData = result?.slice(indexOfFirstData, indexOfLastData);
+  const totalPages = Math.ceil(result?.length / dataPerPage);
 
   const fetchingData = async () => {
     try {
@@ -39,9 +37,24 @@ export default function TenagaPendidikDanPegawaiComponent() {
     }
   };
 
-  const paginate = (pageNumber: any) => {
+  const paginate = async (pageNumber: any) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
+      try {
+        setIsLoading(true);
+        const response = await fetch(
+          `https://admin.smpnegeri1dobo.sch.id/api/teachers/list?limit=10&page=${pageNumber}`
+        );
+        const result = await response.json();
+
+        if (response) {
+          setResult(result?.data);
+        }
+
+        setIsLoading(false);
+      } catch (error) {
+        console.log("Error: ", error);
+      }
     }
   };
 
@@ -82,12 +95,12 @@ export default function TenagaPendidikDanPegawaiComponent() {
     } else {
       return (
         <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-          {currentImages?.map((src, index) => (
+          {currentData?.map((data) => (
             <SimpleCardComponent
-              image={src}
-              name="Your Name"
-              buttons={["No. Telephone"]}
-              key={index}
+              image={data?.avatar}
+              name={data?.name}
+              buttons={[data?.status_kepegawaian]}
+              key={data?.id}
             />
           ))}
         </div>
@@ -98,6 +111,8 @@ export default function TenagaPendidikDanPegawaiComponent() {
   useEffect(() => {
     fetchingData();
   }, []);
+
+  console.log(currentData);
 
   return (
     <div
