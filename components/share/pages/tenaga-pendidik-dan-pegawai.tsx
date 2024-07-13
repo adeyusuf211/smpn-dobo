@@ -112,8 +112,6 @@ export default function TenagaPendidikDanPegawaiComponent() {
     fetchingData();
   }, []);
 
-  console.log(currentData);
-
   return (
     <div
       className="flex flex-col gap-10 w-full min-h-screen h-full"
