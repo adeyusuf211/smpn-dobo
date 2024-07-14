@@ -107,7 +107,7 @@ export default function EPerpusComponent() {
           variant="destructive"
           className="text-lg"
           onClick={fetchingData}
-          disabled={isLoading}
+          disabled={valueText === "" || isLoading}
         >
           {isLoading ? "..." : "Cari"}
         </Button>

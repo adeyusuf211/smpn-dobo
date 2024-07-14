@@ -21,6 +21,8 @@ export default function SimpleCardComponent({
         <Image
           src={image ?? PlaceHolderImage}
           alt="model"
+          width={300}
+          height={300}
           className="absolute bottom-0 w-full h-full flex"
           loading="lazy"
         />

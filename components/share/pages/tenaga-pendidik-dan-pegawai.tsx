@@ -3,31 +3,37 @@
 import { useEffect, useState } from "react";
 import SimpleCardComponent from "@/components/share/card/simple-card";
 import FooterComponent from "@/components/share/footer/footer";
+import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 
 import { Button } from "@/components/ui/button";
 import { useAOS } from "@/hooks/useAOS";
+import PaginationButtons from "../pagination/page";
 
 export default function TenagaPendidikDanPegawaiComponent() {
   useAOS();
 
   const [result, setResult] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [totalData, setTotalData] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState(1);
 
   const dataPerPage = 10;
   const indexOfLastData = currentPage * dataPerPage;
   const indexOfFirstData = indexOfLastData - dataPerPage;
   const currentData = result?.slice(indexOfFirstData, indexOfLastData);
-  const totalPages = Math.ceil(result?.length / dataPerPage);
+  const totalPages = Math.ceil(totalData / dataPerPage);
 
-  const fetchingData = async () => {
+  const fetchingData = async (page: any) => {
     try {
       setIsLoading(true);
-      const response = await fetch("/api/teachers");
+      const response = await fetch(
+        `https://admin.smpnegeri1dobo.sch.id/api/teachers/list?limit=10&page=${page}`
+      );
       const result = await response.json();
 
-      if (response) {
-        setResult(result.response?.data);
+      if (result) {
+        setResult(result?.data);
+        setTotalData(result.pagination?.total_items);
       }
 
       setIsLoading(false);
@@ -40,76 +46,43 @@ export default function TenagaPendidikDanPegawaiComponent() {
   const paginate = async (pageNumber: any) => {
     if (pageNumber > 0 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
-      try {
-        setIsLoading(true);
-        const response = await fetch(
-          `https://admin.smpnegeri1dobo.sch.id/api/teachers/list?limit=10&page=${pageNumber}`
-        );
-        const result = await response.json();
-
-        if (response) {
-          setResult(result?.data);
-        }
-
-        setIsLoading(false);
-      } catch (error) {
-        console.log("Error: ", error);
-      }
+      await fetchingData(pageNumber);
     }
-  };
-
-  const renderPaginationButtons = () => {
-    const buttons = [];
-    const visiblePages = 3;
-    let start = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-    let end = Math.min(totalPages, start + visiblePages - 1);
-
-    if (totalPages > visiblePages && end === totalPages) {
-      start = Math.max(1, end - visiblePages + 1);
-    }
-
-    for (let i = start; i <= end; i++) {
-      buttons.push(
-        <button
-          key={i}
-          onClick={() => paginate(i)}
-          className={`px-3 py-1 mx-1 ${
-            currentPage === i ? "bg-gray-700 text-white" : "bg-gray-300"
-          }`}
-        >
-          {i}
-        </button>
-      );
-    }
-
-    return buttons;
   };
 
   const renderElementTenagaPendidikDanPegawai = () => {
-    if (isLoading) {
+    if (!isLoading) {
+      if (result?.length === 0 || result === undefined) {
+        return (
+          <h3 className="text-center font-bold text-white text-4xl">
+            Tidak Ada Data
+          </h3>
+        );
+      } else {
+        return (
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+            {result?.map((data) => (
+              <SimpleCardComponent
+                image={data?.avatar ?? PlaceHolderImage}
+                name={data?.name}
+                buttons={[data?.status_kepegawaian]}
+                key={data?.id}
+              />
+            ))}
+          </div>
+        );
+      }
+    } else {
       return (
         <div className="flex justify-center items-center w-full">
           <h3 className="text-white font-semibold text-2xl">Loading...</h3>
-        </div>
-      );
-    } else {
-      return (
-        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-          {currentData?.map((data) => (
-            <SimpleCardComponent
-              image={data?.avatar}
-              name={data?.name}
-              buttons={[data?.status_kepegawaian]}
-              key={data?.id}
-            />
-          ))}
         </div>
       );
     }
   };
 
   useEffect(() => {
-    fetchingData();
+    fetchingData("1");
   }, []);
 
   return (
@@ -134,7 +107,11 @@ export default function TenagaPendidikDanPegawaiComponent() {
         >
           Previous
         </Button>
-        {renderPaginationButtons()}
+        <PaginationButtons
+          currentPage={currentPage}
+          totalPages={totalPages}
+          paginate={paginate}
+        />
         <Button
           size="lg"
           onClick={() => paginate(currentPage + 1)}
