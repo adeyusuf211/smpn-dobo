@@ -101,7 +101,6 @@ export default function EPerpusComponent() {
           value={valueText}
           onChange={onChangeValue}
         />
-        <SimpleSelectBoxComponent placeholder="Filter" inputData={dummyData} />
         <Button
           size="lg"
           variant="destructive"
