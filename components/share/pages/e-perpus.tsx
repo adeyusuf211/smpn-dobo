@@ -3,13 +3,10 @@
 import { Button } from "@/components/ui/button";
 import FooterComponent from "../footer/footer";
 import { SimpleFormComponent } from "../form/simple-form";
-import { SimpleSelectBoxComponent } from "../input/simple-selectbox";
 
 import ExampleImage6 from "@/public/assets/images/example-6.svg";
 import CardWithImageComponentAndDownloadFile from "../card/card-with-image-and-download-file";
 import { useEffect, useState } from "react";
-
-const dummyData = ["Terbaru", "Terpopuler"];
 
 export default function EPerpusComponent() {
   const [result, setResult] = useState<any[]>([]);
@@ -55,8 +52,8 @@ export default function EPerpusComponent() {
       } else {
         return result?.map((data: any) => (
           <div
-            key={data.id}
             className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center"
+            key={data?.id}
           >
             <CardWithImageComponentAndDownloadFile
               keyData={data?.id}

@@ -15,72 +15,56 @@ export default function RedaksiPendidikComponent() {
           badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="2 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="3 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="4 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={2}
         />
         <CardWithImageComponent
           imageSource={ExampleImage6}
           badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="2 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="3 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
-        />
-        <CardWithImageComponent
-          imageSource={ExampleImage6}
-          badge="4 Mei 2024"
-          title="Your Info Title Here"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={3}
         />
         <CardWithImageComponent
           imageSource={ExampleImage6}
           badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={4}
         />
         <CardWithImageComponent
           imageSource={ExampleImage6}
-          badge="2 Mei 2024"
+          badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={5}
         />
         <CardWithImageComponent
           imageSource={ExampleImage6}
-          badge="3 Mei 2024"
+          badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={6}
         />
         <CardWithImageComponent
           imageSource={ExampleImage6}
-          badge="4 Mei 2024"
+          badge="1 Mei 2024"
           title="Your Info Title Here"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={7}
+        />
+        <CardWithImageComponent
+          imageSource={ExampleImage6}
+          badge="1 Mei 2024"
+          title="Your Info Title Here"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={8}
+        />
+        <CardWithImageComponent
+          imageSource={ExampleImage6}
+          badge="1 Mei 2024"
+          title="Your Info Title Here"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, dolore?"
+          key={1}
         />
       </div>
       <FooterComponent />

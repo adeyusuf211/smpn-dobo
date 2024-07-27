@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/image";
+import ExampleImage6 from "@/public/assets/images/example-6.svg";
 
 interface CardWithImageComponentProps {
-  readonly keyData?: any;
+  readonly key: any;
   readonly badge?: string;
   readonly imageSource: StaticImageData;
   readonly title?: string;
@@ -11,21 +12,24 @@ interface CardWithImageComponentProps {
 }
 
 export default function CardWithImageComponent({
-  keyData,
+  key,
   badge,
   imageSource,
   title,
   description,
   buttons,
 }: CardWithImageComponentProps) {
+  console.log(imageSource);
   return (
-    <div className="flex h-[500px] flex-col gap-10 bg-white p-3" key={keyData}>
+    <div className="flex h-[500px] flex-col gap-10 bg-white p-3" key={key}>
       <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
         <Image
-          src={imageSource}
+          src={ExampleImage6}
           alt="model"
           loading="lazy"
           className="w-full object-cover flex"
+          width={300}
+          height={300}
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -36,16 +40,17 @@ export default function CardWithImageComponent({
         ) : null}
         {title ? (
           <div className="flex justify-start">
-            <h1 className="font-semibold text-2xl text-gray-700 uppercase">
+            <h3 className="font-semibold text-2xl text-gray-700 uppercase">
               {title}
-            </h1>
+            </h3>
           </div>
         ) : null}
         {description ? (
           <div className="flex justify-start">
-            <h1 className="font-semibold text-base text-gray-700">
-              {description}
-            </h1>
+            <h1
+              className="font-semibold text-base text-gray-700"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
           </div>
         ) : null}
         <div className={`${buttons ? "flex gap-2 w-full mt-5 mb-2" : ""}`}>

@@ -55,11 +55,11 @@ export default function GaleriFotoComponent() {
         Arsip Foto
       </h1>
       <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-        {currentImages.map((image, index) => (
+        {currentImages.map((image) => (
           <CardWithImageComponent
             imageSource={image}
             title="Your title for image here"
-            key={index}
+            key={1}
           />
         ))}
       </div>
