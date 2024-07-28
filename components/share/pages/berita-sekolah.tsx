@@ -35,7 +35,7 @@ export default function BeritaSekolahComponent() {
     }
   };
 
-  const renderElementBeritaSekolah = () => {
+  const renderElement = () => {
     if (!isLoading) {
       if (result?.length === 0 || result === undefined) {
         return (
@@ -45,7 +45,7 @@ export default function BeritaSekolahComponent() {
         );
       } else {
         return (
-          <div className="my-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+          <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
             {result?.map((data) => (
               <CardWithImageComponent
                 imageSource={data?.meta_og_image}
@@ -78,30 +78,7 @@ export default function BeritaSekolahComponent() {
       <h1 className="2xl:text-6xl lg:text-4xl text-2xl uppercase text-center font-semibold text-white mt-48">
         Berita Sekolah
       </h1>
-      <div className="flex lg:flex-row flex-col gap-5">
-        {renderElementBeritaSekolah()}
-        <div className="flex flex-col gap-3 lg:w-[60%] w-full h-full bg-white my-20 lg:p-10 py-10 px-4">
-          <h3 className="font-bold text-2xl mb-2">Berita Populer</h3>
-          <hr className="border-2 border-gray-300 mb-5" />
-          <div className="flex flex-col gap-5">
-            <ListCardComponent
-              title="Pengumuman Libur Lebaran"
-              description="lorem ipsum dolor sit amet"
-              imageSource={""}
-            />
-            <ListCardComponent
-              title="Pengumuman Juara Lomba"
-              description="lorem ipsum dolor sit amet"
-              imageSource={""}
-            />
-            <ListCardComponent
-              title="Pengumuman Libur Semester"
-              description="lorem ipsum dolor sit amet"
-              imageSource={""}
-            />
-          </div>
-        </div>
-      </div>
+      <div className="flex lg:flex-row flex-col gap-5">{renderElement()}</div>
       <FooterComponent />
     </div>
   );

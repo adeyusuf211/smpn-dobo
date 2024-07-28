@@ -1,9 +1,10 @@
 interface AgendaComponentProps {
-  date: string;
+  date: any;
   monthAndYear: string;
   title: string;
-  description: string;
-  isHoliday: boolean;
+  description: any;
+  isHoliday?: boolean;
+  key?: any;
 }
 
 export default function AgendaComponent({
@@ -12,9 +13,10 @@ export default function AgendaComponent({
   title,
   description,
   isHoliday,
+  key,
 }: AgendaComponentProps) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" key={key}>
       <div className="flex items-center gap-3">
         <div className="bg-blue-600 w-[80px] h-[80px] flex flex-col gap-2 justify-center items-center">
           <h1 className="flex justify-center items-center font-bold text-2xl text-white">
@@ -28,9 +30,8 @@ export default function AgendaComponent({
             className={`font-semibold lg:text-sm text-[12px] ${
               isHoliday ? "text-red-600" : "text-blue-600"
             }`}
-          >
-            {description}
-          </p>
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
       </div>
     </div>

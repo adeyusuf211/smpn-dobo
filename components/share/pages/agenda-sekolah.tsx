@@ -35,7 +35,7 @@ export default function AgendaSekolahComponent() {
     }
   };
 
-  const renderElementAgendaSekolah = () => {
+  const renderElement = () => {
     if (!isLoading) {
       if (result?.length === 0 || result === undefined) {
         return (
@@ -77,7 +77,7 @@ export default function AgendaSekolahComponent() {
       <h1 className="2xl:text-6xl lg:text-4xl text-2xl uppercase text-center font-semibold text-white mt-48">
         Agenda Sekolah
       </h1>
-      {renderElementAgendaSekolah()}
+      {renderElement()}
       <FooterComponent />
     </div>
   );

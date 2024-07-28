@@ -21,10 +21,15 @@ const LINK_INSTAGRAM: string =
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { sliceText } from "@/utils/slice-text";
+import { getDayFromDate, getMonthYearFromDate } from "@/utils/format-date";
 
 export default function FooterComponent() {
   const [result, setResult] = useState<any>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const [resultAgenda, setResultAgenda] = useState<any>([]);
+  const [isLoadingAgenda, setIsLoadingAgenda] = useState<boolean>(false);
 
   const fetchingData = async () => {
     try {
@@ -40,6 +45,25 @@ export default function FooterComponent() {
     } catch (error) {
       console.log("Error fetching data:", error);
       setIsLoading(false);
+    }
+  };
+
+  const fetchingDataAgenda = async () => {
+    try {
+      setIsLoadingAgenda(true);
+      const response = await fetch(
+        "https://admin.smpnegeri1dobo.sch.id/api/get-posts?search=test&limit=2"
+      );
+      const result = await response?.json();
+
+      if (result) {
+        setResultAgenda(result.data);
+      }
+
+      setIsLoadingAgenda(false);
+    } catch (error) {
+      console.log("Error fetching data:", error);
+      setIsLoadingAgenda(false);
     }
   };
 
@@ -90,8 +114,33 @@ export default function FooterComponent() {
     }
   };
 
+  const renderElementAgenda = () => {
+    if (isLoadingAgenda) {
+      return (
+        <div className="flex justify-center items-center w-full">
+          <h3 className="text-white font-semibold text-2xl">Loading...</h3>
+        </div>
+      );
+    } else {
+      return (
+        <>
+          {resultAgenda?.map((result: any) => (
+            <AgendaComponent
+              key={result?.id}
+              date={getDayFromDate(result?.published_at)}
+              monthAndYear={getMonthYearFromDate(result?.published_at)}
+              title={result?.name}
+              description={sliceText(result?.content, 30)}
+            />
+          ))}
+        </>
+      );
+    }
+  };
+
   useEffect(() => {
     fetchingData();
+    fetchingDataAgenda();
   }, []);
 
   return (
@@ -110,27 +159,7 @@ export default function FooterComponent() {
           <h3 className="font-semibold text-xl text-gray-700 mb-5">
             Agenda Sekolah
           </h3>
-          <AgendaComponent
-            date="01"
-            monthAndYear="Mei 2024"
-            title="Hari Buruh"
-            description="Libur Sekolah"
-            isHoliday={true}
-          />
-          <AgendaComponent
-            date="17"
-            monthAndYear="Agu 2024"
-            title="Proklamasi Kemerdekaan"
-            description="Libur Sekolah"
-            isHoliday={true}
-          />
-          <AgendaComponent
-            date="18"
-            monthAndYear="Agu 2024"
-            title="Perlombaan 17 Agustus"
-            description="Waktu: 08.00 - 15.00 WIB"
-            isHoliday={false}
-          />
+          {renderElementAgenda()}
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between items-center lg:text-lg text-sm">
