@@ -18,10 +18,14 @@ export default function BeritaSekolahComponent() {
       const response = await fetch(
         `https://admin.smpnegeri1dobo.sch.id/api/get-posts?search=test&limit=10&page=1`
       );
-      const result = await response.json();
+      const result = await response?.json();
+
+      const filterData = result?.data.filter(
+        (data: any) => data.category === "Berita Sekolah"
+      );
 
       if (result) {
-        setResult(result?.data);
+        setResult(filterData);
       }
 
       setIsLoading(false);
