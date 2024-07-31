@@ -57,10 +57,10 @@ export const MENU_LIBRARI: { title: string; href: string }[] = [
     title: "Galeri Vidio",
     href: "/galeri-vidio",
   },
-  {
-    title: "Redaksi Pendidik",
-    href: "/redaksi-pendidik",
-  },
+//   {
+//     title: "Redaksi Pendidik",
+//     href: "/redaksi-pendidik",
+//   },
   {
     title: "Pengumuman",
     href: "/pengumuman",
