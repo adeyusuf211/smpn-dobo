@@ -4,7 +4,7 @@ import Image from "next/image";
 import FooterComponent from "../footer/footer";
 import VideoPlayerComponent from "../video/video-player";
 
-import ModelSekolah from "@/public/assets/images/Foto Siswa/model.webp";
+import ModelSekolah from "@/public/assets/images/Foto Eskull/foto utama.png";
 
 import { fotoGuruImages as imagesLists } from "@/helpers/all-static-images";
 import { URL_YOUTUBE } from "@/helpers/all-static-videos";
