@@ -96,11 +96,11 @@ export default function VisiMisiComponent() {
                 02 Juni 2024
               </h3>
             </div>
-            <h3 className="font-bold text-xl text-gray-700">
+            {/* <h3 className="font-bold text-xl text-gray-700">
               Dibaca 2000 Kali
-            </h3>
+            </h3> */}
           </div>
-          <div className="w-full flex flex-col mt-7">
+          {/* <div className="w-full flex flex-col mt-7">
             <h3 className="text-3xl font-bold text-gray-700 mb-5">
               Tulisan Lainnya
             </h3>
@@ -160,7 +160,7 @@ export default function VisiMisiComponent() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <FooterComponent />
