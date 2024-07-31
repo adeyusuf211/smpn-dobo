@@ -17,7 +17,7 @@ export default function MotivationComponent() {
           src={ImagesLists[8]}
           alt="mutiara deskripsi"
         />
-        <div className="w-full h-full p-4 italic text-white text-3xl">
+        <div className="w-full h-full p-4 italic text-white lg:text-3xl text-xl">
           MUTIARA (Mutu, Intelektual & Karakter): Yang mempunyai arti bahwa SMP
           Negeri 1 Dobo menjadikan Mutu sebagai tujuan utama, dengan sarana
           Intelektual Guru dan Peserta Didik yang berpedoman kepada Karakter

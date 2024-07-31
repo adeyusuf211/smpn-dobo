@@ -38,7 +38,7 @@ export default function SeragamSekolahComponent() {
               <div className="rounded-rectangle ml-auto" />
               <div className="rounded-rectangle ml-auto" />
             </div>
-            <div className="flex w-full absolute top-0">
+            <div className="flex lg:flex-row flex-col lg:gap-0 gap-20 w-full absolute top-0">
               <div className="flex gap-10 z-10">
                 <Image
                   src={SeragamPutihBiru}

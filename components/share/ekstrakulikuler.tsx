@@ -40,9 +40,9 @@ export default function ExtrakulikulerComponent() {
           program ekstra kulikuler
         </h1>
         <div className="flex flex-col gap-5">
-          <div className="text-white text-2xl my-5 flex gap-3">
+          <div className="text-white text-2xl my-5 flex lg:flex-row flex-col lg:gap-3 gap-1">
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center cursor-pointer lg:text-xl text-lg  ${
                 selectedCategory === "Olahraga" ? "bg-destructive" : ""
               } px-7 py-3 border-none rounded-lg`}
               onClick={() => handleCategoryClick("Olahraga")}
@@ -50,7 +50,7 @@ export default function ExtrakulikulerComponent() {
               Olahraga
             </button>
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center cursor-pointer lg:text-xl text-lg  ${
                 selectedCategory === "Seni dan Kreativitas"
                   ? "bg-destructive"
                   : ""
@@ -60,7 +60,7 @@ export default function ExtrakulikulerComponent() {
               Seni dan Kreativitas
             </button>
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center cursor-pointer lg:text-xl text-lg  ${
                 selectedCategory === "Formasi dan Aktivitas"
                   ? "bg-destructive"
                   : ""

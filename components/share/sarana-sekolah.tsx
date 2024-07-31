@@ -42,9 +42,9 @@ export default function SaranaSekolahComponent() {
           sarana dan fasilitas sekolah
         </h1>
         <div className="flex flex-col gap-5 mt-5">
-          <div className="text-white text-2xl my-5 flex gap-3">
+          <div className="text-white text-2xl my-5 flex lg:flex-row flex-col lg:gap-3 gap-1">
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center lg:text-xl text-lg cursor-pointer  ${
                 selectedCategory === "Sarana Utama" ? "bg-destructive" : ""
               } px-7 py-3 border-none rounded-lg`}
               onClick={() => handleCategoryClick("Sarana Utama")}
@@ -52,7 +52,7 @@ export default function SaranaSekolahComponent() {
               Sarana Utama
             </button>
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center lg:text-xl text-lg cursor-pointer  ${
                 selectedCategory === "Laboratorium Praktek"
                   ? "bg-destructive"
                   : ""
@@ -62,7 +62,7 @@ export default function SaranaSekolahComponent() {
               Laboratorium Praktek
             </button>
             <button
-              className={`flex gap-3 items-center cursor-pointer  ${
+              className={`flex gap-3 items-center lg:text-xl text-lg cursor-pointer  ${
                 selectedCategory === "Ruang Belajar dan Pendukung"
                   ? "bg-destructive"
                   : ""
