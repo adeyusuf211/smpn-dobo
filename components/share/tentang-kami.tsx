@@ -10,12 +10,12 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
   return (
     <section id="tentang-kami">
       <div
-        className="w-full min-h-screen h-full relative flex gap-3 lg:mt-0 mb-20"
+        className="w-full lg:min-h-screen min-h-full h-full relative flex gap-3 lg:mt-0 mt-20 lg:mb-20 mb-0"
         data-aos="fade-up"
       >
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="w-full h-full flex items-center p-5">
-            <div className="lg:w-[750px] w-full lg:p-10 p-6 bg-gray-200 absolute right-0 top-20">
+            <div className="lg:w-[750px] w-full lg:p-10 p-6 bg-gray-200 absolute right-0 lg:top-20 -top-10">
               <h3 className="font-semibold text-2xl uppercase text-gray-700 text-center">
                 deskripsi
               </h3>
@@ -28,11 +28,10 @@ export default function TentangKamiComponent({ showAddressLabel }: any) {
               </h3>
             </div>
           </div>
-          <div className="w-[750px] h-[600px] p-4 absolute lg:bottom-0 -bottom-[40rem] lg:left-10 -left-10 mb-5">
+          <div className="w-[750px] h-[600px] p-4 absolute lg:bottom-0 -bottom-[50rem] lg:left-10 left-0 mb-5">
             <Image
               src={ModelSekolahImage}
-              fill
-              style={{ objectFit: "cover" }}
+              className="lg:w-full w-[320px] lg:h-full h-[320px] object-cover lg:relative absolute lg:bottom-0"
               alt="model"
             />
           </div>

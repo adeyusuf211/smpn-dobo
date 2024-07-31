@@ -5,7 +5,7 @@ import TentangKamiComponent from "@/components/share/tentang-kami";
 
 export default function AnotherComponent() {
   return (
-    <div className="w-full h-full flex flex-col gap-5">
+    <div className="w-full h-full flex flex-col gap-5 overflow-hidden">
       <SeragamSekolahComponent />
       <TentangKamiComponent />
       <SaranaSekolahComponent />
