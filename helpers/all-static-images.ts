@@ -111,6 +111,13 @@ import FotoP57 from "@/public/assets/images/Foto P5/foto-7.webp";
 import FotoP58 from "@/public/assets/images/Foto P5/foto-8.webp";
 import FotoP59 from "@/public/assets/images/Foto P5/foto-9.webp";
 
+import FotoEskull1 from "@/public/assets/images/Foto Eskull/ekskul tari.jpg";
+import FotoEskull2 from "@/public/assets/images/Foto Eskull/futsal.jpg";
+import FotoEskull3 from "@/public/assets/images/Foto Eskull/pramuka.jpg";
+import FotoEskull4 from "@/public/assets/images/Foto Eskull/paskibra.jpg";
+import FotoEskull5 from "@/public/assets/images/Foto Eskull/futsal.jpg";
+import FotoEskull6 from "@/public/assets/images/Foto Eskull/pramuka.jpg";
+
 import FotoSarana1 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-1.webp";
 import FotoSarana2 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-2.webp";
 import FotoSarana3 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-3.webp";
@@ -126,6 +133,8 @@ import FotoSarana12 from "@/public/assets/images/Foto Sarana Sekolah/ruang-kelas
 import FotoSarana13 from "@/public/assets/images/Foto Sarana Sekolah/aula-1.webp";
 import FotoSarana14 from "@/public/assets/images/Foto Sarana Sekolah/aula-2.webp";
 import FotoSarana15 from "@/public/assets/images/Foto Sarana Sekolah/aula-3.webp";
+
+import fotoUtamaSiswa1 from "@/public/assets/images/Foto Utama Siswa/Febby Helen Noya.jpg";
 
 export const fotoP5Images = [
   FotoP51,
@@ -174,6 +183,44 @@ export const fotoSiswaImages = [
   },
   {
     name: FotoSiswa9,
+    category: "Aktivitas",
+  },
+];
+
+export const fotoUtamaSiswa = [
+  {
+    images: fotoUtamaSiswa1,
+    name: "Febby Helen Noya",
+  },
+  // {
+  //   images: fotoUtamaSiswa2,
+  //   name: "Christio Ruland Anamofa",
+  // },
+];
+
+export const fotoEskull = [
+  {
+    name: FotoEskull1,
+    category: "Olahraga",
+  },
+  {
+    name: FotoEskull2,
+    category: "Olahraga",
+  },
+  {
+    name: FotoEskull3,
+    category: "Seni",
+  },
+  {
+    name: FotoEskull4,
+    category: "Seni",
+  },
+  {
+    name: FotoEskull5,
+    category: "Seni",
+  },
+  {
+    name: FotoEskull6,
     category: "Aktivitas",
   },
 ];

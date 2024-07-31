@@ -6,7 +6,7 @@ interface HeroProps {
 
 import Image from "next/image";
 import TaglineComponent from "./tagline";
-import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.webp";
+import ModelSekolahImage from "@/public/assets/images/Foto Eskull/foto utama.png";
 import ImageLogo from "@/public/assets/images/logo1.png";
 
 import { useAOS } from "@/hooks/useAOS";

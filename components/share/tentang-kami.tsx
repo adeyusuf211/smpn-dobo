@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import TaglineComponent from "@/components/share/tagline";
-import ModelSekolahImage from "@/public/assets/images/Foto Siswa/model.webp";
+import ModelSekolahImage from "@/public/assets/images/Foto Eskull/foto deskripsi mutiara.png";
 import { useAOS } from "@/hooks/useAOS";
 
 export default function TentangKamiComponent({ showAddressLabel }: any) {
