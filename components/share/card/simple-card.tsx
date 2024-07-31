@@ -5,7 +5,7 @@ import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 interface SimpleCardCompoenntProps {
   readonly image: StaticImageData;
   readonly name: string;
-  readonly buttons: string[];
+  readonly buttons?: string[];
   readonly key?: any;
 }
 

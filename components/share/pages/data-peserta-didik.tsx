@@ -4,6 +4,7 @@ import ModelSekolah from "@/public/assets/images/Foto Siswa/model.webp";
 
 import SimpleCardComponent from "@/components/share/card/simple-card";
 import FooterComponent from "@/components/share/footer/footer";
+import { fotoUtamaSiswa as ImageList } from "@/helpers/all-static-images";
 
 export default function DataPesertaDidikComponent() {
   return (
@@ -12,56 +13,11 @@ export default function DataPesertaDidikComponent() {
         Data Peserta Didik
       </h1>
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Manajemen"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Vokasi", "Wali Kelas X"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Sarjana", "Wali Kelas X"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Manajemen"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Vokasi", "Wali Kelas X"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Manajemen"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Vokasi", "Wali Kelas X"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Manajemen"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Vokasi", "Wali Kelas X"]}
-        />
-        <SimpleCardComponent
-          image={ModelSekolah}
-          name="Your Name"
-          buttons={["Guru Vokasi", "Wali Kelas X"]}
-        />
+        {ImageList.map((image) => (
+          <div key={image?.id}>
+            <SimpleCardComponent image={image?.images} name={image?.name} />
+          </div>
+        ))}
       </div>
       <FooterComponent />
     </div>

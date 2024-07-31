@@ -3,7 +3,7 @@
 import { useAOS } from "@/hooks/useAOS";
 import ImageCardComponent from "./card/image-card";
 
-import { fotoSiswaImages as ImagesLists } from "@/helpers/all-static-images";
+import { fotoEskull as ImagesLists } from "@/helpers/all-static-images";
 import { useState } from "react";
 
 export default function ExtrakulikulerComponent() {
