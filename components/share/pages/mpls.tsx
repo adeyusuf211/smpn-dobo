@@ -61,11 +61,11 @@ export default function MPLSComponent() {
             src={ModelSekolah}
             style={{ objectFit: "cover" }}
             alt="model"
-            className="w-full h-[500px]"
+            className="lg:w-full w-[320px] lg:h-full h-[320px] object-cover"
           />
         </div>
         <div className="w-full h-full flex items-center">
-          <div className="bg-white p-10">
+          <div className="bg-white lg:p-10 p-4">
             <h1 className="lg:text-4xl font-semibold text-2xl uppercase mb-5">
               Tentang SMP Negeri 1 DOBO
             </h1>

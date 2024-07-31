@@ -66,7 +66,7 @@ export default function CardWithImageComponentAndDownloadFile({
           className="w-full object-cover flex"
         />
       </div>
-      <div className="flex flex-col my-3 gap-1">
+      <div className="flex flex-col my-1 gap-1">
         <div className="flex gap-3">
           <p className="text-sm text-gray-500">
             Penulis: {author}, {publisherYear}
