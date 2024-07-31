@@ -115,7 +115,6 @@ import FotoEskull1 from "@/public/assets/images/Foto Eskull/ekskul tari.jpg";
 import FotoEskull2 from "@/public/assets/images/Foto Eskull/futsal.jpg";
 import FotoEskull3 from "@/public/assets/images/Foto Eskull/pramuka.jpg";
 import FotoEskull4 from "@/public/assets/images/Foto Eskull/paskibra.jpg";
-import FotoEskull5 from "@/public/assets/images/Foto Eskull/drumband.jpg";
 
 import FotoSarana1 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-1.webp";
 import FotoSarana2 from "@/public/assets/images/Foto Sarana Sekolah/lab-ipa-2.webp";
@@ -219,12 +218,6 @@ export const fotoEskull = [
   },
   {
     id: "004",
-    title: "Drumband",
-    name: FotoEskull5,
-    category: "Seni",
-  },
-  {
-    id: "005",
     title: "Futsal",
     name: FotoEskull2,
     category: "Olahraga",
