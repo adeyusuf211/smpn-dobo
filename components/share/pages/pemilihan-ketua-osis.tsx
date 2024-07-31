@@ -39,19 +39,43 @@ export default function PemilihanKetuaOSISComponent() {
               </h3>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VII - A :</h4>
+              <h4 className="text-gray-400 text-lg">7 - 1 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VII - B :</h4>
+              <h4 className="text-gray-400 text-lg">7 - 2 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VII - C :</h4>
+              <h4 className="text-gray-400 text-lg">7 - 3 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VII - D :</h4>
+              <h4 className="text-gray-400 text-lg">7 - 4 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 5 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 6 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 7 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 8 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 9 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">7 - 10 :</h4>
               <h4 className="text-gray-700 text-lg">Person two</h4>
             </div>
           </div>
@@ -62,28 +86,44 @@ export default function PemilihanKetuaOSISComponent() {
               </h3>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - A :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - B :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - C :</h4>
+              <h4 className="text-gray-400 text-lg">8 - 1 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - D :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - E :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">VIII - F :</h4>
+              <h4 className="text-gray-400 text-lg">8 - 2 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 3 :</h4>
+              <h4 className="text-gray-700 text-lg">Person one</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 4 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 5 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 6 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 7 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 8 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 9 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">8 - 10 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -93,16 +133,44 @@ export default function PemilihanKetuaOSISComponent() {
               </h3>
             </div>
             <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">IX - A :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">IX - B :</h4>
-              <h4 className="text-gray-700 text-lg">Person two</h4>
-            </div>
-            <div className="flex gap-5 font-semibold">
-              <h4 className="text-gray-400 text-lg">IX - C :</h4>
+              <h4 className="text-gray-400 text-lg">9 - 1 :</h4>
               <h4 className="text-gray-700 text-lg">Person one</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 2 :</h4>
+              <h4 className="text-gray-700 text-lg">Person one</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 3 :</h4>
+              <h4 className="text-gray-700 text-lg">Person one</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 4 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 5 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 6 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 7 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 8 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 9 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
+            </div>
+            <div className="flex gap-5 font-semibold">
+              <h4 className="text-gray-400 text-lg">9 - 10 :</h4>
+              <h4 className="text-gray-700 text-lg">Person two</h4>
             </div>
           </div>
         </div>

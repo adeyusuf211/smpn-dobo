@@ -1,11 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import FooterComponent from "../footer/footer";
 
 import ExampleBrosur1 from "@/public/assets/images/brosur-1.svg";
 import ExampleBrosur2 from "@/public/assets/images/brosur-2.svg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function PPDBComponent() {
+  const router = useRouter();
   return (
     <div className="w-full h-full min-h-screen overflow-hidden">
       <h1 className="2xl:text-6xl lg:text-4xl text-2xl uppercase text-center font-semibold text-white mt-48">
@@ -23,6 +27,7 @@ export default function PPDBComponent() {
           </div>
         </div>
         <Button
+          onClick={() => router.push("https://wa.me/6282311436428")}
           variant="destructive"
           size="lg"
           className="uppercase text-xl font-semibold py-10 lg:px-20 px-10 text-center lg:mx-auto mx-0 mt-5"

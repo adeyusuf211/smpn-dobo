@@ -23,7 +23,7 @@ export default function CardWithImageComponent({
     <div className="flex h-[500px] flex-col gap-10 bg-white p-3" key={key}>
       <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
         <Image
-          src={ExampleImage6}
+          src={imageSource}
           alt="model"
           loading="lazy"
           className="w-full object-cover flex"
