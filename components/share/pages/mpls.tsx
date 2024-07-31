@@ -70,19 +70,22 @@ export default function MPLSComponent() {
               Tentang SMP Negeri 1 DOBO
             </h1>
             <p className="text-lg font-regular">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              pariatur voluptas unde molestias veniam quas ducimus suscipit,
-              possimus nulla. Minima enim quidem quos dignissimos voluptatem!
+              BERIMTAQ BERKARAKTER BANGSA UNGGUL DALAM PRESTASI DAN BERBUDAYA
+              LINGKUNGAN
             </p>
             <br />
             <p className="text-lg font-regular">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-              ullam maiores sequi, asperiores numquam fugit, odit doloremque
-              vitae voluptatem quibusdam architecto porro pariatur tempora
-              repellat repellendus nostrum, maxime consequatur hic? Ratione fuga
-              ipsum vel provident nobis error commodi consectetur id nihil
-              inventore incidunt eius, sint laudantium earum facere praesentium
-              impedit fugit reprehenderit qui.
+              Meningkatkan iman dan taqwa terhadap Tuhan yang Maha Esa sesuai
+              dengan agama dan kepercayaan yang dianut Meningkatkan budaya
+              belajar peserta didik sesuai dengan nilai-nilai karakter bangsa
+              Meningkatkan kompetensi kinerja guru dan tenaga kependidikan untuk
+              menguasai ilmu pengetahuan, teknologi dan keterampilan secara
+              insentif Meningkatkan partisipasi warga sekolah dan masyarakat
+              dalam pengelolaan lingkungan pendidikan yang berwawasan dan
+              bermutu Mewujudkan fasilitas sarana prasarana dalam bidang
+              akademik maupun non akademik yang ramah lingkungan sesuai dengan
+              kebutuhan Menciptakan lingkungan sekolah yang bersih, sehat dan
+              asri
             </p>
           </div>
         </div>

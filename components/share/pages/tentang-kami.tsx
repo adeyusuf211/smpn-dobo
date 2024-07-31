@@ -28,27 +28,82 @@ export default function TentangKamiComponent() {
             />
           </div>
           <div className="relative">
-            <h3 className="font-bold text-xl text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              ipsa.
+            <h3 className="text-white font-regular text-xl">
+              KILASAN SEJARAH Pendidikan adalah suatu rencana untuk membentuk
+              generasi penerus bangsa dalam suasana pembelajaran dengan
+              memberikan ilmu pengetahuan agar tercapai kemampuan,spiritual
+              keagamaan ,kecerdasaan ,kepribadian akhlak mulia serta
+              pengendalian diri. Pendidikan nasional merupakan pendidikan
+              berproses pada undang undang dasar 1945 dan pancasila dengan
+              nilai-nilai agama serta keanekaragaman budaya yang ada di
+              Indonesia kususnya dikepulauan aru. Pendidikan bertujuan untuk
+              membentuk karakter bangsa seperti menambah ilmu
+              pengetahuan,kreatifitas kretampilan ,kepercayaan diiri ,motivasi
+              serta ketekunaan kepada Tuhan yang maha esa. Dengan demikian sejak
+              abad 16 ,masuknya agama-agama di Indonesia dan khususnya
+              dikepulauan aru pendidikan sekolah rakyat sudah ada sejak saat itu
+              di wokam ,sampai Negara Indonesia menyatakan kemerdekaannya .
+              pendidikan terus berkembang dan maju hingga berdirinya SMP N1 DOBO
+              01 agustus 1953 pertama dikepulauan aru , yang dikenal dengan nama
+              SMP MUTIARA yang berstatus swasta dengan memiliki 7 orang guru dan
+              1 orang pegawai tatausaha . lembaga pendidikan ini melaksanakan
+              tanggung jawabnya dengan kepala sekolah pertama yaitu almah bapak
+              BERHITU dan kemudian beberapa tahun dilanjutkan dengan almah bapak
+              SOPEHELAWAKAN sebagai kepalah sekolah walaupun beraptapkan daun
+              rumbia dan berdinding papan berlokasih di DOK ,namun mereka tetap
+              memiliki semangat belajar dengan tekun .seiring bergantinya tahun
+              maka jabatan kepala sekolah diserahkan kepada almah bapak GAITE.
+              Kepemimpinan kepala sekola selanjutnya dijalankan oleh almah bapak
+              BINTO 1. Melalui kesepakatan pemerintah didalam memajukan
+              pendidikan dinegri ini , maka lembaga ini pun mengalami
+              perpindahan tempat di lokasi baru yaitu di ROMBENGAN yang saat ini
+              beralamat pada JL ALI MOERTOPO. Waktu bergulir dan kemudian kepala
+              sekola secara resmi dipercayakan kepada alm bapak H.TABELA dengan
+              jumlah guru 10 orang dan 2 orang pegawai tatausaha , beliau dalam
+              tugas dan pengapdiannya menatalayani dan membimbing anak- anak
+              bangsa di bumi JARGARIA walaupun minimnya tenaga pendidik namun
+              mereka tetap sabar dan terus bersemangat meskipun kondisi sekolah
+              sangat sederhana karena berdinding papan , beratap lumbia dan
+              berlantai tanah.
             </h3>
             <br />
             <br />
             <h3 className="text-white font-regular text-xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              omnis officiis minima. Corporis facilis, possimus, tempore ab
-              molestiae doloremque optio sint autem ex laudantium voluptates,
-              inventore veritatis voluptate eligendi in reiciendis et
-              temporibus. Esse, quasi. Praesentium nisi animi ipsa quis
-              blanditiis, non debitis. Eaque nostrum, officia error nihil
-              assumenda sint?
-            </h3>
-            <br />
-            <h3 className="text-white font-regular text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-              dolorem mollitia perspiciatis, dolores reprehenderit excepturi
-              cumque possimus? Expedita, laudantium aut quis accusamus magnam
-              nobis veritatis!
+              Seiring dengan bergantinnya waktu ,atas musyawarah bersama maka
+              SMA MUTIARA yang saat itu berlokasi didepan SMP N1 DOBO berpindah
+              tempat pada lokasi yang sekarang menjadi SMA N1 PULAU-PULAU ARU
+              beralamat JL CENDRAWASI PUNCAK DOBO. Hal ini membuat lokasi SMP N1
+              DOBO menjadi cukup luas lahan nya yaitu kurang lebih 13.000 m2 dan
+              berada pada poros jalan utamayang dapat memperindah tata kota dobo
+              apa bila adanya perhatian . Pemda kepulauan Aru untuk pengembangan
+              fisik SMP NEGERI 1 DOBO kedepan . selanjutnya jabatan kepala
+              Sekolah berganti dari Alm.Bapak H Tabela karena beliau pindah dan
+              bertugas didaerah lainnya, dan jabatan Kepala Sekolah dipimpin
+              oleh Almah Nyonya M Ralahallo, dengan masa kerja dari tahun 1978
+              sampai 1999. Lembaga Pendidikan ini terus mengalami perubahan
+              pembangunan fisik dan dengan semangat kerja keras para guru dan
+              peserta didik pada zaman itu, dilakukan penimbunan ditempat-tempat
+              rawa atau berair dan diawali dengan penambahan ruang belajar dan
+              Lab IPA melalui program pemerintah lembaga Pendidikan ini berubah
+              menjadi gedung yang permanen dengan jumlah guru 10 orang dan 2
+              orang pegawai TATA USAHA, mengalami peningkatan menjadi 18 orang
+              guru dan 6 orang pegawai. Almrhm Ny. M Ralahallo menjalankan
+              tugasnya hingga pada tahun 1999 memasuki masa pensiun dan
+              dilanjutkan dengan kepala sekolah yang baru yaitu Alm Bpk J Kauy
+              dengan masa jabatan dari tahun 2000-2006, dengan mengalami
+              peningkatan jumlah guru sebanyak 43 orang dan pegawai tata Usaha 4
+              orang. Saat itu Alm Bpk J Kauy dalam masa kepemimpinannya hanya 5
+              tahun karena menerima tugas dan tanggung jawab yang baru sebagai
+              pengawas pendidikan dengan demikian maka jabatan kepala Sekolah
+              dilanjutkan Bpk H DAHOKLORY,S.Sos, Tepatnya tgl 12 April 2007
+              dilantik dengan SK bupati No.71 tahun 2006. Massa jabatan beliau
+              dari tahun 2007-2012, pada masa kepemimpinan beliau melalui
+              perkembangan da kemajuan IPTEK mengalami perubahan nama SMP N !
+              Pulau Pulau Aru mengalami perubahan perkembangan dan kemajuan yang
+              signifikan dalambidang olahraga, dan kepramukaan hingga membawah
+              nama harum ketingkat Nasional dan dunia. Jumlah tenaga pendidik
+              tetap 42 orang, penambahan tenaga pendidik honorer 7 orang,
+              pegawai tata usaha tetap 5 orang, dan pegawai honorer 3 orang.
             </h3>
           </div>
         </div>

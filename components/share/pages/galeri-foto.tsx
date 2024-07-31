@@ -56,11 +56,7 @@ export default function GaleriFotoComponent() {
       </h1>
       <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
         {currentImages.map((image) => (
-          <CardWithImageComponent
-            imageSource={image}
-            title="Your title for image here"
-            key={1}
-          />
+          <CardWithImageComponent imageSource={image} key={1} />
         ))}
       </div>
       <div className="flex justify-center mt-5">
