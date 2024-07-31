@@ -52,7 +52,7 @@ export default function FooterComponent() {
     try {
       setIsLoadingAgenda(true);
       const response = await fetch(
-        "https://admin.smpnegeri1dobo.sch.id/api/get-posts?search=test&limit=2"
+        "https://admin.smpnegeri1dobo.sch.id/api/get-posts?limit=3"
       );
       const result = await response?.json();
 
