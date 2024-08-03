@@ -16,12 +16,12 @@ export default function BeritaSekolahComponent() {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://admin.smpnegeri1dobo.sch.id/api/get-posts?search=test&limit=10&page=1`
+        `https://admin.smpnegeri1dobo.sch.id/api/get-posts?limit=10&page=1`
       );
       const result = await response?.json();
 
       const filterData = result?.data.filter(
-        (data: any) => data.category === "Berita Sekolah"
+        (data: any) => data.category === "Berita Sekolah" || data.category === "Pengumuman"
       );
 
       if (result) {

@@ -52,12 +52,16 @@ export default function FooterComponent() {
     try {
       setIsLoadingAgenda(true);
       const response = await fetch(
-        "https://admin.smpnegeri1dobo.sch.id/api/get-posts?search=test&limit=2"
+        "https://admin.smpnegeri1dobo.sch.id/api/get-posts"
       );
       const result = await response?.json();
+      const filterData = result?.data.filter(
+              (data: any) =>
+                data.category === "Agenda Sekolah"
+            );
 
       if (result) {
-        setResultAgenda(result.data);
+        setResultAgenda(filterData);
       }
 
       setIsLoadingAgenda(false);
