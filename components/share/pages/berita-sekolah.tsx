@@ -21,7 +21,7 @@ export default function BeritaSekolahComponent() {
       const result = await response?.json();
 
       const filterData = result?.data.filter(
-        (data: any) => data.category === "Berita Sekolah" || data.category === "Pengumuman"
+        (data: any) => data.category === "Berita Sekolah"
       );
 
       if (result) {
