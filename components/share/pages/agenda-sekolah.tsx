@@ -21,7 +21,7 @@ export default function AgendaSekolahComponent() {
 
       const filterData = result?.data.filter(
         (data: any) =>
-          data.category === "Pengumuman" || data.category === "Berita Sekolah"
+          data.category === "Agenda Sekolah"
       );
 
       if (result) {
