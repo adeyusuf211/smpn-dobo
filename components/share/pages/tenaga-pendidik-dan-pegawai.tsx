@@ -23,11 +23,13 @@ export default function TenagaPendidikDanPegawaiComponent() {
   const currentData = result?.slice(indexOfFirstData, indexOfLastData);
   const totalPages = Math.ceil(totalData / dataPerPage);
 
-  const fetchingData = async (page: any) => {
+  const fetchingData = async (page?: any) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://admin.smpnegeri1dobo.sch.id/api/teachers/list?limit=10&page=${page}`
+        `https://admin.smpnegeri1dobo.sch.id/api/teachers/list?limit=10&page=${
+          page ?? "1"
+        }`
       );
       const result = await response.json();
 
@@ -82,7 +84,7 @@ export default function TenagaPendidikDanPegawaiComponent() {
   };
 
   useEffect(() => {
-    fetchingData("1");
+    fetchingData();
   }, []);
 
   return (

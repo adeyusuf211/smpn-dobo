@@ -7,6 +7,7 @@ interface SimpleCardCompoenntProps {
   readonly name: string;
   readonly buttons?: string[];
   readonly key?: any;
+  onClickDetail?: () => void;
 }
 
 export default function SimpleCardComponent({
@@ -14,6 +15,7 @@ export default function SimpleCardComponent({
   name,
   buttons,
   key,
+  onClickDetail,
 }: SimpleCardCompoenntProps) {
   return (
     <div className="flex flex-col gap-2 bg-white" key={key}>
@@ -37,6 +39,7 @@ export default function SimpleCardComponent({
             variant="destructive"
             key={button}
             className="w-full flex flex-1"
+            onClick={onClickDetail}
           >
             {button}
           </Button>
