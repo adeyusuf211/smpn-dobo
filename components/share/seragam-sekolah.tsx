@@ -1,25 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import ListBackgroundCard from "@/public/assets/images/background-card.svg";
-import SeragamBatik1 from "@/public/assets/images/Foto Siswa/batik-1.webp";
-import SeragamBatik2 from "@/public/assets/images/Foto Siswa/batik-2.webp";
-import SeragamPutihBiru from "@/public/assets/images/Foto Siswa/model.webp";
-import SeragamKostum from "@/public/assets/images/Foto Siswa/kostum.webp";
-import SeragamPramuka from "@/public/assets/images/Foto Siswa/pramuka.webp";
 
 import { useAOS } from "@/hooks/useAOS";
-
-const LIST_SERAGAM: string[] = [
-  "biru dan putih",
-  "batik",
-  "batik",
-  "kostum",
-  "pramuka",
-] as const;
+import { useFetchData } from "@/hooks/useFetchData";
 
 export default function SeragamSekolahComponent() {
   useAOS();
+
+  const { data, error, loading } = useFetchData(
+    "uniforms",
+    `https://admin.smpnegeri1dobo.sch.id/api/get-uniforms`,
+    {
+      staleTime: 5 * 60 * 1000, // Override default staleTime
+      cacheTime: 5 * 60 * 1000, // Override default cacheTime
+      method: "GET", // Default method
+    }
+  );
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+  if (!Array.isArray(data)) return <p>Data is not available</p>;
+
   return (
     <section id="seragam">
       <h1
@@ -31,85 +33,35 @@ export default function SeragamSekolahComponent() {
       <div className="flex flex-col mt-10">
         <div className="flex justify-end w-full">
           <div className="relative w-full">
-            <div className="flex lg:flex-row flex-col gap-3">
-              <div className="rounded-rectangle ml-auto" />
-              <div className="rounded-rectangle ml-auto" />
-              <div className="rounded-rectangle ml-auto" />
-              <div className="rounded-rectangle ml-auto" />
-              <div className="rounded-rectangle ml-auto" />
+            <div className="flex lg:flex-row flex-col justify-evenly">
+              <div className="rounded-rectangle" />
+              <div className="rounded-rectangle" />
+              <div className="rounded-rectangle" />
+              <div className="rounded-rectangle" />
+              <div className="rounded-rectangle" />
             </div>
             <div className="flex lg:flex-row flex-col lg:gap-0 gap-20 w-full absolute top-0">
-              <div className="flex gap-10 z-10">
-                <Image
-                  src={SeragamPutihBiru}
-                  width={250}
-                  height={250}
-                  alt="seragam-batik"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                />
-              </div>
-              <div className="flex z-10">
-                <Image
-                  src={SeragamBatik1}
-                  width={250}
-                  height={250}
-                  alt="seragam-batik"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    marginLeft: "50px",
-                  }}
-                />
-              </div>
-              <div className="flex z-10">
-                <Image
-                  src={SeragamBatik2}
-                  width={250}
-                  height={250}
-                  alt="seragam-batik"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    marginLeft: "50px",
-                  }}
-                />
-              </div>
-              <div className="flex z-10">
-                <Image
-                  src={SeragamKostum}
-                  width={250}
-                  height={250}
-                  alt="seragam-kostum"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    marginLeft: "50px",
-                  }}
-                />
-              </div>
-              <div className="flex z-10">
-                <Image
-                  src={SeragamPramuka}
-                  width={250}
-                  height={250}
-                  alt="seragam-pramuka"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    marginLeft: "50px",
-                  }}
-                />
-              </div>
+              {data?.map((result: any) => (
+                <div className="flex gap-10 z-10" key={result.id}>
+                  <Image
+                    src={result.image}
+                    width={250}
+                    height={250}
+                    alt={result?.name}
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
         <div className="w-full h-full bg-blue-secondary p-4 flex lg:flex-row flex-col justify-between pr-32">
-          {LIST_SERAGAM.map((seragam) => (
+          {data.map((result) => (
             <h3
               className="font-bold text-xl text-white uppercase"
-              key={seragam}
+              key={result.id}
             >
-              {seragam}
+              {result.name}
             </h3>
           ))}
         </div>

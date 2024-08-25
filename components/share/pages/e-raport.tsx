@@ -5,7 +5,6 @@ import FooterComponent from "@/components/share/footer/footer";
 import { SimpleFormComponent } from "@/components/share/form/simple-form";
 import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 
-import IconsPDF from "@/public/assets/images/icons/icons-pdf.svg";
 import { useEffect, useState } from "react";
 import PaginationButtons from "../pagination/page";
 import SimpleCardComponent from "../card/simple-card";
@@ -45,7 +44,7 @@ export default function ERaportComponent() {
 
       if (result) {
         setResult(result?.data);
-        setTotalData(result?.pagination?.total_items);
+        setTotalData(result?.pagination?.total);
       }
 
       setIsLoading(false);
@@ -115,7 +114,6 @@ export default function ERaportComponent() {
           variant="destructive"
           className="text-lg lg:w-32 w-full"
           onClick={fetchingData}
-          disabled={valueText === "" || isLoading}
         >
           {isLoading ? "..." : "Cari"}
         </Button>
