@@ -8,8 +8,15 @@ import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 import { useEffect, useState } from "react";
 import PaginationButtons from "../pagination/page";
 import SimpleCardComponent from "../card/simple-card";
+import { useRouter } from "next/navigation";
 
-export default function ERaportComponent() {
+interface Props {
+  paramsId?: any;
+}
+
+export default function ERaportComponent({ paramsId }: Props) {
+  const router = useRouter();
+
   const [result, setResult] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [valueText, setValueText] = useState<string>("");
@@ -25,21 +32,14 @@ export default function ERaportComponent() {
 
   const onChangeValue = (e: any) => setValueText(e.target.value);
 
-  const fetchingData = async (page?: any, id?: any) => {
+  const fetchingData = async (page?: any) => {
     try {
       setIsLoading(true);
-      let response;
-      if (!id) {
-        response = await fetch(
-          `https://admin.smpnegeri1dobo.sch.id/api/get-students?limit=10&page=${page}&search=${
-            valueText ?? ""
-          }`
-        );
-      } else {
-        response = await fetch(
-          `https://admin.smpnegeri1dobo.sch.id/api/get-students/${id}`
-        );
-      }
+      const response = await fetch(
+        `https://admin.smpnegeri1dobo.sch.id/api/get-students?limit=10&page=${page}&search=${
+          valueText ?? ""
+        }`
+      );
       const result = await response.json();
 
       if (result) {
@@ -77,7 +77,7 @@ export default function ERaportComponent() {
               image={data?.photo !== "" || PlaceHolderImage}
               name={data?.name}
               buttons={["Lihat"]}
-              onClickDetail={() => fetchingData("1", data?.nisn)}
+              onClickDetail={() => router.push(`/e-raport/${data.nisn}`)}
             />
           </div>
         ));
@@ -118,7 +118,7 @@ export default function ERaportComponent() {
           {isLoading ? "..." : "Cari"}
         </Button>
       </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+      <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
         {renderElements()}
       </div>
       <div className="flex justify-center mt-5">

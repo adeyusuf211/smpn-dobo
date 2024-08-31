@@ -40,9 +40,9 @@ export default function SeragamSekolahComponent() {
               <div className="rounded-rectangle" />
               <div className="rounded-rectangle" />
             </div>
-            <div className="flex lg:flex-row flex-col lg:gap-0 gap-20 w-full absolute top-0">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-20 w-full absolute top-0">
               {data?.map((result: any) => (
-                <div className="flex gap-10 z-10" key={result.id}>
+                <div className="flex justify-between z-10" key={result.id}>
                   <Image
                     src={result.image}
                     width={250}
