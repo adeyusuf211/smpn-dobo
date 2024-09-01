@@ -9,14 +9,16 @@ export const metadata: Metadata = {
 
 export async function generateStaticParams() {
   const result = await fetch(
-    `https://admin.smpnegeri1dobo.sch.id/api/get-students`
+    "https://admin.smpnegeri1dobo.sch.id/api/get-students"
   ).then((res) => res.json());
 
   return result.data.map((data: any) => ({
-    slug: data.nisn,
+    id: data.nisn.toString(),
   }));
 }
 
-export default function ERaportPage({ params }: any) {
-  return <ERaportComponent paramsId={params.slug} />;
+export default async function ERaportPage({ params }: any) {
+  const { id } = params;
+
+  return <ERaportComponent id={id} />;
 }
