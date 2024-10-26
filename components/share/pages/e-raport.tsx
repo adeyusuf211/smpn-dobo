@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import PaginationButtons from "../pagination/page";
 import SimpleCardComponent from "../card/simple-card";
 import { useRouter } from "next/navigation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface Props {
   id?: string;
@@ -18,7 +19,6 @@ export default function ERaportComponent({ id }: Props) {
   const router = useRouter();
 
   const [result, setResult] = useState<any[]>([]);
-  const [assesments, setAssesments] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isLoadingButton, setIsLoadingButton] = useState<boolean>(false);
   const [valueText, setValueText] = useState<string>("");
@@ -51,15 +51,14 @@ export default function ERaportComponent({ id }: Props) {
         );
       }
 
-      const result = await response?.json();
+      const data = await response?.json();
 
-      if (result) {
+      if (data) {
         if (!id) {
-          setResult(result?.data);
-          setTotalData(result?.pagination?.total);
+          setResult(data?.data);
+          setTotalData(data?.pagination?.total);
         } else {
-          setResult([result?.student]);
-          setAssesments(result?.assessments);
+          setResult([data?.assesments]);
         }
       }
 
@@ -75,7 +74,7 @@ export default function ERaportComponent({ id }: Props) {
       setIsLoadingButton(true);
 
       const response = await fetch(
-        `https://admin.smpnegeri1dobo.sch.id/api/rapor/${id}/${assesment.rombel}/${assesment.semester}`,
+        `https://admin.smpnegeri1dobo.sch.id/api/rapor/${id}/${assesment?.rombel}/${assesment?.semester}`,
         {
           method: "GET",
         }
@@ -87,7 +86,7 @@ export default function ERaportComponent({ id }: Props) {
       // Buat link download dan klik secara otomatis
       const link = document.createElement("a");
       link.href = url;
-      link.download = `rapor-${result[0]?.name}-${id}-${assesment.rombel}-${assesment.semester}.pdf`;
+      link.download = `rapor-${id}-${assesment?.rombel}-${assesment?.semester}.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -107,62 +106,75 @@ export default function ERaportComponent({ id }: Props) {
   };
 
   const renderElements = () => {
-    if (!isLoading) {
-      if (result?.length === 0 || result === undefined) {
-        return (
-          <h3 className="text-center font-bold text-white text-4xl">
-            Tidak Ada Data {!id ? "Siswa" : "Raport"}
-          </h3>
-        );
-      } else if (result?.length !== 0 || result !== undefined) {
-        if (!id) {
-          return (
-            <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
-              {result?.map((data) => (
-                <div data-aos="fade-up" key={data?.id}>
-                  <SimpleCardComponent
-                    key={data?.id}
-                    image={data?.photo !== "" || PlaceHolderImage}
-                    name={data?.name}
-                    buttons={["Lihat"]}
-                    onClickDetail={() => router.push(`/e-raport/${data.nisn}`)}
-                  />
-                </div>
-              ))}
-            </div>
-          );
-        } else {
-          return assesments.map((assesment, index) => (
-            <div
-              data-aos="fade-up"
-              key={assesment?.id ?? index}
-              className="flex flex-col gap-5 w-full bg-yellow-500"
-            >
-              <div className="p-4 bg-white rounded-lg flex justify-between items-center">
-                <h3 className="w-full">
-                  Tahun Ajaran: {assesment?.school_year}, {assesment?.rombel},
-                  Semester: {assesment?.semester}
-                </h3>
-
-                <Button
-                  size="sm"
-                  variant="destructive"
-                  key={assesment.rombel_id}
-                  className="w-full flex flex-1"
-                  onClick={() => downloadRaport(assesment)}
-                >
-                  {isLoadingButton ? "Loading..." : "Download Raport"}
-                </Button>
-              </div>
-            </div>
-          ));
-        }
-      }
-    } else {
+    if (isLoading) {
       return (
         <div className="flex justify-center items-center w-full">
           <h3 className="text-white font-semibold text-2xl">Loading...</h3>
         </div>
+      );
+    }
+
+    if (!isLoading && result?.length === 0) {
+      return (
+        <h3 className="text-center font-bold text-white text-4xl">
+          Tidak Ada Data {!id ? "Siswa" : "Nilai"}
+        </h3>
+      );
+    }
+
+    if (!isLoading && result?.length !== 0) {
+      return renderElementData();
+    }
+  };
+
+  const renderElementData = () => {
+    if (!id) {
+      return (
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+          {result?.map((data) => (
+            <div data-aos="fade-up" key={data?.id}>
+              <SimpleCardComponent
+                key={data?.id}
+                image={data?.photo !== "" || PlaceHolderImage}
+                name={data?.name}
+                buttons={["Lihat"]}
+                onClickDetail={() => router.push(`/e-raport/${data.nisn}`)}
+              />
+            </div>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        result !== undefined &&
+        result?.map((assesment, index) => (
+          <div
+            data-aos="fade-up"
+            key={assesment?.id ?? index}
+            className="flex w-full justify-center"
+          >
+            <Tabs defaultValue={assesment?.rombel} className="w-[400px]">
+              <TabsList className="flex">
+                <TabsTrigger
+                  value={assesment?.rombel}
+                  defaultValue={assesment?.rombel}
+                >
+                  {assesment?.rombel}
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value={assesment?.rombel}>
+                <SimpleCardComponent
+                  key={assesment?.rombel_id}
+                  image={PlaceHolderImage}
+                  name={assesment?.school_year}
+                  buttons={["Download"]}
+                  onClickDetail={() => downloadRaport(assesment)}
+                  loadingButton={isLoadingButton}
+                />
+              </TabsContent>
+            </Tabs>
+          </div>
+        ))
       );
     }
   };
@@ -174,7 +186,7 @@ export default function ERaportComponent({ id }: Props) {
   return (
     <div className="flex flex-col gap-10 w-full min-h-screen h-full">
       <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-2xl font-semibold mt-44 mb-8 uppercase">
-        {!id ? "E-Raport" : `Raport - ${result[0]?.name}`}
+        E-Raport
       </h1>
       {!id ? (
         <div className="flex lg:flex-row flex-col items-center justify-between gap-3 w-full lg:p-5 p-3 bg-white overflow-x-hidden">

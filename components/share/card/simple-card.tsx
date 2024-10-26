@@ -5,6 +5,7 @@ import PlaceHolderImage from "@/public/assets/images/placeholder-1.svg";
 interface SimpleCardCompoenntProps {
   readonly image: StaticImageData;
   readonly name: string;
+  readonly loadingButton?: boolean;
   readonly buttons?: string[];
   readonly key?: any;
   onClickDetail?: () => void;
@@ -15,6 +16,7 @@ export default function SimpleCardComponent({
   name,
   buttons,
   key,
+  loadingButton,
   onClickDetail,
 }: SimpleCardCompoenntProps) {
   return (
@@ -41,7 +43,7 @@ export default function SimpleCardComponent({
             className="w-full flex flex-1"
             onClick={onClickDetail}
           >
-            {button}
+            {!loadingButton ? button : "loading..."}
           </Button>
         ))}
       </div>
