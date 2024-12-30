@@ -5,10 +5,11 @@ import ExampleImage6 from "@/public/assets/images/example-6.svg";
 interface CardWithImageComponentProps {
   readonly key: any;
   readonly badge?: string;
-  readonly imageSource: StaticImageData;
+  readonly imageSource: string | StaticImageData;
   readonly title?: string;
   readonly description?: string;
   readonly buttons?: string[];
+  readonly onClick?: () => void;
 }
 
 export default function CardWithImageComponent({
@@ -18,9 +19,14 @@ export default function CardWithImageComponent({
   title,
   description,
   buttons,
+  onClick,
 }: CardWithImageComponentProps) {
   return (
-    <div className="flex h-[500px] flex-col gap-10 bg-white p-3" key={key}>
+    <div
+      className="flex h-[500px] flex-col gap-10 bg-white p-3"
+      key={key}
+      onClick={onClick}
+    >
       <div className="flex justify-center items-center w-full min-h-[200px] h-full overflow-hidden">
         <Image
           src={imageSource}

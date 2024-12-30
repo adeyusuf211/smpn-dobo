@@ -7,8 +7,11 @@ import FooterComponent from "../footer/footer";
 
 import { formatDateIndonesian } from "@/utils/format-date";
 import { sliceText } from "@/utils/slice-text";
+import { useRouter } from "next/navigation";
 
 export default function BeritaSekolahComponent() {
+  const router = useRouter();
+
   const [result, setResult] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -45,7 +48,7 @@ export default function BeritaSekolahComponent() {
         );
       } else {
         return (
-          <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
+          <div className="my-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 justify-center cursor-pointer">
             {result?.map((data) => (
               <CardWithImageComponent
                 imageSource={data?.meta_og_image}
@@ -55,6 +58,7 @@ export default function BeritaSekolahComponent() {
                 title={sliceText(data?.name, 35)}
                 description={sliceText(data?.content, 50)}
                 key={data?.id}
+                onClick={() => router.push(`/berita-sekolah/${data?.id}`)}
               />
             ))}
           </div>
