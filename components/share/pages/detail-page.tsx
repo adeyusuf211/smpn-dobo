@@ -167,17 +167,24 @@ export default function DetailPageComponent({
                   </h3>
                 </div>
                 {state?.allData?.map((item: any) => (
-                  <ul
-                    className="flex flex-column gap-3 border p-2 rounded-lg hover:bg-gray-200 cursor-pointer"
-                    key={item?.id}
-                  >
-                    <li
-                      className="font-semibold text-lg text-gray-700"
-                      onClick={() => router.push(`/${redirect}/${item?.id}`)}
-                    >
-                      {item?.name}
-                    </li>
-                  </ul>
+                  <>
+                    {item?.name?.toLowerCase() !==
+                      state?.detailData?.name?.toLowerCase() && (
+                      <ul
+                        className="flex flex-column gap-3 border p-2 rounded-lg hover:bg-gray-200 cursor-pointer"
+                        key={item?.id}
+                      >
+                        <li
+                          className="font-semibold text-lg text-gray-700"
+                          onClick={() =>
+                            router.push(`/${redirect}/${item?.id}`)
+                          }
+                        >
+                          {item?.name}
+                        </li>
+                      </ul>
+                    )}
+                  </>
                 ))}
               </div>
             </div>

@@ -14,7 +14,7 @@ async function fetchAllData() {
 
   while (hasMore) {
     const response = await fetch(
-      `https://admin.smpnegeri1dobo.sch.id/api/get-posts?page=${page}&limit=1000`
+      `https://admin.smpnegeri1dobo.sch.id/api/get-posts?page=${page}&limit=10000000`
     );
     const result = await response.json();
     allData = [...allData, ...result?.data];
