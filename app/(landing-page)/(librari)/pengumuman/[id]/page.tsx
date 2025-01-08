@@ -1,4 +1,5 @@
 import DetailPageComponent from "@/components/share/pages/detail-page";
+import { getDataPosts } from "@/helpers/api";
 
 import { Metadata } from "next";
 
@@ -7,32 +8,14 @@ export const metadata: Metadata = {
   description: "Halaman Pengumuman SMP Negeri 1 DOBO",
 };
 
-async function fetchAllData() {
-  let allData: any = [];
-  let page = 1;
-  let hasMore = true;
-
-  while (hasMore) {
-    const response = await fetch(
-      `https://admin.smpnegeri1dobo.sch.id/api/get-posts?page=${page}&limit=10000000`
-    );
-    const result = await response.json();
-    allData = [...allData, ...result?.data];
-    hasMore = result.hasMore; // Pastikan ini sesuai dengan API Anda
-    page++;
-  }
-
-  return allData;
-}
-
 export async function generateStaticParams() {
-  const allData = await fetchAllData();
+  const data = await getDataPosts();
 
-  const paramsId = allData.map((data: any) => ({
+  const result = data?.map((data: any) => ({
     id: data?.id.toString(),
   }));
 
-  return paramsId;
+  return result;
 }
 
 export default async function PengumumanPage({ params }: any) {
