@@ -5,7 +5,7 @@ export async function getDataPosts() {
 
   while (hasMore) {
     const response = await fetch(
-      `https://admin.smpnegeri1dobo.sch.id/api/get-posts?limit=100`
+      `https://admin.smpnegeri1dobo.sch.id/api/get-posts?limit=1000000`
     );
     const result = await response.json();
     allData = [...allData, ...result.data];

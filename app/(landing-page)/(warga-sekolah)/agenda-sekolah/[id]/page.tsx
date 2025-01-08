@@ -3,6 +3,8 @@ import { getDataPosts } from "@/helpers/api";
 
 import { Metadata } from "next";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "SMP NEGERI 1 DOBO | Agenda Sekolah",
   description: "Halaman Detail Agenda Sekolah SMP Negeri 1 DOBO",
