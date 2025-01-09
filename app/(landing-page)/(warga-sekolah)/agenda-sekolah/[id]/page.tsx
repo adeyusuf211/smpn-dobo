@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  const data = await getDataPosts();
+  const data = await getDataPosts("Agenda Sekolah");
 
   const result = data?.map((data: any) => ({
     id: data?.id.toString(),
