@@ -116,10 +116,10 @@ export default function DetailPageComponent({
     if (!state.loadingAll && !state.loadingDetail) {
       return (
         <div className="flex flex-col gap-10 w-full min-h-screen h-full">
-          <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-20 mb-8 uppercase">
+          <h1 className="text-center text-white 2xl:text-6xl lg:text-4xl text-xl font-semibold lg:mt-44 mt-36 md:mb-4 mb-0 uppercase">
             {state?.detailData?.name}
           </h1>
-          <div className="my-10 flex md:flex-row flex-col md:gap-10 gap-0">
+          <div className="mb-10 flex md:flex-row flex-col gap-5">
             <div className="flex flex-col gap-5 w-full">
               <div className="bg-white w-full rounded-2xl h-[350px] flex overflow-hidden">
                 <Image
@@ -151,7 +151,7 @@ export default function DetailPageComponent({
                 />
               </div>
             </div>
-            <div className="h-full w-full max-w-[35%] bg-white p-10 rounded-xl">
+            <div className="h-full w-full md:max-w-[35%] bg-white md:p-10 p-5 rounded-xl">
               <div className="flex justify-center items-center py-5">
                 <Image
                   src={LogoSekolah}
@@ -175,7 +175,7 @@ export default function DetailPageComponent({
                         key={item?.id}
                       >
                         <li
-                          className="font-semibold text-lg text-gray-700"
+                          className="font-semibold md:text-lg text-sm text-gray-700"
                           onClick={() =>
                             router.push(`/${redirect}/${item?.id}`)
                           }

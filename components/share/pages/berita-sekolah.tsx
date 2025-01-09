@@ -8,6 +8,7 @@ import FooterComponent from "../footer/footer";
 import { formatDateIndonesian } from "@/utils/format-date";
 import { sliceText } from "@/utils/slice-text";
 import { useRouter } from "next/navigation";
+import { getDataPosts } from "@/helpers/api";
 
 export default function BeritaSekolahComponent() {
   const router = useRouter();
@@ -18,17 +19,10 @@ export default function BeritaSekolahComponent() {
   const fetchingData = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(
-        `https://admin.smpnegeri1dobo.sch.id/api/get-posts?limit=10&page=1`
-      );
-      const result = await response?.json();
+      const response = await getDataPosts("Berita Sekolah");
 
-      const filterData = result?.data.filter(
-        (data: any) => data.category === "Berita Sekolah"
-      );
-
-      if (result) {
-        setResult(filterData);
+      if (response) {
+        setResult(response);
       }
 
       setIsLoading(false);
